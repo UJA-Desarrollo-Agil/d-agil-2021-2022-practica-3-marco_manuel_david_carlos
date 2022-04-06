@@ -16,9 +16,10 @@ Juego conversacional creado en el framework Undum para la asignatura Desarrollo 
 
 **A Nuclear Winter's Tale**
 
-El juego inicia en un refugio nuclear, la guerra nuclear ha sucedido y tú naciste y te criaste en el refugio. Solo has conocido este lugar a lo largo de tu vida, hasta que te enteras que el administrador del refugio lo abrió para comerciar con gente del exterior. Aunque no permite salir a los moradores del refugio, solamente él comercia en base a las necesidades del refugio.
+El juego inicia en un refugio nuclear, la guerra nuclear ha sucedido, tú naciste y te criaste en el refugio. Solo has conocido este lugar a lo largo de tu vida, hasta que te enteras que el administrador del refugio lo abrió para comerciar con gente del exterior. Aunque no permite salir a los moradores del refugio, solo él comercia con la gente en base a las necesidades del refugio.
 
-Siempre te habías sentido curioso con el exterior aunque según la historia del refugio el exterior es un yermo nuclear inhabitable y algo encerrado entre las paredes de tan pequeño lugar, así que te armas de valor y te decides a escapar de allí como puedas para conocer mundo,aunque tu tía ( la única familia que te queda) no está de acuerdo con ello.
+Siempre te habías sentido curioso con el exterior, aunque según la historia del refugio el exterior es un yermo nuclear inhabitable. También te sientes encerrado entre las paredes de un lugar tan pequeño, así que te armas de valor y decides  escapar de allí como puedas para conocer el mundo exterior,aunque tu tía ( la única familia que te queda) no está de acuerdo con ello.
+
 
 
 <a name="Trello"></a>
