@@ -29,7 +29,17 @@ undum.game.slideUpSpeed = 500
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation(
-        "<p>Saludos</p>"
+        "<h1>20-05-2152 Refugio J100</h1>\
+		<p class = transient><img src='media/games/tutorial/cabum.jpg' class='float_left'></p>\
+		<p>Hace 100 años que el mundo entró en la tercera guerra mundial, tras una guerra convencional finalmente alguna nación empezó a usar las bombas nucleares y todas lanzaron a su vez.\
+		Algunos pudieron refugiarse en refugios preparados para la ocasión, entre ellos tu familia. La gran mayoría murieron y muchos otros sufrieron los efectos de la radiación y el invierno nuclear.\
+		</p>\
+		<p> Mientras que los habitantes de los refugios sobrevivían con purificadores, cultivos hidropónicos y reactores nucleares en miniatura en el yermo exterior se levantaban de entre las ruinas los habitantes creando pequeños asentamientos con lo que tenían a su alcance.  \
+		</p>\
+		<p class = transient><img src='media/games/tutorial/yermo.jpg' class='float_left'></p>\
+		<p>Eres un habitante del refugio, llevas viviendo aquí toda tu vida, de tu familia solo te queda tu tía Josefina.</p>\
+		\
+		"
     )
 };
 
