@@ -37,9 +37,33 @@ undum.game.situations = {
 		<p> Mientras que los habitantes de los refugios sobrevivían con purificadores, cultivos hidropónicos y reactores nucleares en miniatura en el yermo exterior se levantaban de entre las ruinas los habitantes creando pequeños asentamientos con lo que tenían a su alcance.  \
 		</p>\
 		<p class = transient><img src='media/games/tutorial/yermo.jpg' class='float_left'></p>\
-		<p>Eres un habitante del refugio, llevas viviendo aquí toda tu vida, de tu familia solo te queda tu tía Josefina.</p>\
+		<p>Eres un habitante del refugio J100, con apenas 18 años, llevas viviendo aquí toda tu vida, de tu familia solo te queda tu tía Josefina, tus padres murieron hace años debido a una epidemia de cólera que hubo en el refugio cuando el purificador de agua se estropeó.</p>\
+		<p>Tu tía se hizo cargo de ti pues apenas tenías 4 años y desde entonces siempre has vivido con ella, aunque sois bien distintos la quieres como es.\
+		Ella siempre ha querido que seas parte del refugio y tengas algún puesto de responsabilidad en este, aunque tú te has metido en líos varias veces ella siempre te ha sacado de ellos.\
+		Pero tú por tu parte siempre has pensado más allá de las paredes del refugio y te han llamado la atención las historias de antes de la guerra que se contaban dentro del refugio.</p>\
+		<p class = transient><img src='media/games/tutorial/refugio.jpg' class='float_left'></p>\
+		<p>Con todo esto hace ya varios años que sabes por rumores de los guardias del refugio que el gobernador del refugio periódicamente comercia con caravanas del exterior y que este es relativamente habitable, pues si no, nadie quedaría fuera para comerciar.\
+		Desde hace semanas llevas preparándote para escapar de aquí con tu <a href='./mejora-fuerza'>Fuerza</a> o <a href='./mejora-destreza'>Destreza </a>\
+		y tu <a href='./mejora-inteligencia'>Inteligencia</a> o <a href='./mejora-suerte'>Suerte</a> además de varias herramientas preparas un <a href='hub'>plan de huída.</a></p>\
 		\
-		"
+		",
+		{
+			actions: {
+                'mejora-fuerza': function(character, system, action) {
+                    system.setQuality("fuerza", character.qualities.fuerza+4);
+                },
+				'mejora-destreza': function(character, system, action) {
+                    system.setQuality("destreza", character.qualities.destreza+4);
+                },
+				'mejora-inteligencia': function(character, system, action) {
+                    system.setQuality("inteligencia", character.qualities.inteligencia+4);
+                },
+				'mejora-suerte': function(character, system, action) {
+                    system.setQuality("suerte", character.qualities.suerte+4);
+                }
+            }
+			
+		}
     )
 };
 
