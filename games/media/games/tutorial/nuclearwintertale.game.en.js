@@ -64,7 +64,51 @@ undum.game.situations = {
             }
 			
 		}
-    )
+    ),
+	ganzua: new undum.SimpleSituation(
+	"<p>Opción ganzua</p>",
+	{
+	tags: ["topic"],
+        optionText: "Tratas de ir sigilosamente y usas una ganzúa.",
+        displayOrder: 1,
+		canChoose: function(character, system, host) {
+                return character.qualities.destreza > 3;
+            },
+	}
+	),
+	conver: new undum.SimpleSituation(
+	"<p>Opción conversación</p>",
+	{
+	tags: ["topic"],
+        optionText: "Te pones una bata y tratas de convencer a los guardias con tu inteligencia sobre ciencia.",
+        displayOrder: 2,
+		canChoose: function(character, system, host) {
+                return character.qualities.inteligencia > 3;
+            },
+	}
+	),
+	duelo: new undum.SimpleSituation(
+	"<p>Opción pelea con el guardia</p>",
+	{
+	tags: ["topic"],
+        optionText: "Te lanzas a por el guardia con un tubo de metal en mano antes de que pueda reaccionar.",
+        displayOrder: 3,
+		canChoose: function(character, system, host) {
+                return character.qualities.fuerza > 3;
+            },
+	}
+	),
+	suertudo: new undum.SimpleSituation(
+	"<p>Opción suertuda.</p>",
+	{
+	tags: ["topic"],
+        optionText: "Vas confiado en ti mismo y en tu suerte hacia la puerta del despacho del administrador.",
+        displayOrder: 4,
+		canChoose: function(character, system, host) {
+                return character.qualities.suerte > 3;
+            },
+	}
+	),
 };
 
 // ---------------------------------------------------------------------------
