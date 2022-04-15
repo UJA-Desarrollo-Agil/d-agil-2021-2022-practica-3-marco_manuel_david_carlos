@@ -66,7 +66,12 @@ undum.game.situations = {
 		}
     ),
 	ganzua: new undum.SimpleSituation(
-	"<p>Opción ganzua</p>",
+	"<p>Te escapas por el interior del refugio con tu  más que probada destreza abriendo las cerraduras con pinzas para el pelo, mientras que nadie te ve pues te escabulles como una sabandija sin ser detectado. Llegas a la puerta del despacho del administrador del refugio y la abres sin problema.</p>\
+	<p class = transient><img src='media/games/tutorial/ganzua.jpg' class='float_left'></p>\
+	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
+	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	",
 	{
 	tags: ["topic"],
         optionText: "Tratas de ir sigilosamente y usas una ganzúa.",
@@ -77,7 +82,12 @@ undum.game.situations = {
 	}
 	),
 	conver: new undum.SimpleSituation(
-	"<p>Opción conversación</p>",
+	"<p>Te diriges a la oficina del gobernador donde te espera uno de los guardias, con tu inteligencia y tu bata de científico robada lo convences en base a palabrería científica de que debe de dejarte pasar porque necesitas una de las llaves para el reactor del refugio que solo están en esa oficina.</p>\
+	<p class = transient><img src='media/games/tutorial/cientifico.jpg' class='float_left'></p>\
+	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
+	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	",
 	{
 	tags: ["topic"],
         optionText: "Te pones una bata y tratas de convencer a los guardias con tu inteligencia sobre ciencia.",
@@ -88,10 +98,15 @@ undum.game.situations = {
 	}
 	),
 	duelo: new undum.SimpleSituation(
-	"<p>Opción pelea con el guardia</p>",
+	"<p>Te armas con un tubo de metal bien duro y vas cuidadosamente hacia la puerta del despacho del administrador, cuando llegas, ves a un guardia esperando, te lanzas sobre él con el tubo y lo sorprendes, dejándolo insconciente con un par de golpes, abres la puerta con las llaves del guardia.</p>\
+	<p class = transient><img src='media/games/tutorial/fuerza.jpg' class='float_left'></p>\
+	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
+	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	",
 	{
 	tags: ["topic"],
-        optionText: "Te lanzas a por el guardia con un tubo de metal en mano antes de que pueda reaccionar.",
+        optionText: "Decides que entrarás por la fuerza al despacho del administrador sea como sea.",
         displayOrder: 3,
 		canChoose: function(character, system, host) {
                 return character.qualities.fuerza > 3;
@@ -99,7 +114,12 @@ undum.game.situations = {
 	}
 	),
 	suertudo: new undum.SimpleSituation(
-	"<p>Opción suertuda.</p>",
+	"<p>Tienes tanta suerte que los guardias parecen ni siquiera mirar en tu dirección, llegas al despacho del gobernador y te encuentras la llave del despacho en una maceta cercana a la puerta. Entras sin problema.</p>\
+	<p class = transient><img src='media/games/tutorial/trebol.jpg' class='float_left'></p>\
+	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
+	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	",
 	{
 	tags: ["topic"],
         optionText: "Vas confiado en ti mismo y en tu suerte hacia la puerta del despacho del administrador.",
