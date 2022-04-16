@@ -149,7 +149,7 @@ undum.game.situations = {
 		{
 			actions: {
                 "chapa": function (character, system, action) {
-					system.setQuality("chapaDorada", true);
+					system.setQuality("chapaDorada", true);        //FIXME: cambiar esta basura de imagen
                     system.write("<p><img src='media/img/sarpullido.jpg' class='float_left'></p>\
 					<p>Coges lo que tiene en su interior, es una chapa dorada que no\
 					sabes para qué sirve, así que optas por guardarla en tu bolsillo. Al sacar tu\
@@ -283,12 +283,92 @@ undum.game.situations = {
     ),
 	asentamiento: new undum.SimpleSituation(
         "<h1>Asentamiento</h1>\
-		<p>Asentamiento</p>\
+		<p>Te fijas en tu alrededor y te quedas asombrado de la cantidad de luces que hay, de\
+		la gente tan rara que hay para ti haciendo su vida, y de las casas y comercios, que son\
+		chapuzas fabricadas con materiales reciclados. Ahora caes en que la vida en el refugio\
+		era un lujo. También te percatas de un cartel al fondo del asentamiento que pone 'Taberna'.\
+		Estás muerto de sed por lo que decides ir allí para pedir un vaso de agua aunque sea.</p>\
+		<p><img src='media/img/taberna.jpg' class='float_left'></p>\
+		<p>Una vez dentro, vas directamente a la barra y llamas al tabernero. Le pides que te ponga un\
+		vaso de agua porque estás deshidratado, y él te mira detenidamente. Antes de servirte el\
+		vaso de agua, te dice que no eres de por aquí y que deberías de tener cuidado de con quién\
+		te juntas. Seguís hablando un buen rato, parece ser que el tabernero tiene un buen palique\
+		y también te advierte sobre los peligros del yermo de Jaén. Por lo visto, las malas\
+		lenguas hablan de que existen 3 bichos mutantes bastante poderosos que no tienen piedad\
+		con las personas que se acercan a sus guaridas y nadie de todas las personas que han ido\
+		en busca de ellos ha sobrevivido para contarlo.</p>\
+		<p><img src='media/img/olivo.jpg' class='float_left'></p>\
+		<p>El primero de ellos lo encuentras en la ciénaga del Olivar, una ciénaga enorme llena de\
+		olivos y cubierta de una densa neblina de color verde-marrón, situado al norte del\
+		asentamiento donde mucha gente ha desaparecido por intentar robar las tan preciadas\
+		aceitunas y nadie sabe qué ha sido de ellos. Curiosamente, esta zona es la única del yermo\
+		de Jaén con tierra fértil para cultivar, y se cree que lo que esconde la ciénaga es la causa\
+		principal de que no se pueda cultivar bien en todo el resto de la región.</p>\
+		<p><img src='media/img/dragon.gif' class='float_left'></p>\
+		<p>La historia del segundo monstruo mutante es que en una montaña enorme, llamada la\
+		Montaña de Malena, situada no muy lejos del cruce con el Gran Eje, al suroeste de la región\
+		de Jaén y la cuál está plagada de necrófagos, se ha avistado alguna vez una especie de lagarto\
+		con alas volando y escupiendo humo radiactivo. En la cima de aquella montaña está el Gran\
+		Castillo de Lord Malena y se dice que esconde un gran tesoro y el Lagarto solo quiere protegerlo.</p>\
+		<p><img src='media/img/senior.jpg' class='float_left'></p>\
+		</p>El último de ellos, y no por ello menos importante, se encuentra en el Coliseo, un antro de\
+		mala muerte, donde los pobladores de Jaén más desalmados van a ver las sangrientas\
+		batallas entre esclavos por mera diversión. Pues bien, se dice que quién lo regenta es un\
+		ser oscuro que trafica con niños para luego convertirlos en luchadores a muerte,\
+		maltratándolos y esclavizándolos sin ningún tipo de piedad, esos niños crecen sin cultivar\
+		ningún tipo de sentimiento. También, cuentan que utiliza los cuerpos de los luchadores\
+		muertos para experimentar con ellos y convertirlos en androides, una especie de robots,\
+		extirpando las partes de sus cuerpos dañadas.</p>\
+		<p>Después de dejarte la cabeza como un bombo, le das las gracias por el vaso de agua y te\
+		vas de allí pitando para que el tabernero no te hable más ni te cuente leyendas inventadas.\
+		Justo antes de salir de la taberna cruzas miradas con un hombre con bigote y capucha que\
+		está sentado solo, y al segundo te hace un gesto para que te sientes con él.</p>\
+		<p><img src='media/img/encapuchado.jpg' class='float_left'></p>\
+		<p>Puesto que\
+		no tienes nada mejor que hacer vas con él. Te sientas y te fijas en que le falta un brazo,\
+		pero por educación no le preguntas qué le pasó. Lo primero que te pregunta es cuándo te\
+		has escapado; y tú, con cara de sorpresa, le dices que te has escapado hoy mismo del\
+		refugio. Entonces empieza a contarte la historia de un chico que era idéntico a ti que\
+		hace 5 años estuvo en esta misma taberna, lo cual te recuerda a tu hermano mellizo\
+		perdido, y que se fue dirección al sur con una chica del asentamiento. Sorprendido\
+		por esta noticia no dudas en salir en su búsqueda. Antes de irte, el extraño te ofrece una\
+		daga de chatarra diciéndote que él ya no la iba a necesitar más. <a href='./daga'>Coges la daga\
+		</a>sin pensarlo ya que no sabes cuándo te puede venir bien, o <a href='./nada'>no la coges\
+		</a>puesto que tú eres un ser de luz y no tienes intención de hacerle daño a nadie </p>\
 		",
 		{
-			
+			actions: {
+                "daga": function (character, system, action) {
+					system.setQuality("daga", true);
+					system.setCharacterText("<p>Añades daga a tu inventario</p>");
+					system.write("<p>Coges la daga.</p>");
+					system.doLink("finalasentamiento");
+				},
+				"nada": function (character, system, action) {
+					system.write("<p>No coges la daga.</p>");
+					system.doLink("finalasentamiento");
+                }
+			}
 		}
     ),
+	finalasentamiento: new undum.SimpleSituation(
+        "<p>Ya dispuesto para ir en busca de tu hermano, antes de salir por la puerta te fijas en la\
+		caravana de gente que viste anteriormente y te acercas a husmear. Por lo visto, están\
+		preparados ellos también para salir y te enteras de que van en dirección al sur, por lo que\
+		recuerdas las palabras del tabernero hablándote de todos los peligros del yermo de Jaén y\
+		decides preguntarles si puedes ir con ellos. Ellos no dudan en aceptarte ya que toda ayuda\
+		y compañía en estos tiempos postapocalípticos es buena. Sin más dilación <a href='caravana'>ponéis rumbo\
+		hacia el sur.</a></p>",
+		{
+
+		}
+    ),
+	caravana: new undum.SimpleSituation(
+        "<p>CARAVANA</p>",
+		{
+
+		}
+    )
 };
 
 // ---------------------------------------------------------------------------
@@ -319,7 +399,10 @@ undum.game.qualities = {
         "Chapa Dorada", { priority: "0001", group: 'inventario', onDisplay: "&#10003;" }
     ),
 	linterna: new undum.OnOffQuality(
-        "Linterna", { priority: "0002", group: 'inventario', onDisplay: "&#10050;" }
+        "Linterna", { priority: "0002", group: 'inventario', onDisplay: "&#9732;" }
+    ),
+	daga: new undum.OnOffQuality(
+        "Daga", { priority: "0003", group: 'inventario', onDisplay: "&#9876;" }
     ),
 };
 
@@ -346,4 +429,5 @@ undum.game.init = function(character, system) {
 	system.setQuality("chapaDorada", false);
 	system.setQuality("sarpullido", false);
 	system.setQuality("linterna", false);
+	system.setQuality("daga", false);
 };
