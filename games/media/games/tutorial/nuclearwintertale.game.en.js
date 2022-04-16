@@ -402,6 +402,64 @@ undum.game.situations = {
 		<br/>\
 		<p><a  href='gladiador' > Luchar... </a></p>",
     ),
+	
+	gladiador: new undum.SimpleSituation(
+	 "<h1>Combate final</h1> \
+        <p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
+		heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con  \
+		todo para acabar el combate. Pero  gracias a tu inteligencia, durante el combate observas \
+		que el punto débil del enemigo eraun tubo de oxígeno, lo que le permitía al cyborg no tener fatiga \
+		 y estar siempre al 100% durante todo el combate. \
+		 En un momento consigues desconectar el cable que le proporcinaba el oxígeno, por lo que consigues \
+		 ganar el combate atacando y haciéndole que se cansase de manera rápida, ya que no disponía de oxígeno.</p>\
+		<br/>\
+		<p>Te declaran ganador y el líder te pide que le cortes la cabeza al cyborg. Tú no eras ese tipo  \
+		de personas, tú habías combatido por obligación no por gusto, por lo que decides <a  href='./quitar_mascara' >quitarle la \
+		máscara al cyborg </a> para ver quién es o <a  href='./salir_correr' >irte </a> sin saber nada y con la mayor rapidez posible</p>" ,
+    {
+			actions: {
+                "quitar_mascara": function (character, system, action) {
+					 system.setQuality("fuerza", character.qualities.fuerza+7);
+					system.doLink("quitar");
+				},
+				 "salir_correr": function (character, system, action) {
+					 system.setQuality("fuerza", character.qualities.fuerza==0);
+					 system.setQuality("destreza", character.qualities.destreza==0);
+					 system.setQuality("inteligencia", character.qualities.inteligencia==0);
+					 system.setQuality("suerte", character.qualities.suerte==0);
+					system.doLink("salir");
+				}
+                }
+		}
+	),
+	
+	quitar: new undum.SimpleSituation(
+	 "<h1>Quitar la máscara</h1> \
+        <p> Cuando le quitas la máscara al cyborg, descubres que esa persona con la \
+		que habías estado combatiendo era tu hermano, al cual querías encontrar.   \
+		Al descubrir que esa persona era tu hermano, decides no cortarle la cabeza y salir corriendo  \
+		de allí, lo que provoca que el cacique se enfade y decida pelear contra ti. </p>\
+		<br/>\
+		<p>En este combate  tu hermano se une contigo para derrotar los dos al cacique y poder salir  \
+		con vida del coliseo. Tras luchar y derrotar al cacique, tu hermano te explica que lo habían  \
+		chantajeado con luchar para poder liberar a su mujer. Decidís ir a por su mujer y salir los 3 de allí con vida…\
+		UNIÓN CON LA SIGUIENTE SITUACIÓN </p> ",
+		
+    ),
+	
+		salir: new undum.SimpleSituation(
+	 "<h1>Salir corriendo</h1> \
+        <p> El cacique se enfada contigo por no terminar el combate como él mismo había  \
+		querido, cortando la cabeza al perdedor, por lo que decide combatir junto a ti. El   \
+		cyborg se quita la máscara como puede, en ese momento ves que es tu hermano el cyborg contra quien  \
+		habías peleado y decides irte correndo hacia él para abrazarlo y comprobar si está bien después del combate.  \
+		Mientras ibas a ver a tu hermano, sientes como un fuerte latigazo te pegaba en la espaldas, provocando que te  \
+		 dejara totalmente inmovil. Habias descuidado el combate contra el cacique por la situación que estabas viviendo  \
+		 en ese momento. Tras quedarte inmóvil el cacique te mata, porvocando que tu tía se quede sola y tu hermano   \
+		 sin poder salir de allí. </p> ",
+	
+    ),
+	
 };
 
 // ---------------------------------------------------------------------------
