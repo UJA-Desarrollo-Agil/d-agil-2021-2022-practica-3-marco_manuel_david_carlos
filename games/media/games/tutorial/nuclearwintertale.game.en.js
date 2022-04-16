@@ -364,11 +364,44 @@ undum.game.situations = {
 		}
     ),
 	caravana: new undum.SimpleSituation(
-        "<p>CARAVANA</p>",
-		{
-
+	    "<h1>Viaje hacia el sur</h1> \
+        <p>Cuando llevais unos kilómetros de viaje, te percatas que os llevan siguiendo desde el inicio una camioneta,\
+		por lo que decides hablar con el conductor para que le pise all acelerador. A pesar de aumentar la velocidad, la  \
+		camioneta de atrás empieza  también a acelerar, de manera que alcanza a la caravana y colisiona con ella \
+		 de manera que os desplazan hacia fuera de la carretera y varios locos os asaltan. </p> \
+		 <p><img src='media/img/caravana.png' class='float_left'></p>\
+		<p><a  href='./defender' > Intentas defenderte  </a> pero a pesar de tus esfuerzos, eres capturado ya que ellos tenían más fuerza \
+		 o <a  href='combate' >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>\ ",
+{
+			actions: {
+                "defender": function (character, system, action) {
+					 system.setQuality("fuerza", character.qualities.fuerza-2);
+					system.doLink("combate");
+				},
+                }
 		}
-    )
+    ),
+	combate: new undum.SimpleSituation(
+	 "<h1>Coliseo</h1> \
+        <p>Después del ataque, despiertas en el hipogeo del coliseo y te enteras que vas a a\
+		tener que pelear varias rondas. De un momento para otro, te encontrabas de estar \
+		viajando en una caravana a estar en la arena para realizar peleas.<p>\
+		<br/>\
+		<p><img src='media/img/combate.jpg' class='float_left'></p>\
+		<p>En el primer combate era contra 2 saqueadores, a los cuales consigues derrotar gracias a tu\
+		habilidades para encontrar sus puntos débiles, aunque también te dejan muy tocado</p>\
+		<br/>\
+		<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo \
+		salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>  \
+		<br/>\
+		<p>Consigues ganar el segundo combate, el cual era contra un lince mutante pero sabías cómo \
+		atacar gracias a los videojuegos que jugabas cuando eras pequeño. </p>\
+		<br/>\
+		<p>Finalmente te enfrentas con el último combate, un fuerte cyborg que no había perdido \
+		nunca.</p> \
+		<br/>\
+		<p><a  href='gladiador' > Luchar... </a></p>",
+    ),
 };
 
 // ---------------------------------------------------------------------------
