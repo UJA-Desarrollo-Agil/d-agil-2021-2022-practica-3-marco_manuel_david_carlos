@@ -134,7 +134,9 @@ undum.game.situations = {
         "<h1>Camino al asentamiento</h1>\
 		<p>Intrigado por ver qué clase de cosas hay en ese asentamiento, decides poner rumbo hacía\
 		allí. A lo lejos ves como una caravana de personas se acerca al asentamiento con\
-		intención de entrar. Distraído por aquella visión te tropiezas con una raíz mutante que\
+		intención de entrar.</p>\
+		<p><img src='media/img/rodando.gif' class='float_left'></p>\
+		<p>Distraído por aquella visión te tropiezas con una raíz mutante que\
 		nace del suelo con la mala suerte de que caes rodando por una cuesta hacia abajo. Te\
 		levantas del suelo flipando de lo tonto que eres, y te percatas que al fondo del camino\
 		que conecta con la cuesta hay una especie de agujero en la pared. Tienes curiosidad por\
@@ -148,7 +150,8 @@ undum.game.situations = {
 			actions: {
                 "chapa": function (character, system, action) {
 					system.setQuality("chapaDorada", true);
-                    system.write("<p>Coges lo que tiene en su interior, es una chapa dorada que no\
+                    system.write("<p><img src='media/img/sarpullido.jpg' class='float_left'></p>\
+					<p>Coges lo que tiene en su interior, es una chapa dorada que no\
 					sabes para qué sirve, así que optas por guardarla en tu bolsillo. Al sacar tu\
 					mano del bolsillo notas un escozor que te quema la mano. Te fijas más detenidamente\
 					y te está saliendo un sarpullido con no muy buena pinta</p>"); //FIXME: cambiar el css para que p no salga con un hueco al principio
@@ -177,7 +180,8 @@ undum.game.situations = {
                 "linterna": function (character, system, action) {
 					system.setQuality("linterna", true);
                     system.setCharacterText("<p>Añades linterna a tu inventario</p>");
-                    system.write("<p>Decides cogerlo sin tocar nada más. Lo miras bien, observas que\
+                    system.write("<p><img src='media/img/linterna.jpg' class='float_left'></p>\
+					<p>Decides cogerlo sin tocar nada más. Lo miras bien, observas que\
 					el cilindro tiene un botón que no puedes evitar pulsar y ves como sale del aparato un\
 					destello que dura un segundo, parece ser una especie de linterna. Sigues pulsando el\
 					botón pero no notas ningún cambio, así que te lo guardas por si acaso.</p>");
@@ -194,7 +198,9 @@ undum.game.situations = {
 	entradaasentamiento: new undum.SimpleSituation(
         "<h1>Entrada al asentamiento</h1>\
 		<p>Te pones de nuevo en marcha hasta llegar al asentamiento, y una vez allí, te encuentras\
-		con los guardianes de la puerta que te miran de arriba a abajo. Al verte con esa ropa\
+		con los guardianes de la puerta que te miran de arriba a abajo.</p>\
+		<p><img src='media/img/puertaAsentamiento.png' class='float_left'></p>\
+		<p>Al verte con esa ropa\
 		característica del refugio donde has vivido toda tu vida, se miran con una sonrisa malévola y\
 		te dicen que para pasar necesitas pagar la entrada. No esperabas que hubiera que pagar\
 		para entrar, por lo que echas mano a <a class='once' href='./bolsillo'>tus bolsillos</a>.\
@@ -235,8 +241,9 @@ undum.game.situations = {
 					system.write("<p> Después de tu primer intento fallido de entrar en el asentamiento, buscas otra manera\
 						de colarte. Las murallas del asentamiento están construidas con chatarra y madera\
 						en mal estado como si de una barricada mal hecha se tratara, por lo que decides rodear\
-						la muralla en busca de alguna apertura lo suficientemente grande para colarte.\
-						Rodeas las murallas hasta que ves un agujero que es bastante pequeño pero que con un\
+						la muralla en busca de alguna apertura lo suficientemente grande para colarte.</p>\
+						<p><img src='media/img/agujero.jpg' class='float_left'></p>\
+						<p>Rodeas las murallas hasta que ves un agujero que es bastante pequeño pero que con un\
 						poquito de esfuerzo crees que puedes entrar. Así pues, miras a tu alrededor antes de\
 						entrar por si alguien te puede estar viendo. Al no haber moros en la costa procedes a\
 						colarte por el agujero con precaución de no pincharte con ningún hierro o madera\
