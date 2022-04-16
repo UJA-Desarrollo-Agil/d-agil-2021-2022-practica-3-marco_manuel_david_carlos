@@ -413,6 +413,7 @@ undum.game.situations = {
 		 En un momento consigues desconectar el cable que le proporcinaba el oxígeno, por lo que consigues \
 		 ganar el combate atacando y haciéndole que se cansase de manera rápida, ya que no disponía de oxígeno.</p>\
 		<br/>\
+		 <p><img src='media/img/muerte.jpeg' class='float_left'></p>\
 		<p>Te declaran ganador y el líder te pide que le cortes la cabeza al cyborg. Tú no eras ese tipo  \
 		de personas, tú habías combatido por obligación no por gusto, por lo que decides <a  href='./quitar_mascara' >quitarle la \
 		máscara al cyborg </a> para ver quién es o <a  href='./salir_correr' >irte </a> sin saber nada y con la mayor rapidez posible</p>" ,
