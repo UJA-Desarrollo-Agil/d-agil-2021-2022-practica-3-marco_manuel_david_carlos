@@ -443,11 +443,40 @@ undum.game.situations = {
 		<br/>\
 		<p>En este combate  tu hermano se une contigo para derrotar los dos al cacique y poder salir  \
 		con vida del coliseo. Tras luchar y derrotar al cacique, tu hermano te explica que lo habÃ­an  \
-		chantajeado con luchar para poder liberar a su mujer. DecidÃ­s ir a por su mujer y salir los 3 de allÃ­ con vidaâ€¦\
-		UNIÃ“N CON LA SIGUIENTE SITUACIÃ“N </p> ",
+		chantajeado con luchar para poder <a  href='escape' >liberar a su mujer </a>.\
+		</p> ",
 		
-    ),
-	
+	),
+
+	escape: new undum.SimpleSituation(
+		"<h1>Escape del coliseo</h1> \
+        <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
+		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >"
+
+	),
+	convencer: new undum.SimpleSituation(
+		"<h1>Escape del coliseo</h1> \
+        <p>Intentas convencer a tu hermano de huir y buscar ayuda para rescatar a su esposa pero el se niega y corre en su búsqueda perdiendose en la multitud. Intentas \
+		ir tras el pero lo has perdido de vista. No quieres volver a perder a tu hermano así que lo buscas sin parar hasta que el revuelo se calma. Aprovechando que todo está más calmado unos soldados se acercan y te detienen.</p > "
+
+	),
+	rescate: new undum.SimpleSituation(
+		"<h1>Escape del coliseo</h1> \
+        <p>Decides acompañarle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
+		{
+			actions: {
+				"abrir": function (character, system, action) {
+					if (character.qualities.fuerza > 2) {
+						system.write("<p> Consigues abrir la celda rompiendo los barrotes que estaban en mal estado y salís huyendo del coliseo hasta llegar a un lugar seguro, decidís <a href='descanso'>Descansar ahí</a>.</p>");
+					} else {
+						system.write("<p>Intentas romper unos barrotes que están en mal estado pero no tienes fuerza suficiente. Unos soldados que corrían para calmar la revuelta os ven, os detienen y os meten en la celda con la mujer de tu hermano</p>");
+					}
+				}
+			}
+		}
+
+	),
+
 		salir: new undum.SimpleSituation(
 	 "<h1>Salir corriendo</h1> \
         <p> El cacique se enfada contigo por no terminar el combate como Ã©l mismo habÃ­a  \
