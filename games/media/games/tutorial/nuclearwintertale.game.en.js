@@ -478,6 +478,7 @@ undum.game.situations = {
 	),
 	rescate: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
+		<img src='media/img/celda.jpg' width= 500 class= 'float_left' >\
         <p>Decides acompañarle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
 		{
 			actions: {
@@ -494,6 +495,7 @@ undum.game.situations = {
 	),
 	descanso: new undum.SimpleSituation(
 		"<h1>Claro del bosque</h1> \
+		<img src='media/img/bosque.jpg' width= 500 class= 'float_left' >\
         <p>Os sentais sobre un tronco caido. Aprovechais el momento de calma para observar mejor el entorno y veis que os encontrais en un bosque rodeado de arboles. debes <a  href='./buscar_madera' >buscar madera </a>, \
 		<a  href='./buscar_piedras' >buscar piedras</a> e intentar <a  href='./hacer_fuego' >hacer fuego</a></p >.", {
 		actions: {
