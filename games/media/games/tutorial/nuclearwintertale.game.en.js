@@ -476,7 +476,6 @@ undum.game.situations = {
 		}
 
 	),
-
 		salir: new undum.SimpleSituation(
 	 "<h1>Salir corriendo</h1> \
         <p> El cacique se enfada contigo por no terminar el combate como él mismo había  \
