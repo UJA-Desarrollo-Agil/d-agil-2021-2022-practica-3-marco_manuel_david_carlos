@@ -9,7 +9,9 @@ Juego conversacional creado en el framework Undum para la asignatura Desarrollo 
  1. [Descripción historia conversacional](#historia)
  2. [URL de Trello](#Trello)
  3. [Sprint review](#Review)
- 4. [Integrantes del proyecto](#Evolución)
+ 4. [Sprint Retrospective](#Retro)
+ 5. [Evolución del tablero Trello](#Tablero)
+ 6. [Integrantes del proyecto](#Evolución)
  
 
 
@@ -53,6 +55,22 @@ Además de eso, añadir diálogos, música, cambios
 
 - La idea sería dedicar las primeras semanas a terminar las situaciones de la historia y la última semana y media en mejorar la calidad de todo y añadir nuevas mecánicas.
 
+<a name="Retro"></a>
+## Sprint Retrospective
+
+<a name="Tablero"></a>
+## Evolución del tablero de Trello
+
+- **Tablero en el primer momento**
+<img src="capturas/06-04-22.png" alt="imagen 3" title="Imagen 3">
+
+
+- **Tablero después del Product backlog Refinement**
+<img src="capturas/11-04-22.JPG" alt="imagen 3" title="Imagen 3">
+
+
+- **Tablero terminado el primer sprint**
+<img src="capturas/final.png" alt="imagen 3" title="Imagen 3">
 
 
 <a name="Evolución"></a>
