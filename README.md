@@ -72,7 +72,6 @@ Se pueden usar objetos cosa necesaria para el juego.
 El software es funcional tiene bastantes finales y no te puedes quedar bloqueado en ninguna parte.
 
 #### ¿Qué ha ido mal?
-
 Hemos incluido un solo diálogo.
 
 No hemos tenido tiempo de cambiar el css de los textos ni de las ventanas. Pues hemos valorado más dar un software funcional con una historia con un inicio y final, creemos que esta parte se puede desarrollar más adelante.
@@ -84,8 +83,18 @@ Hay objetos sin uso claro actualmente.
 Hay partes de la historia que se podrían mejorar a nivel desarrollo.
 
 #### ¿Qué se puede mejorar?
+El diálogo incluido se puede mejorar para aclarar el personaje que habla en cada momento.
+
+Sobre el css lo pensamos priorizar en los siguientes Sprints para completarlo cuanto antes.
+
+Se puede dar más calidad y desarrollo a ciertas partes de la historia que están narradas muy de pasada o con poca acción para la importancia del momento.
 
 #### ¿Cómo se pueden mejorar?
+El diálogo se puede mejorar añadiendo un texto con el nombre del personaje que habla o incluyendo una cita del estilo “El protagonista dijo:”
+
+Para completar el css con tiempo será la primera actividad que tendremos en cuenta a la hora de trabajar.
+
+Se pueden añadir situaciones o alargar las ya hechas para dar mayor profundidad o acción a ciertas partes de la historia.
 
 
 <a name="Tablero"></a>
