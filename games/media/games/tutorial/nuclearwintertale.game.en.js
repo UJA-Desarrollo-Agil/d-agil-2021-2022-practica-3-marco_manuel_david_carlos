@@ -285,7 +285,7 @@ undum.game.situations = {
 						el hombro y tu traje del refugio con un metal afilado que sobresalía de la muralla. Te duele\
 						y notas como tu brazo ha perdido fuerza\
 						pero no le das más importancia, lo importante es que has conseguido entrar</p>");
-						system.setQuality("fuerza", character.qualities.skill-1);
+						system.setQuality("fuerza", character.qualities.fuerza-1);
 						system.setCharacterText("<p>Has perdido fuerza por la herida</p>");
 						system.write("<p><a href='asentamiento'>Sigamos</a></p>");
 					}
@@ -440,10 +440,6 @@ undum.game.situations = {
 					system.doLink("quitar");
 				},
 				 "salir_correr": function (character, system, action) {
-					 system.setQuality("fuerza", character.qualities.fuerza==0);
-					 system.setQuality("destreza", character.qualities.destreza==0);
-					 system.setQuality("inteligencia", character.qualities.inteligencia==0);
-					 system.setQuality("suerte", character.qualities.suerte==0);
 					system.doLink("salir");
 				}
                 }
@@ -459,21 +455,23 @@ undum.game.situations = {
 		<br/>\
 		<p>En este combate  tu hermano se une contigo para derrotar los dos al cacique y poder salir  \
 		con vida del coliseo. Tras luchar y derrotar al cacique, tu hermano te explica que lo habían  \
-		chantajeado con luchar para poder <a  href='escape' >liberar a su mujer </a>.\
+		chantajeado con luchar para poder <a  href='escape1' >liberar a su mujer </a>.\
 		</p> ",
 		
 	),
 
-	escape: new undum.SimpleSituation(
+	escape1: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
-        <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
+        <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud, al saber de la muerte del cacique los esclavos se han rebelado y hay luchas internas entre los saqueadores. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
 		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >"
 
 	),
 	convencer: new undum.SimpleSituation(
-		"<h1>Escape del coliseo</h1> \
-        <p>Intentas convencer a tu hermano de huir y buscar ayuda para rescatar a su esposa pero el se niega y corre en su búsqueda perdiendose en la multitud. Intentas \
-		ir tras el pero lo has perdido de vista. No quieres volver a perder a tu hermano así que lo buscas sin parar hasta que el revuelo se calma. Aprovechando que todo está más calmado unos soldados se acercan y te detienen.</p > "
+		"<h1>BAD ENDING: Escape del coliseo</h1> \
+        <p>Intentas convencer a tu hermano de huir y buscar ayuda para rescatar a su esposa pero él se niega y corre en su búsqueda perdiendose en la multitud. Intentas \
+		ir tras él pero lo has perdido de vista. No quieres volver a perder a tu hermano así que lo buscas sin parar hasta que el revuelo se calma. Aprovechando que todo está más calmado unos soldados se acercan y te detienen, un nuevo cacique se alza y te toman como nuevo campeón.</p>\
+		<p><img src='media/img/nuevogladiador.jpg' class='float_left'></p>\
+		"
 
 	),
 	rescate: new undum.SimpleSituation(
@@ -486,7 +484,7 @@ undum.game.situations = {
 					if (character.qualities.destreza > 0) {
 						system.write("<p> Consigues abrir la celda rompiendo los barrotes que estaban en mal estado y salís huyendo del coliseo hasta llegar a un lugar seguro, decidís <a href='descanso'>Descansar ahí</a>.</p>");
 					} else {
-						system.write("<p>Intentas romper unos barrotes que están en mal estado pero no tienes fuerza suficiente. Unos soldados que corrían para calmar la revuelta os ven, os detienen y os meten en la celda con la mujer de tu hermano</p>");
+						system.write("<p>Intentas romper unos barrotes que están en mal estado pero no tienes fuerza suficiente. Unos soldados que corrían para calmar la revuelta os ven, os detienen y <a href='mfin'>os meten en la celda con la mujer de tu hermano.</a></p>");
 					}
 				}
 			}
@@ -512,8 +510,9 @@ undum.game.situations = {
 					system.setQuality("piedra", false);
 					system.setQuality("madera", false);
 					system.write("<p class= transient><img src='media/img/hoguera.jpg' width = 500 class='float_left'></p>")
-					system.write("<p>Junto a la luz tenue de la hoguera le preguntas a tu hermano sobre como llego al coliseo. Este te cuenta que al salir del refugio llegar a un asentamiento que se encontraba al sur de este. Vivian una vida tranquila, aunque con las obvias dificultades que este nuevo mundo impone.\
-					entre esas dificultades se encontraban los saqueadores, los cuales un dia llegaron al asentamiento, arrasando con todo y esclavizando a las personas que alli vivian. En su caso fue vendido a los gerentes del coliseo por dos naranjas y cuatro sandias.<\p>");
+					system.write("<p>Junto a la luz tenue de la hoguera le preguntas a tu hermano sobre como llego al coliseo. Este te cuenta que tras salir del refugio y llegó a un asentamiento que se encontraba al sur de este. Vivía una vida tranquila, aunque con las obvias dificultades que este nuevo mundo impone.\
+					En el asentamiento conoció a Sofía, su pareja, hija de uno de los granjeros de la zona. Al ver como la tierra no era muy fértil y cada vez producía menos comida decidieron irse hacia el sur en busca de mejores condiciones pero cuando llevaban algunos kilómetros los saqueadores del Cacique los asaltaron y tomaron prisioneros, a tu hermano lo usaron como gladiador y con toda su fuerza de voluntad y física luchó por poder volver a ver a su amada.\
+					Ellos además te cuenta de como era la vida en el asentamiento antes de su secuestro y tú te das cuenta que antes eran felices pese a las dificultades. Decides <a href='bfin'>ir con ellos hacia el asentamiento.</a> o que <a href='nfin'>este no es tu lugar y que quieres seguir explorando mundo.</a><\p>");
 				} else if (!character.qualities.madera && character.qualities.piedra) {
 					system.write("<p>Aun necesitas <a  href='./buscar_madera' >buscar madera</a><\p>");
 				} else if (character.qualities.madera && !character.qualities.piedra) {
@@ -527,18 +526,40 @@ undum.game.situations = {
 
 	),
 		salir: new undum.SimpleSituation(
-	 "<h1>Salir corriendo</h1> \
-        <p> El cacique se enfada contigo por no terminar el combate como él mismo había  \
-		querido, cortando la cabeza al perdedor, por lo que decide combatir junto a ti. El   \
-		cyborg se quita la máscara como puede, en ese momento ves que es tu hermano el cyborg contra quien  \
-		habías peleado y decides irte correndo hacia él para abrazarlo y comprobar si está bien después del combate.  \
-		Mientras ibas a ver a tu hermano, sientes como un fuerte latigazo te pegaba en la espaldas, provocando que te  \
-		 dejara totalmente inmovil. Habias descuidado el combate contra el cacique por la situación que estabas viviendo  \
+	 "<h1>BAD ENDING: Salir corriendo</h1> \
+        <p> El cacique se enfada contigo por no terminar el combate como él quería  \
+		cortando la cabeza del perdedor, por lo que decide combatir contra ti. El   \
+		cyborg se quita la máscara como puede, revelando que es tu hermano,  \
+		decides irte correndo hacia él para abrazarlo y comprobar si está bien después del combate. </p> \
+		<p><img src='media/img/muertef.jpg' class='float_left'></p>\
+		<p>Mientras ibas hacia tu hermano, sientes como un fuerte latigazo te pegaba en la espaldas, provocando que te  \
+		 quedes totalmente inmovil. Habias descuidado el combate contra el cacique por la situación que estabas viviendo  \
 		 en ese momento. Tras quedarte inmóvil el cacique te mata, provocando que tu tía se quede sola y tu hermano   \
-		 sin poder salir de allí. </p> ",
+		 no pueda salir de allí. </p>\
+		 ",
 	
     ),
-	
+	bfin: new undum.SimpleSituation(
+	"<h1>GOOD ENDING: Te vas con tu hermano</h1>\
+	<p>Te vas con tu hermano y su pareja al asentamiento, allí el padre de ella os recibe con gran alegría aunque en este tiempo ha perdido una mano por culpa de los animales salvajes.\
+	Tu hermano y su pareja deciden que se van a quedar en la granja ayudando y tú te sientes uno más con ellos así que decides quedarte con ellos como un granjero más en esta tierra. Mientras tanto mucho de los esclavos y sirvientes del antiguo cacique llegan al asentamiento dispuestos a recuperar sus vidas.\
+	</p>\
+	<p><img src='media/img/farm.jpg' class='float_left'></p>\
+	",
+	),
+	nfin: new undum.SimpleSituation(
+	"<h1>NEUTRAL ENDING: Sigues tu camino de explorador del yermo.</h1>\
+	<p>Te despides de tu hermano y su pareja, les prometes que intentarás volver aunque no es algo seguro, tú no sientes que este sea tu lugar y quieres seguir explorando y haciendo bien por este desolado yermo. Ellos te dan su bendición y sus mejores deseos mientras partes hacia lo desconocido.</p>\
+	<p><img src='media/img/ending.gif' class='float_left'></p>\
+	"
+	),
+	mfin: new undum.SimpleSituation(
+	"<h1>BAD ENDING: Os devoran en la arena.</h1>\
+	<p>Pese a lo cerca que os quedásteis de escapar de esta pesadilla los guardias no os dan tregua, os encadenan a las paredes y os vigilan día y noche. El nuevo cacique os quiere trofeo para su primer gran juego y no os va a dejar escapar. </p>\
+	<p><img src='media/img/martires.jpg' class='float_left'></p>\
+	<p>A los pocos días os sacan de allí y os atan en mitad de la arena para que os devoren las bestias del yermo como venganza por la huída y la muerte del anterior cacique. Además de vosotros hay un grupo de esclavos rebeldes encadenados. El cacique da un pomposo discurso y abren las celdas de los animales de las que salen grotescas figuras. Al poco tiempo no queda nadie de tu familia salvo tu tía con vida.</p>\
+	",
+	)
 };
 
 // ---------------------------------------------------------------------------
