@@ -8,7 +8,9 @@ Juego conversacional creado en el framework Undum para la asignatura Desarrollo 
 ## Índice
  1. [Descripción historia conversacional](#historia)
  2. [URL de Trello](#Trello)
- 3. [Integrantes del proyecto](#Evolución)
+ 3. [Sprint review](#Review)
+ 4. [Integrantes del proyecto](#Evolución)
+ 
 
 
 <a name="historia"></a>
@@ -26,6 +28,28 @@ Siempre te habías sentido curioso con el exterior, aunque según la historia de
 ## URL del tablero Trello
 
 URL de Trello: https://trello.com/b/XQQRDCRW/pr%C3%A1ctica-3-d%C3%A1gil
+
+
+<a name="Review"></a>
+## Sprint Review
+
+En cuanto al Sprint Backlog se ha elegido un reparto más o menos equitativo de valor entre los dos Sprints. 
+Hemos cumplido prácticamente todas las historias de usuario, completando primero las historias con un mayor valor, excepto la historia de usuario
+donde el cliente quiere nuevas situaciones en cada versión del juego.
+Surgieron problemas como muchas faltas de ortografía y se solucionaron dando un repaso general.
+
+Hubo un atasco a la hora de desarrollar la historia de forma orgánica aunque al final salió correctamente de forma coherente.
+
+Uno de los problemas que nos surgió fue que muchas de las escenas finales, las cuales no permiten acceder a otra situación, no dejaban claro que eran escenas finales. Este problema lo hemos solucionado añadiendo un resultado a cada situación final, con su propio indicador de final e imagen.
+
+Otro problema que tuvimos fue repartir la carga de trabajo. Para repartirla de forma igualitaria dividimos las tareas en “subtareas” para cada persona del grupo, por ejemplo en vez de encargar las nueve situaciones a una persona, le encargamos un número equitativo de situaciones a cada miembro del equipo.
+
+Tendremos 20 días para dar una versión definitiva del juego, es algo que vemos posible añadiendo las mejoras mecánicas y lo que consideramos que falta de la historia, sobre todo mejorar la calidad de lo ya hecho y mantenerla para lo nuevo que se añada, intentando de unificar las formas del juego para que no haya unas diferencias significativas a la hora de tomar decisiones o tomar objetos dentro del juego y llevar a cabo diálogos que se entiendan y sean lo más resolutivos posibles.
+
+Además de eso, añadir diálogos, música, cambios 
+
+La idea sería dedicar las primeras semanas a terminar las situaciones de la historia y la última semana y media en mejorar la calidad de todo y añadir nuevas mecánicas.
+
 
 
 <a name="Evolución"></a>
