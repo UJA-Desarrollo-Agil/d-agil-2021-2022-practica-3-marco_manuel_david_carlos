@@ -57,6 +57,36 @@ Además de eso, añadir diálogos, música, cambios
 
 <a name="Retro"></a>
 ## Sprint Retrospective
+#### ¿Qué ha ido bien?
+
+Reparto de tareas, esto nos ha permitido que no se haya quedado ninguna parte de la historia que calculamos sin hacer.
+
+Los stats y decisiones funcionan perfectamente, eliges al principio e influyen en toda la historia, no puedes quedarte a medias en una historia atascada.
+
+Creo que la historia ha quedado bastante redonda, clara e interesante.
+
+Todos los desarrolladores han tomado parte creativa en el desarrollo de la historia.
+
+Se pueden usar objetos cosa necesaria para el juego.
+
+El software es funcional tiene bastantes finales y no te puedes quedar bloqueado en ninguna parte.
+
+#### ¿Qué ha ido mal?
+
+Hemos incluido un solo diálogo.
+
+No hemos tenido tiempo de cambiar el css de los textos ni de las ventanas. Pues hemos valorado más dar un software funcional con una historia con un inicio y final, creemos que esta parte se puede desarrollar más adelante.
+
+No hemos unificado del todo la forma en la que queremos ciertas funcionalidades.
+
+Hay objetos sin uso claro actualmente.
+
+Hay partes de la historia que se podrían mejorar a nivel desarrollo.
+
+#### ¿Qué se puede mejorar?
+
+#### ¿Cómo se pueden mejorar?
+
 
 <a name="Tablero"></a>
 ## Evolución del tablero de Trello
