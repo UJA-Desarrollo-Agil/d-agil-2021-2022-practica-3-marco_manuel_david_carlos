@@ -482,7 +482,7 @@ undum.game.situations = {
 		{
 			actions: {
 				"abrir": function (character, system, action) {
-					if (character.qualities.fuerza > 2) {
+					if (character.qualities.destreza > 0) {
 						system.write("<p> Consigues abrir la celda rompiendo los barrotes que estaban en mal estado y salís huyendo del coliseo hasta llegar a un lugar seguro, decidís <a href='descanso'>Descansar ahí</a>.</p>");
 					} else {
 						system.write("<p>Intentas romper unos barrotes que están en mal estado pero no tienes fuerza suficiente. Unos soldados que corrían para calmar la revuelta os ven, os detienen y os meten en la celda con la mujer de tu hermano</p>");
@@ -490,6 +490,38 @@ undum.game.situations = {
 				}
 			}
 		}
+
+	),
+	descanso: new undum.SimpleSituation(
+		"<h1>Claro del bosque</h1> \
+        <p>Os sentais sobre un tronco caido. Aprovechais el momento de calma para observar mejor el entorno y veis que os encontrais en un bosque rodeado de arboles. debes <a  href='./buscar_madera' >buscar madera </a>, \
+		<a  href='./buscar_piedras' >buscar piedras</a> e intentar <a  href='./hacer_fuego' >hacer fuego</a></p >.", {
+		actions: {
+			"buscar_madera": function (character, system, action) {
+				system.setQuality("madera", true);
+				system.write("<p>Tras caminar unos cuantos pasos encuentras unas ramas. Son un poco raras, debe ser porque han crecido sobre un liquido morado desconocido, pero supones que te serviran.<\p>");
+			},
+			"buscar_piedras": function (character, system, action) {
+				system.setQuality("piedra", true);
+				system.write("<p>Te acercas a un riachuelo y encuentras dos brillantes rocas que parece que con el choque adecuado pueden producir una chispa<\p>.")
+			},
+			"hacer_fuego": function (character, system, action) {
+				if (character.qualities.madera && character.qualities.piedra) {
+					system.setQuality("piedra", false);
+					system.setQuality("madera", false);
+					system.write("<p class= transient><img src='media/img/hoguera.jpg' width = 500 class='float_left'></p>")
+					system.write("<p>Junto a la luz tenue de la hoguera le preguntas a tu hermano sobre como llego al coliseo. Este te cuenta que al salir del refugio llegar a un asentamiento que se encontraba al sur de este. Vivian una vida tranquila, aunque con las obvias dificultades que este nuevo mundo impone.\
+					entre esas dificultades se encontraban los saqueadores, los cuales un dia llegaron al asentamiento, arrasando con todo y esclavizando a las personas que alli vivian. En su caso fue vendido a los gerentes del coliseo por dos naranjas y cuatro sandias.<\p>");
+				} else if (!character.qualities.madera && character.qualities.piedra) {
+					system.write("<p>Aun necesitas <a  href='./buscar_madera' >buscar madera</a><\p>");
+				} else if (character.qualities.madera && !character.qualities.piedra) {
+					system.write("<p>Aun necesitas <a  href='./buscar_piedras' >buscar piedras</a><\p>");
+				} else {
+					system.write("<p>Necesitas <a  href='./buscar_madera' >recoger madera</a> y <a  href='./buscar_piedras' >recoger piedras</a> para hacer un fuego<\p>");
+				}
+			}
+		}
+	}
 
 	),
 		salir: new undum.SimpleSituation(
@@ -539,10 +571,16 @@ undum.game.qualities = {
     ),
 	daga: new undum.OnOffQuality(
         "Daga", { priority: "0003", group: 'inventario', onDisplay: "&#9876;" }
-    ),
+	),
+	madera: new undum.OnOffQuality(
+		"Madera", { priority: "0006", group: 'inventario', onDisplay: "&#10003;" }
+	),
+	piedra: new undum.OnOffQuality(
+		"Piedra", { priority: "0007", group: 'inventario', onDisplay: "&#10003;" }
+	),
 	stats: new undum.NumericQuality(
 	"Stats a Repartir",{priority:"0005",group:'stats'}
-	),
+	)
 };
 
 // ---------------------------------------------------------------------------
@@ -570,4 +608,6 @@ undum.game.init = function(character, system) {
 	system.setQuality("sarpullido", false);
 	system.setQuality("linterna", false);
 	system.setQuality("daga", false);
+	system.setQuality("piedra", false);
+	system.setQuality("madera", false);
 };
