@@ -43,23 +43,34 @@ undum.game.situations = {
 		Pero tú por tu parte siempre has pensado más allá de las paredes del refugio y te han llamado la atención las historias de antes de la guerra que se contaban dentro del refugio.</p>\
 		<p class = transient><img src='media/games/tutorial/refugio.jpg' class='float_left'></p>\
 		<p>Con todo esto hace ya varios años que sabes por rumores de los guardias del refugio que el gobernador del refugio periódicamente comercia con caravanas del exterior y que este es relativamente habitable, pues si no, nadie quedaría fuera para comerciar.\
-		Desde hace semanas llevas preparándote para escapar de aquí con tu <a href='./mejora-fuerza'>Fuerza</a> o <a href='./mejora-destreza'>Destreza </a>\
-		y tu <a href='./mejora-inteligencia'>Inteligencia</a> o <a href='./mejora-suerte'>Suerte</a> además de varias herramientas preparas un <a href='hub'>plan de huída.</a></p>\
-		<p><a href='caminoasentamiento1'>Camino al asentamiento</a></p>\
+		Desde hace semanas llevas preparándote para escapar de aquí con tu <a href='./mejora-fuerza'>Fuerza</a>, <a href='./mejora-destreza'>Destreza</a>,\
+		<a href='./mejora-inteligencia'>Inteligencia</a> y <a href='./mejora-suerte'>Suerte</a> además de varias herramientas preparas un <a href='hub'>plan de huída.</a></p>\
 		",
 		{
 			actions: {
                 'mejora-fuerza': function(character, system, action) {
-                    system.setQuality("fuerza", character.qualities.fuerza+4);
+					if(character.qualities.stats>0){
+                    system.setQuality("fuerza", character.qualities.fuerza+1);
+					system.setQuality("stats", character.qualities.stats-1);
+					}
                 },
 				'mejora-destreza': function(character, system, action) {
-                    system.setQuality("destreza", character.qualities.destreza+4);
+					if(character.qualities.stats>0){
+                    system.setQuality("destreza", character.qualities.destreza+1);
+					system.setQuality("stats", character.qualities.stats-1);
+					}
                 },
 				'mejora-inteligencia': function(character, system, action) {
-                    system.setQuality("inteligencia", character.qualities.inteligencia+4);
+					if(character.qualities.stats>0){
+                    system.setQuality("inteligencia", character.qualities.inteligencia+1);
+					system.setQuality("stats", character.qualities.stats-1);
+					}
                 },
 				'mejora-suerte': function(character, system, action) {
-                    system.setQuality("suerte", character.qualities.suerte+4);
+					if(character.qualities.stats>0){
+                    system.setQuality("suerte", character.qualities.suerte+1);
+					system.setQuality("stats", character.qualities.stats-1);
+					}
                 }
             }
 			
@@ -70,7 +81,7 @@ undum.game.situations = {
 	<p class = transient><img src='media/games/tutorial/ganzua.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
-	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
 	tags: ["topic"],
@@ -86,7 +97,7 @@ undum.game.situations = {
 	<p class = transient><img src='media/games/tutorial/cientifico.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
-	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
 	tags: ["topic"],
@@ -102,7 +113,7 @@ undum.game.situations = {
 	<p class = transient><img src='media/games/tutorial/fuerza.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
-	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
 	tags: ["topic"],
@@ -118,7 +129,7 @@ undum.game.situations = {
 	<p class = transient><img src='media/games/tutorial/trebol.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
-	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al exterior ves por primera vez la luz solar a poco de anochecer. </p>\
+	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
 	tags: ["topic"],
@@ -129,7 +140,12 @@ undum.game.situations = {
             },
 	}
 	),
-	
+	salida: new undum.SimpleSituation(
+	"<p>Al ver el sol ponerse por primera vez te quedas paralizado viendo algo tan bonito por primera vez pues solo sabías que eso ocurría por los libros que has leído. Al poco de terminar el anochecer ves salir la luna llena y piensas en tu hermano perdido y en las ganas que tienes de explorar ese enorme aunque ruinoso mundo. A lo lejos ves unas luces de lo que parece ser un asentamiento.</p>\
+	<p><img src='media/img/asentamiento.jpg' class='float_left'></p>\
+	<p><a href='caminoasentamiento1'>Te pones rumbo hacia las luces que ves a lo lejos con cuidado.</a></p>\
+	",
+	),
 	caminoasentamiento1: new undum.SimpleSituation(
         "<h1>Camino al asentamiento</h1>\
 		<p>Intrigado por ver qué clase de cosas hay en ese asentamiento, decides poner rumbo hacía\
@@ -155,7 +171,7 @@ undum.game.situations = {
 					sabes para qué sirve, así que optas por guardarla en tu bolsillo. Al sacar tu\
 					mano del bolsillo notas un escozor que te quema la mano. Te fijas más detenidamente\
 					y te está saliendo un sarpullido con no muy buena pinta</p>"); //FIXME: cambiar el css para que p no salga con un hueco al principio
-					system.setQuality("destreza", character.qualities.skill-1);  //FIXME: cambiar la iluminacion a rojo 
+					if(character.qualities.skill>0){system.setQuality("destreza", character.qualities.skill-1);}  //FIXME: cambiar la iluminacion a rojo 
 					system.setQuality("sarpullido", true);
 					system.setCharacterText("<p>Añades chapa dorada a tu inventario</p>\
 					<p>Conseguiste un sarpullido radiactivo, enhorabuena</p>\
@@ -366,9 +382,9 @@ undum.game.situations = {
 	caravana: new undum.SimpleSituation(
 	    "<h1>Viaje hacia el sur</h1> \
         <p>Cuando llevais unos kilómetros de viaje, te percatas que os llevan siguiendo desde el inicio una camioneta,\
-		por lo que decides hablar con el conductor para que le pise all acelerador. A pesar de aumentar la velocidad, la  \
+		por lo que decides hablar con el conductor para que le pise al acelerador. A pesar de aumentar la velocidad, la  \
 		camioneta de atrás empieza  también a acelerar, de manera que alcanza a la caravana y colisiona con ella \
-		 de manera que os desplazan hacia fuera de la carretera y varios locos os asaltan. </p> \
+		 de manera que os desplazan hacia fuera de la carretera y varios locos de la carretera os asaltan. </p> \
 		 <p><img src='media/img/caravana.png' class='float_left'></p>\
 		<p><a  href='./defender' > Intentas defenderte  </a> pero a pesar de tus esfuerzos, eres capturado ya que ellos tenían más fuerza \
 		 o <a  href='combate' >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>\ ",
@@ -450,26 +466,26 @@ undum.game.situations = {
 
 	escape: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
-        <p>Aprovech�is el alboroto que se ha creado por la pelea para huir entre la multitud. Tu hermano te dice que cree saber donde est� su amada y quiere ir a buscarla, \
-		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompa�arle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >"
+        <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
+		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >"
 
 	),
 	convencer: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
-        <p>Intentas convencer a tu hermano de huir y buscar ayuda para rescatar a su esposa pero el se niega y corre en su b�squeda perdiendose en la multitud. Intentas \
-		ir tras el pero lo has perdido de vista. No quieres volver a perder a tu hermano as� que lo buscas sin parar hasta que el revuelo se calma. Aprovechando que todo est� m�s calmado unos soldados se acercan y te detienen.</p > "
+        <p>Intentas convencer a tu hermano de huir y buscar ayuda para rescatar a su esposa pero el se niega y corre en su búsqueda perdiendose en la multitud. Intentas \
+		ir tras el pero lo has perdido de vista. No quieres volver a perder a tu hermano así que lo buscas sin parar hasta que el revuelo se calma. Aprovechando que todo está más calmado unos soldados se acercan y te detienen.</p > "
 
 	),
 	rescate: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
-        <p>Decides acompa�arle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
+        <p>Decides acompañarle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
 		{
 			actions: {
 				"abrir": function (character, system, action) {
 					if (character.qualities.fuerza > 2) {
-						system.write("<p> Consigues abrir la celda rompiendo los barrotes que estaban en mal estado y sal�s huyendo del coliseo hasta llegar a un lugar seguro, decid�s <a href='descanso'>Descansar ah�</a>.</p>");
+						system.write("<p> Consigues abrir la celda rompiendo los barrotes que estaban en mal estado y salís huyendo del coliseo hasta llegar a un lugar seguro, decidís <a href='descanso'>Descansar ahí</a>.</p>");
 					} else {
-						system.write("<p>Intentas romper unos barrotes que est�n en mal estado pero no tienes fuerza suficiente. Unos soldados que corr�an para calmar la revuelta os ven, os detienen y os meten en la celda con la mujer de tu hermano</p>");
+						system.write("<p>Intentas romper unos barrotes que están en mal estado pero no tienes fuerza suficiente. Unos soldados que corrían para calmar la revuelta os ven, os detienen y os meten en la celda con la mujer de tu hermano</p>");
 					}
 				}
 			}
@@ -485,7 +501,7 @@ undum.game.situations = {
 		habías peleado y decides irte correndo hacia él para abrazarlo y comprobar si está bien después del combate.  \
 		Mientras ibas a ver a tu hermano, sientes como un fuerte latigazo te pegaba en la espaldas, provocando que te  \
 		 dejara totalmente inmovil. Habias descuidado el combate contra el cacique por la situación que estabas viviendo  \
-		 en ese momento. Tras quedarte inmóvil el cacique te mata, porvocando que tu tía se quede sola y tu hermano   \
+		 en ese momento. Tras quedarte inmóvil el cacique te mata, provocando que tu tía se quede sola y tu hermano   \
 		 sin poder salir de allí. </p> ",
 	
     ),
@@ -525,6 +541,9 @@ undum.game.qualities = {
 	daga: new undum.OnOffQuality(
         "Daga", { priority: "0003", group: 'inventario', onDisplay: "&#9876;" }
     ),
+	stats: new undum.NumericQuality(
+	"Stats a Repartir",{priority:"0005",group:'stats'}
+	),
 };
 
 // ---------------------------------------------------------------------------
@@ -546,6 +565,7 @@ undum.game.init = function(character, system) {
     character.qualities.fuerza = 0;
     character.qualities.suerte = 0;
 	character.qualities.inteligencia=0;
+	character.qualities.stats=12;
     system.setCharacterText("<p>Estas son tus estadísticas y objetos.</p>");
 	system.setQuality("chapaDorada", false);
 	system.setQuality("sarpullido", false);
