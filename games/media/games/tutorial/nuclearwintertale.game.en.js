@@ -285,7 +285,9 @@ undum.game.situations = {
 						el hombro y tu traje del refugio con un metal afilado que sobresalía de la muralla. Te duele\
 						y notas como tu brazo ha perdido fuerza\
 						pero no le das más importancia, lo importante es que has conseguido entrar</p>");
+						if(character.qualities.fuerza>=1){
 						system.setQuality("fuerza", character.qualities.fuerza-1);
+						}
 						system.setCharacterText("<p>Has perdido fuerza por la herida</p>");
 						system.write("<p><a href='asentamiento'>Sigamos</a></p>");
 					}
@@ -391,7 +393,11 @@ undum.game.situations = {
 {
 			actions: {
                 "defender": function (character, system, action) {
+					if(character.qualities.fuerza >2){
 					 system.setQuality("fuerza", character.qualities.fuerza-2);
+					}else{
+						system.setQuality("fuerza", 0);
+					}
 					system.doLink("combate");
 				},
                 }
@@ -440,6 +446,10 @@ undum.game.situations = {
 					system.doLink("quitar");
 				},
 				 "salir_correr": function (character, system, action) {
+					 system.setQuality("fuerza", 0);
+					 system.setQuality("destreza", 0);
+					 system.setQuality("inteligencia", 0);
+					 system.setQuality("suerte", 0);
 					system.doLink("salir");
 				}
                 }
