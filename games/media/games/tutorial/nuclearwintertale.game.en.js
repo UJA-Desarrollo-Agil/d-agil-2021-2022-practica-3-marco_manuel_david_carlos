@@ -26,6 +26,10 @@ undum.game.fadeSpeed = 1500
  * option. */
 undum.game.slideUpSpeed = 500
 
+var ini = document.getElementById("ini");
+var taberna = document.getElementById("taberna");
+var atmosphere = document.getElementById("atmosphere");
+
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation(
@@ -84,6 +88,10 @@ undum.game.situations = {
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
+		enter: function (character, system, from) {
+                atmosphere.play();
+
+            },
 	tags: ["topic"],
         optionText: "Tratas de ir sigilosamente y usas una ganzúa.",
         displayOrder: 1,
@@ -226,7 +234,7 @@ undum.game.situations = {
 			actions: {
                 "bolsillo": function (character, system, action) {
 					if (character.qualities.chapaDorada == true) {
-						system.write("<p><a href='./chapa'>Les puedes dar la chapa dorada</a> que encontraste anteriormente,\
+						system.write("<p class = transient><a href='./chapa'>Les puedes dar la chapa dorada</a> que encontraste anteriormente,\
 						también <a href='./suerte'>te puedes inventar una historia trágica</a> de algo que nunca te sucedió,\
 						para dar pena y poder así entrar, o <a href='./entrar'>te vas de allí</a> blasfemando en voz baja.\
 						</p>");
@@ -248,8 +256,8 @@ undum.game.situations = {
 						permiten el paso al asentamiento.</p>");
 						system.doLink("asentamiento");
 					}else{
-						system.write("<p>Tu historia no ha colado, has quedado como un pendejo mentiroso, por\
-						lo que te dan una patada y te echan de allí como si fueras un perro pulgoso</p>");
+						system.write("<p>Te inventas una historia trágica pero no cuela, has quedado como un pendejo mentiroso, por\
+						lo que te dan una patada y te echan de allí como si fueras un perro pulgoso.</p>");
 						system.doLink("./entrar");
 					}
                 },
@@ -276,12 +284,12 @@ undum.game.situations = {
 			actions: {
                 "entrar": function (character, system, action) {
 					if (character.qualities.destreza > 2) {
-						system.write("<p> Lo atraviesas a toda velocidad con la mala suerte de que rajas\
-						tu traje del refugio.</p>");
-						system.write("<p><a href='asentamiento'>Sigamos</a></p>");
+						system.write("<p><a href='asentamiento'>Lo atraviesas a toda velocidad</a> con la mala suerte de que rajas\
+						tu traje del refugio con un metal afilado que sobresalía de la muralla, pero no le das más importancia, lo\
+						importante es que has conseguido entrar</p>");
 					}else{
 						//system.delay(0.1);
-						system.write("<p>Lo atraviesas a toda velocidad con la mala suerte de que te rajas\
+						system.write("<p><a href='asentamiento'>Lo atraviesas a toda velocidad</a> con la mala suerte de que te rajas\
 						el hombro y tu traje del refugio con un metal afilado que sobresalía de la muralla. Te duele\
 						y notas como tu brazo ha perdido fuerza\
 						pero no le das más importancia, lo importante es que has conseguido entrar</p>");
@@ -289,7 +297,6 @@ undum.game.situations = {
 						system.setQuality("fuerza", character.qualities.fuerza-1);
 						}
 						system.setCharacterText("<p>Has perdido fuerza por la herida</p>");
-						system.write("<p><a href='asentamiento'>Sigamos</a></p>");
 					}
                 }
             }
@@ -327,7 +334,7 @@ undum.game.situations = {
 		Montaña de Malena, situada no muy lejos del cruce con el Gran Eje, al suroeste de la región\
 		de Jaén y la cuál está plagada de necrófagos, se ha avistado alguna vez una especie de lagarto\
 		con alas volando y escupiendo humo radiactivo. En la cima de aquella montaña está el Gran\
-		Castillo de Lord Malena y se dice que esconde un gran tesoro y el Lagarto solo quiere protegerlo.</p>\
+		Castillo de Lord Malena y se dice que esconde un gran tesoro que el Lagarto solo quiere proteger.</p>\
 		<p><img src='media/img/senior.jpg' class='float_left'></p>\
 		</p>El último de ellos, y no por ello menos importante, se encuentra en el Coliseo, un antro de\
 		mala muerte, donde los pobladores de Jaén más desalmados van a ver las sangrientas\
@@ -350,20 +357,21 @@ undum.game.situations = {
 		hace 5 años estuvo en esta misma taberna, lo cual te recuerda a tu hermano mellizo\
 		perdido, y que se fue dirección al sur con una chica del asentamiento. Sorprendido\
 		por esta noticia no dudas en salir en su búsqueda. Antes de irte, el extraño te ofrece una\
-		daga de chatarra diciéndote que él ya no la iba a necesitar más. <a href='./daga'>Coges la daga\
+		daga de chatarra diciéndote que él ya no la iba a necesitar más.</p>\
+		<p class = transient><a href='./daga'>Coges la daga\
 		</a>sin pensarlo ya que no sabes cuándo te puede venir bien, o <a href='./nada'>no la coges\
-		</a>puesto que tú eres un ser de luz y no tienes intención de hacerle daño a nadie </p>\
+		</a>puesto que tú eres un ser de luz y no tienes intención de hacerle daño a nadie.</p>\
 		",
 		{
 			actions: {
                 "daga": function (character, system, action) {
 					system.setQuality("daga", true);
 					system.setCharacterText("<p>Añades daga a tu inventario</p>");
-					system.write("<p>Coges la daga.</p>");
+					system.write("<p>Coges la daga sin pensarlo ya que no sabes cuándo te puede venir bien.</p>");
 					system.doLink("finalasentamiento");
 				},
 				"nada": function (character, system, action) {
-					system.write("<p>No coges la daga.</p>");
+					system.write("<p>No coges la daga puesto que tú eres un ser de luz y no tienes intención de hacerle daño a nadie.</p>");
 					system.doLink("finalasentamiento");
                 }
 			}
@@ -389,7 +397,7 @@ undum.game.situations = {
 		 de manera que os desplazan hacia fuera de la carretera y varios locos de la carretera os asaltan. </p> \
 		 <p><img src='media/img/caravana.png' class='float_left'></p>\
 		<p><a  href='./defender' > Intentas defenderte  </a> pero a pesar de tus esfuerzos, eres capturado ya que ellos tenían más fuerza \
-		 o <a  href='combate' >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>\ ",
+		 o <a  href='combate/primero' >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>\ ",
 {
 			actions: {
                 "defender": function (character, system, action) {
@@ -398,61 +406,127 @@ undum.game.situations = {
 					}else{
 						system.setQuality("fuerza", 0);
 					}
-					system.doLink("combate");
+					system.setCharacterText("<p>Has perdido fuerza por pelear</p>");
+					system.doLink("combate/primero");
 				},
                 }
 		}
     ),
 	combate: new undum.SimpleSituation(
-	 "<h1>Coliseo</h1> \
-        <p>Después del ataque, despiertas en el hipogeo del coliseo y te enteras que vas a a\
-		tener que pelear varias rondas. De un momento para otro, te encontrabas de estar \
-		viajando en una caravana a estar en la arena para realizar peleas.<p>\
-		<br/>\
-		<p><img src='media/img/combate.jpg' class='float_left'></p>\
-		<p>En el primer combate era contra 2 saqueadores, a los cuales consigues derrotar gracias a tu\
-		habilidades para encontrar sus puntos débiles, aunque también te dejan muy tocado</p>\
-		<br/>\
-		<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo \
-		salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>  \
-		<br/>\
-		<p>Consigues ganar el segundo combate, el cual era contra un lince mutante pero sabías cómo \
-		atacar gracias a los videojuegos que jugabas cuando eras pequeño. </p>\
-		<br/>\
-		<p>Finalmente te enfrentas con el último combate, un fuerte cyborg que no había perdido \
-		nunca.</p> \
-		<br/>\
-		<p><a  href='gladiador' > Luchar... </a></p>",
+	 "",
+		{
+			actions: {
+                "primero": function (character, system, action) {
+					system.write("<h1>Coliseo</h1>");
+					if(character.qualities.fuerza>0){
+						system.write("<p>Después del ataque, despiertas en el hipogeo del coliseo y te enteras de que vas a\
+						tener que pelear varias rondas. De un momento para otro, te encontrabas de estar\
+						viajando en una caravana a estar en la arena para realizar peleas.<p>\
+						<br/>\
+						<p><img src='media/img/combate.jpg' class='float_left'></p>\
+						<p>En el primer combate era contra 2 saqueadores, a los cuales consigues derrotar gracias a tu\
+						habilidades para encontrar sus puntos débiles, aunque también <a href=./segundo>te dejan muy tocado</a>.</p>\
+						<br/>");
+						if(character.qualities.fuerza >2){
+							system.setQuality("fuerza", character.qualities.fuerza-2);
+						}else{
+							system.setQuality("fuerza", 0);
+						}
+						system.setCharacterText("<p>Has perdido fuerza por la pelea con los saqueadores</p>");
+					}else{
+						system.write("<p>Después del ataque, despiertas en el hipogeo del coliseo y te enteras de que vas a\
+						tener que pelear varias rondas. De un momento para otro, te encontrabas de estar\
+						viajando en una caravana a estar en la arena para realizar peleas.<p>\
+						<br/>\
+						<p><img src='media/img/combate.jpg' class='float_left'></p>\
+						<p>En el primer combate era contra 2 saqueadores, a los cuales no consigues derrotar ya que no\
+						tienes fuerza suficiente como para empuñar un arma, por lo que al segundo del combate, uno de\
+						ellos te corta la cabeza y cae entre el público, quienes deciden jugar con tu cabeza pasandosela\
+						entre todos.</p>\
+						FIN.");
+					}
+				},
+				"segundo": function (character, system, action) {
+					if(character.qualities.fuerza>0 && character.qualities.destreza>=2){
+						system.write("<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
+						<br/>\
+						<p>Consigues ganar el segundo combate, el cual era contra un lince mutante pero sabías cómo\
+						atacar gracias a los videojuegos que jugabas cuando eras pequeño.</p>\
+						<br/>");
+						if(character.qualities.fuerza >2){
+							system.setQuality("fuerza", character.qualities.fuerza-2);
+						}else{
+							system.setQuality("fuerza", 0);
+						}
+						system.setCharacterText("<p>Has perdido fuerza por la pelea contra el lince</p>");
+						system.write("<p>Finalmente <a href=gladiador/combate>te enfrentas con el último combate</a>, un fuerte cyborg que\
+						no había perdido nunca.</p>");
+					}else if (character.qualities.fuerza==0){
+						system.write("<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
+						<br/>\
+						<p>Consigues llegar al segundo combate, el cual era contra un lince mutante, pero\
+						no tienes suficiente fuerza como para atacarle, por lo que sin dudarlo el lince\
+						te arranca la cabeza de un bocado. FIN.</p>");
+					}else{
+						system.write("<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
+						<br/>\
+						<p>Consigues llegar al segundo combate, el cual era contra un lince mutante, pero\
+						no tienes suficiente destreza como para esquivar sus ataques. El lince se avalanza\
+						rápidamente sobre ti y te arranca la cabeza de un bocado. FIN.</p>");
+					}
+                }
+			}
+		}
     ),
 	
 	gladiador: new undum.SimpleSituation(
-	 "<h1>Combate final</h1> \
-        <p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
-		heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con  \
-		todo para acabar el combate. Pero  gracias a tu inteligencia, durante el combate observas \
-		que el punto débil del enemigo eraun tubo de oxígeno, lo que le permitía al cyborg no tener fatiga \
-		 y estar siempre al 100% durante todo el combate. \
-		 En un momento consigues desconectar el cable que le proporcinaba el oxígeno, por lo que consigues \
-		 ganar el combate atacando y haciéndole que se cansase de manera rápida, ya que no disponía de oxígeno.</p>\
-		<br/>\
-		 <p><img src='media/img/muerte.jpeg' class='float_left'></p>\
-		<p>Te declaran ganador y el líder te pide que le cortes la cabeza al cyborg. Tú no eras ese tipo  \
-		de personas, tú habías combatido por obligación no por gusto, por lo que decides <a  href='./quitar_mascara' >quitarle la \
-		máscara al cyborg </a> para ver quién es o <a  href='./salir_correr' >irte </a> sin saber nada y con la mayor rapidez posible</p>" ,
-    {
+	 "",
+		{
 			actions: {
-                "quitar_mascara": function (character, system, action) {
-					 system.setQuality("fuerza", character.qualities.fuerza+7);
+                "combate": function (character, system, action) {
+					system.write("<h1>Combate final</h1>");
+					if(character.qualities.inteligencia>=2 && character.qualities.fuerza>0){
+						system.write("<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
+						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con  \
+						todo para acabar el combate. Pero gracias a tu inteligencia, durante el combate observas \
+						que el punto débil del enemigo era un tubo de oxígeno, lo que le permitía al cyborg no tener fatiga \
+						y estar siempre al 100% durante todo el combate.\
+						En un momento consigues desconectar el cable que le proporcinaba el oxígeno, por lo que consigues \
+						ganar el combate atacando y haciéndole que se cansase de manera rápida, ya que no disponía de oxígeno.</p>\
+						<br/>");
+						if(character.qualities.fuerza >2){
+							system.setQuality("fuerza", character.qualities.fuerza-2);
+						}else{
+							system.setQuality("fuerza", 0);
+						}
+						system.setCharacterText("<p>Has perdido fuerza por la pelea</p>");
+						system.write("<p><img src='media/img/muerte.jpeg' class='float_left'></p>\
+						<p>Te declaran ganador y el líder te pide que le cortes la cabeza al cyborg. Tú no eras ese tipo\
+						de personas, tú habías combatido por obligación no por gusto, por lo que decides <a  href='./quitar_mascara' >quitarle la \
+						máscara al cyborg </a> para ver quién es o <a  href='./salir_correr' >irte </a> sin saber nada y con la mayor rapidez posible</p>");
+					}else if (character.qualities.inteligencia<2){
+						system.write("<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
+						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con\
+						todo para acabar el combate. No eres capaz de ver ningún punto débil en su postura, por lo que\
+						consigue llegar hasta a ti y te corta el cuello sin siquiera haberte percatado. FIN.</p>");
+					}else{
+						system.write("<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
+						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con\
+						todo para acabar el combate. No eres capaz mover ningún músculo al no quedarte fuerzas ya\
+						para pelear, por lo que consigue llegar hasta a ti y te corta el cuello sin siquiera poder hacer nada. FIN.</p>");
+					}
+				},
+				"quitar_mascara": function (character, system, action) {
+					system.setQuality("fuerza", character.qualities.fuerza+7);
 					system.doLink("quitar");
 				},
 				 "salir_correr": function (character, system, action) {
-					 system.setQuality("fuerza", 0);
-					 system.setQuality("destreza", 0);
-					 system.setQuality("inteligencia", 0);
-					 system.setQuality("suerte", 0);
 					system.doLink("salir");
 				}
-                }
+            }
 		}
 	),
 	
@@ -485,8 +559,7 @@ undum.game.situations = {
 
 	),
 	rescate: new undum.SimpleSituation(
-		"<h1>Escape del coliseo</h1> \
-		<img src='media/img/celda.jpg' width= 500 class= 'float_left' >\
+		"<img src='media/img/celda.jpg' width= 500 class= 'float_left' >\
         <p>Decides acompañarle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
 		{
 			actions: {
