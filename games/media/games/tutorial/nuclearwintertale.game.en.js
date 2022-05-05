@@ -29,6 +29,8 @@ undum.game.slideUpSpeed = 500
 var ini = document.getElementById("ini");
 var taberna = document.getElementById("taberna");
 var atmosphere = document.getElementById("atmosphere");
+var peleas = document.getElementById("peleas");
+var lince = document.getElementById("lince");
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
@@ -88,10 +90,6 @@ undum.game.situations = {
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
-		enter: function (character, system, from) {
-                atmosphere.play();
-
-            },
 	tags: ["topic"],
         optionText: "Tratas de ir sigilosamente y usas una ganzúa.",
         displayOrder: 1,
@@ -153,6 +151,12 @@ undum.game.situations = {
 	<p><img src='media/img/asentamiento.jpg' class='float_left'></p>\
 	<p><a href='caminoasentamiento1'>Te pones rumbo hacia las luces que ves a lo lejos con cuidado.</a></p>\
 	",
+	{
+		enter: function (character, system, from) {
+                atmosphere.play();
+
+            }
+	}
 	),
 	caminoasentamiento1: new undum.SimpleSituation(
         "<h1>Camino al asentamiento</h1>\
@@ -344,7 +348,7 @@ undum.game.situations = {
 		ningún tipo de sentimiento. También, cuentan que utiliza los cuerpos de los luchadores\
 		muertos para experimentar con ellos y convertirlos en androides, una especie de robots,\
 		extirpando las partes de sus cuerpos dañadas.</p>\
-		<p>Después de dejarte la cabeza como un bombo, le das las gracias por el vaso de agua y te\
+		<p>Después de dejarte la cabeza como un bombo, le das las gracias por el vaso de agua, y te\
 		vas de allí pitando para que el tabernero no te hable más ni te cuente leyendas inventadas.\
 		Justo antes de salir de la taberna cruzas miradas con un hombre con bigote y capucha que\
 		está sentado solo, y al segundo te hace un gesto para que te sientes con él.</p>\
@@ -363,6 +367,10 @@ undum.game.situations = {
 		</a>puesto que tú eres un ser de luz y no tienes intención de hacerle daño a nadie.</p>\
 		",
 		{
+			enter: function (character, system, from) {
+				atmosphere.pause();
+				taberna.play();
+            },
 			actions: {
                 "daga": function (character, system, action) {
 					system.setQuality("daga", true);
@@ -383,38 +391,109 @@ undum.game.situations = {
 		preparados ellos también para salir y te enteras de que van en dirección al sur, por lo que\
 		recuerdas las palabras del tabernero hablándote de todos los peligros del yermo de Jaén y\
 		decides preguntarles si puedes ir con ellos. Ellos no dudan en aceptarte ya que toda ayuda\
-		y compañía en estos tiempos postapocalípticos es buena. Sin más dilación <a href='caravana'>ponéis rumbo\
+		y compañía en estos tiempos postapocalípticos es buena. Sin más dilación <a href='caravana/chapa'>ponéis rumbo\
 		hacia el sur.</a></p>",
 		{
 
+			
 		}
     ),
 	caravana: new undum.SimpleSituation(
-	    "<h1>Viaje hacia el sur</h1> \
-        <p>Cuando llevais unos kilómetros de viaje, te percatas que os llevan siguiendo desde el inicio una camioneta,\
-		por lo que decides hablar con el conductor para que le pise al acelerador. A pesar de aumentar la velocidad, la  \
-		camioneta de atrás empieza  también a acelerar, de manera que alcanza a la caravana y colisiona con ella \
-		 de manera que os desplazan hacia fuera de la carretera y varios locos de la carretera os asaltan. </p> \
-		 <p><img src='media/img/caravana.png' class='float_left'></p>\
-		<p><a  href='./defender' > Intentas defenderte  </a> pero a pesar de tus esfuerzos, eres capturado ya que ellos tenían más fuerza \
-		 o <a  href='combate/primero' >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>\ ",
-{
+	    "",
+		{
+			enter: function (character, system, from) {
+				taberna.pause();
+                atmosphere.play();
+
+            },
+			actions: {
+                "chapa": function (character, system, action) {
+					if(character.qualities.chapaDorada==true){
+						system.write("<h1>Viaje hacia el sur</h1>\
+						<p>Mientras vais camino al sur, haces buenas migas con Mike Towers, un veterano del yermo que llevaba\
+						años dirigiendo la caravana. Te habla de un libro muy útil para la supervivencia llamado 'Guía de supervivencia\
+						en el yermo', y te dice que ya no lo va a necesitar más, por lo que te lo ofrece a cambio de unas chapas.\
+						Tú no sabes ni a que se refiere pero tienes una chapa dorada, así que <a class='once' href='./dar'>se la das</a> a cambio del libro.</p>");
+					}else{
+						system.write("<h1>Viaje hacia el sur</h1>\
+						<p>Mientras vais camino al sur, haces buenas migas con Mike Towers, un veterano del yermo que llevaba\
+						años dirigiendo la caravana. Te habla de un libro muy útil para la supervivencia llamado 'Guía de supervivencia\
+						en el yermo', y te dice que ya no lo va a necesitar más, por lo que te lo ofrece a cambio de unas chapas.\
+						Tú no sabes ni a que se refiere por lo que <a class='once' href='./pedir'>le pides por favor</a> que te lo dé, que ya se lo pagarás.</p>");
+					}
+				},
+				"dar": function (character, system, action) {
+					system.setQuality("chapaDorada", false);
+					system.setCharacterText("<p>Añades 'Guía de supervivencia' a tu inventario</p>\
+					<p>Has ganado inteligencia gracias al libro</p>");
+					system.setQuality("libro", true);
+					system.setQuality("inteligencia", character.qualities.inteligencia+2);
+					system.write("<p>Acepta el cambio, y te pones a leer como un loco, mientras seguís vuestro camino.</p>\
+					<p>Después de varios kilómetros de viaje, te percatas que os llevan siguiendo desde el inicio una camioneta,\
+					por lo que decides hablar con el conductor para que le pise al acelerador.</p>\
+					<p><img src='media/img/caravana.png' class='float_left'></p>\
+					<p>A pesar de aumentar la velocidad, la \
+					camioneta de atrás empieza  también a acelerar, de manera que alcanza a la caravana y colisiona con ella \
+					de manera que os desplazan hacia fuera de la carretera y varios locos de la carretera os asaltan. </p> \
+					<p class = transient><a class='once' href='caravana2/defender' > Intentas defenderte  </a> pero a pesar de tus esfuerzos, eres capturado ya que ellos tenían más fuerza\
+					o <a class='once' href='combate/primero'  >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>");
+				},
+				"pedir": function (character, system, action) {
+					if(character.qualities.suerte>=2){
+						system.setCharacterText("<p>Añades 'Guía de supervivencia' a tu inventario</p>");
+						system.setQuality("libro", true);
+						system.setCharacterText("<p>Has ganado inteligencia gracias al libro</p>");
+						system.setQuality("inteligencia", character.qualities.inteligencia+2);
+						system.write("<p>Es tu día de suerte, Mike está de buen humor y se siente generoso, así pues te lo regala sin más. Una vez en tu posesión,\
+						te pones a leer como un loco, mientras seguís vuestro camino.</p>\
+						<p>Después de varios kilómetros de viaje, te percatas que os llevan siguiendo desde el inicio una camioneta,\
+						por lo que decides hablar con el conductor para que le pise al acelerador.</p>\
+						<p><img src='media/img/caravana.png' class='float_left'></p>\
+						<p>A pesar de aumentar la velocidad, la \
+						camioneta de atrás empieza  también a acelerar, de manera que alcanza a la caravana y colisiona con ella \
+						de manera que os desplazan hacia fuera de la carretera y varios locos de la carretera os asaltan. </p> \
+						<p class = transient><a class='once' href='caravana2/defender' > Intentas defenderte  </a> pero a pesar de tus esfuerzos, eres capturado ya que ellos tenían más fuerza\
+						o <a class='once' href='combate/primero'  >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>");
+					}else{
+						system.write("<p>Mike te dice que en esta vida no se prospera regalando cosas a desconocidos, por lo que se queda el libro para él y te vas de allí montando un drama.</p>\
+						<p>Después de varios kilómetros de viaje, te percatas que os llevan siguiendo desde el inicio una camioneta,\
+						por lo que decides hablar con el conductor para que le pise al acelerador.</p>\
+						<p><img src='media/img/caravana.png' class='float_left'></p>\
+						<p>A pesar de aumentar la velocidad, la \
+						camioneta de atrás empieza  también a acelerar, de manera que alcanza a la caravana y colisiona con ella \
+						de manera que os desplazan hacia fuera de la carretera y varios locos de la carretera os asaltan. </p> \
+						<p class = transient><a class='once' href='caravana2/defender' > Intentas defenderte  </a> pero a pesar de tus esfuerzos, eres capturado ya que ellos tenían más fuerza\
+						o <a class='once' href='combate/primero'  >  dejas que te capturen, </a> ya que tienes todas las papeletas de ser capturado y perder fuerza. </p>");
+					}
+				}
+            }
+		}
+    ),
+	caravana2: new undum.SimpleSituation(
+	    "",
+		{
+			
 			actions: {
                 "defender": function (character, system, action) {
 					if(character.qualities.fuerza >2){
-					 system.setQuality("fuerza", character.qualities.fuerza-2);
+						system.setQuality("fuerza", character.qualities.fuerza-2);
 					}else{
 						system.setQuality("fuerza", 0);
 					}
 					system.setCharacterText("<p>Has perdido fuerza por pelear</p>");
-					system.doLink("combate/primero");
-				},
-                }
+					system.write("<p>Intentas defenderte, pero a pesar de tus esfuerzos, <a href='combate/primero'> eres capturado</a> ya que ellos tenían más fuerza.</p>");
+				}
+            }
 		}
     ),
+
 	combate: new undum.SimpleSituation(
 	 "",
 		{
+			enter: function (character, system, from) {
+                atmosphere.pause();
+				peleas.play();
+            },
 			actions: {
                 "primero": function (character, system, action) {
 					system.write("<h1>Coliseo</h1>");
@@ -425,7 +504,7 @@ undum.game.situations = {
 						<br/>\
 						<p><img src='media/img/combate.jpg' class='float_left'></p>\
 						<p>En el primer combate era contra 2 saqueadores, a los cuales consigues derrotar gracias a tu\
-						habilidades para encontrar sus puntos débiles, aunque también <a href=./segundo>te dejan muy tocado</a>.</p>\
+						habilidades para encontrar sus puntos débiles, aunque también <a class = 'once' href=./segundo>te dejan muy tocado</a>.</p>\
 						<br/>");
 						if(character.qualities.fuerza >2){
 							system.setQuality("fuerza", character.qualities.fuerza-2);
@@ -512,6 +591,19 @@ undum.game.situations = {
 						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con\
 						todo para acabar el combate. No eres capaz de ver ningún punto débil en su postura, por lo que\
 						consigue llegar hasta a ti y te corta el cuello sin siquiera haberte percatado. FIN.</p>");
+					}else if (character.qualities.fuerza<2 && character.qualities.sarpullido == true){
+						system.write("<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
+						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con  \
+						todo para acabar el combate. Gracias a tu inteligencia, durante el combate observas \
+						que el punto débil del enemigo era un tubo de oxígeno, lo que le permitía al cyborg no tener fatiga \
+						y estar siempre al 100% durante todo el combate. No eres capaz mover ningún músculo al no quedarte fuerzas ya\
+						para pelear, por lo que consigue llegar hasta a ti, pero justo antes de que te ataque consigues coger\
+						su tubo con tu mano leprosa. Sorprendentemente, tu mano radiactiva hace que se derrita el tubo de oxígeno, por lo que consigues \
+						ganar el combate atacando y haciéndole que se cansase de manera rápida, ya que no disponía de oxígeno.</p>\
+						<p><img src='media/img/muerte.jpeg' class='float_left'></p>\
+						<p>Te declaran ganador y el líder te pide que le cortes la cabeza al cyborg. Tú no eras ese tipo\
+						de personas, tú habías combatido por obligación no por gusto, por lo que decides <a  href='./quitar_mascara' >quitarle la \
+						máscara al cyborg </a> para ver quién es o <a  href='./salir_correr' >irte </a> sin saber nada y con la mayor rapidez posible</p>");
 					}else{
 						system.write("<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
 						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con\
@@ -562,6 +654,8 @@ undum.game.situations = {
 		"<img src='media/img/celda.jpg' width= 500 class= 'float_left' >\
         <p>Decides acompañarle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
 		{
+
+			
 			actions: {
 				"abrir": function (character, system, action) {
 					if (character.qualities.destreza > 0) {
@@ -579,6 +673,10 @@ undum.game.situations = {
 		<img src='media/img/bosque.jpg' width= 500 class= 'float_left' >\
         <p>Os sentais sobre un tronco caido. Aprovechais el momento de calma para observar mejor el entorno y veis que os encontrais en un bosque rodeado de arboles. debes <a  href='./buscar_madera' >buscar madera </a>, \
 		<a  href='./buscar_piedras' >buscar piedras</a> e intentar <a  href='./hacer_fuego' >hacer fuego</a></p >.", {
+						enter: function (character, system, from) {
+                peleas.pause();
+				atmosphere.play();
+            },
 		actions: {
 			"buscar_madera": function (character, system, action) {
 				system.setQuality("madera", true);
@@ -678,6 +776,9 @@ undum.game.qualities = {
 	daga: new undum.OnOffQuality(
         "Daga", { priority: "0003", group: 'inventario', onDisplay: "&#9876;" }
 	),
+	libro: new undum.OnOffQuality(
+        "Libro", { priority: "0004", group: 'inventario', onDisplay: "&#10015;" }
+	),
 	madera: new undum.OnOffQuality(
 		"Madera", { priority: "0006", group: 'inventario', onDisplay: "&#10003;" }
 	),
@@ -714,6 +815,7 @@ undum.game.init = function(character, system) {
 	system.setQuality("sarpullido", false);
 	system.setQuality("linterna", false);
 	system.setQuality("daga", false);
+	system.setQuality("libro", false);
 	system.setQuality("piedra", false);
 	system.setQuality("madera", false);
 };
