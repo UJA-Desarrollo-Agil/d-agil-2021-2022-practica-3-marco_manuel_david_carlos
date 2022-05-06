@@ -503,8 +503,16 @@ undum.game.situations = {
 						viajando en una caravana a estar en la arena para realizar peleas.<p>\
 						<br/>\
 						<p><img src='media/img/combate.jpg' class='float_left'></p>\
-						<p>En el primer combate era contra 2 saqueadores, a los cuales consigues derrotar gracias a tu\
-						habilidades para encontrar sus puntos débiles, aunque también <a class = 'once' href=./segundo>te dejan muy tocado</a>.</p>\
+						<p>El primer combate tenía una duración de 45 min., en los cuales tenías que derrotar a 2 saqueadores,\
+						donde uno era de peso ligero y otro de peso pesado. Contra el saqueador de peso ligero tenías que atacarle al torso\
+						ya que iba con el torso a descubierto y cuyo escudo era más pequeño al tuyo debido a su peso, mientras que el otro saqueador,\
+						 tenía un escudo era más grande respecto al tuyo y más fuerza, pero no podía moverse de manera rápida debido a su peso\
+						 por lo que contra él debías de aplicar tus habilidades para poder cansarlo y atacarle cuando estuviera fatigado o intentando moverse.</p>\
+						 <p>Trascurrido 30 min., el primer saqueador, debido a las heridas y el miedo a morir en la arena, declara su rendición alzando el brazo izquierdo con el dedo índice extendido, \
+						 soltando el escudo. En este momento el combate era entre tú y el saqueador de peso pesado, el cuál te habia\
+						 dejado muy tocado debido a su gran fuerza, pero no tenías mucho tiempo para derrotarlo. </p>\
+						<p> Observas que detras del saqueador se encontraba el arma del otro saqueador, por lo que decides realizar un moviento de despieste para ir por detras y cogerla.\
+						 con las dos armas, consigues derrotar al segundo saqueador y consagrarte para el público como  <a class = 'once' href=./segundo>nuevo héroe</a>.</p>\
 						<br/>");
 						if(character.qualities.fuerza >2){
 							system.setQuality("fuerza", character.qualities.fuerza-2);
@@ -527,7 +535,8 @@ undum.game.situations = {
 				},
 				"segundo": function (character, system, action) {
 					if(character.qualities.fuerza>0 && character.qualities.destreza>=2){
-						system.write("<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						system.write("<h1>Segundo combate</h1>\
+						<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
 						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
 						<br/>\
 						<p>Consigues ganar el segundo combate, el cual era contra un lince mutante pero sabías cómo\
@@ -542,14 +551,14 @@ undum.game.situations = {
 						system.write("<p>Finalmente <a href=gladiador/combate>te enfrentas con el último combate</a>, un fuerte cyborg que\
 						no había perdido nunca.</p>");
 					}else if (character.qualities.fuerza==0){
-						system.write("<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						system.write("<h1>Segundo Combate</h1><p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
 						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
 						<br/>\
 						<p>Consigues llegar al segundo combate, el cual era contra un lince mutante, pero\
 						no tienes suficiente fuerza como para atacarle, por lo que sin dudarlo el lince\
 						te arranca la cabeza de un bocado. FIN.</p>");
 					}else{
-						system.write("<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						system.write("<h1>Segundo Combate</h1><p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
 						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
 						<br/>\
 						<p>Consigues llegar al segundo combate, el cual era contra un lince mutante, pero\
