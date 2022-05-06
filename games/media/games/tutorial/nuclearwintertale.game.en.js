@@ -538,6 +538,7 @@ undum.game.situations = {
 						system.write("<h1>Segundo combate</h1>\
 						<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
 						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
+						<p><img src='media/img/lince.jpg' class='float_left'></p>\
 						<br/>\
 						<p>Consigues ganar el segundo combate, el cual era contra un lince mutante pero sabías cómo\
 						atacar gracias a los videojuegos que jugabas cuando eras pequeño.</p>\
@@ -551,15 +552,19 @@ undum.game.situations = {
 						system.write("<p>Finalmente <a href=gladiador/combate>te enfrentas con el último combate</a>, un fuerte cyborg que\
 						no había perdido nunca.</p>");
 					}else if (character.qualities.fuerza==0){
-						system.write("<h1>Segundo Combate</h1><p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						system.write("<h1>Segundo Combate</h1>\
+						<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
 						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
+						<p><img src='media/img/lince.jpg' class='float_left'></p>\
 						<br/>\
 						<p>Consigues llegar al segundo combate, el cual era contra un lince mutante, pero\
 						no tienes suficiente fuerza como para atacarle, por lo que sin dudarlo el lince\
 						te arranca la cabeza de un bocado. FIN.</p>");
 					}else{
-						system.write("<h1>Segundo Combate</h1><p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
+						system.write("<h1>Segundo Combate</h1>\
+						<p>Cuando ibas a salir de la arena, anuncian que faltan dos combates para que el esclavo\
 						salga con vida. Tal fue tu asombro y susto que no tenías fuerzas para moverte.</p>\
+						<p><img src='media/img/lince.jpg' class='float_left'></p>\
 						<br/>\
 						<p>Consigues llegar al segundo combate, el cual era contra un lince mutante, pero\
 						no tienes suficiente destreza como para esquivar sus ataques. El lince se avalanza\
