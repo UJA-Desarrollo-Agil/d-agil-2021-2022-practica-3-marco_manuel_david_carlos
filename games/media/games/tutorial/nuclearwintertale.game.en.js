@@ -748,12 +748,11 @@ undum.game.situations = {
 	
 	quitar: new undum.SimpleSituation(
 	 "<h1>Quitar la máscara</h1> \
-		<p><img src='media/img/cascosuelo.jpg' width= 500 class='float_left'></p>\
+		<p><img src='media/img/cascosuelo.jpg' class='float_left'></p>\
         <p> Cuando le quitas la máscara al cyborg, descubres que esa persona con la \
 		que habías estado combatiendo era tu hermano, al cual querías encontrar.   \
 		Al descubrir que esa persona era tu hermano, decides no cortarle la cabeza y salir corriendo  \
 		de allí, lo que provoca que el cacique se enfade y decida pelear contra ti. </p>\
-
 		<br/>\
 		<p>En este combate  tu hermano se une contigo para derrotar los dos al cacique y poder salir  \
 		con vida del coliseo. Tras luchar y derrotar al cacique, tu hermano te explica que lo habían  \
