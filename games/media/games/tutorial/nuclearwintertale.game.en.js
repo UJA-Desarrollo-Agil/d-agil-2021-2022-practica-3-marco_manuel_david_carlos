@@ -970,6 +970,7 @@ undum.game.situations = {
 	locoen: new undum.SimpleSituation(
 	"<p>Os acercáis a la figura, este es un hombre encapuchado, sucio, barbudo y aunque no es un anciano, se nota que está demacrado, llevando una ropa hecha jirones, manchada de barro y verde por el musgo al haber pasado tanto tiempo en la ciénaga.\
 	El hombre se os acerca más y más con una suciam extraña botella en la mano llena de un líquido verde esmeralda y un olor a alcohol y aceite, diciendo una y otra vez: 'La enrea te llama. La enrea te llama.' </p>\
+	<p><img src='media/img/locoen.jpg' class='float_left'></p>\
 	<p>Tú lo miras extrañado y dudas si <a href='cercaloco'>acercarte</a> o <a href='arbol'>seguir con tu hermano hacia el interior de la ciénaga.</a></p>\
 	",
 	{
@@ -997,8 +998,9 @@ undum.game.situations = {
 				 "pararlo": function (character, system, action) {
 					if (character.qualities.linterna == true) {
 						system.setQuality("linterna",false);
-						system.write("<p>Te rebuscas entre tus objetos y encuentras la linterna, antes de que el tipo pueda darte de beber, la enciendes y esto lo distrae profundamente, él se queda extasiado mirando a la linterna y te la quita, dejando la botella a tu lado\
-						Tu hermano se ríe al ver la reacción del tipo y <a href='./botella'>recogéis la botella</a> por si pudiera serviros para más adelante. <a href='arbol'>Seguís vuestro camino hacia el interior de la ciénaga.</a></p>");
+						system.write("<p>Te rebuscas entre tus objetos y encuentras la linterna, antes de que el tipo pueda darte de beber, la enciendes y esto lo distrae profundamente, él se queda extasiado mirando a la linterna y te la quita, dejando la botella a tu lado.</p>\
+						<p><img src='media/img/linterna2.jpg' class='float_left'></p>\
+						<p>Tu hermano se ríe al ver la reacción del tipo y <a href='./botella'>recogéis la botella</a> por si pudiera serviros para más adelante. <a href='arbol'>Seguís vuestro camino hacia el interior de la ciénaga.</a></p>");
 					}else{
 						system.write("<p> El tipo te obliga a beber con una fuerza colosal, aunque tu hermano intenta pararlo no puede y cuando das un trago a ese asqueroso licor tu mente se descompone. <a href='enreotico'>Has sido absorbido por la enrea.</a></p>");	
 					}
