@@ -246,7 +246,8 @@ undum.game.situations = {
     ),
 	
 	caminoasentamiento2: new undum.SimpleSituation(
-        "<p>Justo antes de marcharte te fijas que en el suelo entre las piernas del esqueleto\
+        "<p><img src='media/games/tutorial/esqueleto.jpg' class='float_left' width= 300></p>\
+		<p>Justo antes de marcharte te fijas que en el suelo entre las piernas del esqueleto\
 		hay una especie de cilindro gris. Decides <a class='once' href='./linterna'>cogerlo</a> sin tocar nada más\
 		o <a class='once' href='./nada'>no lo coges</a> puesto que parece no tener ninguna importancia.</p>\
 		",
@@ -470,6 +471,7 @@ undum.game.situations = {
 		<p>Ellos se juntan en un coro para discutir si llevarte con ellos o no </p>\
 		<p> - Conductores: Está bien, puedes venir con nosotros, pero deberás ayudarnos con las tareas diarias.</p>\
 		<p> - P: Me parece justo, además podremos hacernos compañia</p>\
+		<p><img src='media/games/tutorial/caravan.jpg' class='float_left'></p>\
 		<p>Sin más dilación <a href='caravana/chapa'>ponéis rumbo\
 		hacia el sur.</a></p>",
 		{ enter: function (character, system, from) {
@@ -500,12 +502,14 @@ undum.game.situations = {
                 "chapa": function (character, system, action) {
 					if(character.qualities.chapaDorada==true){
 						system.write("<h1>Viaje hacia el sur</h1>\
+						<p><img src='media/games/tutorial/mike.jpg' class='float_left'></p>\
 						<p>Mientras vais camino al sur, haces buenas migas con Mike Towers, un veterano del yermo que llevaba\
 						años dirigiendo la caravana. Te habla de un libro muy útil para la supervivencia llamado 'Guía de supervivencia\
 						en el yermo', y te dice que ya no lo va a necesitar más, por lo que te lo ofrece a cambio de unas chapas.\
 						Tú no sabes ni a que se refiere pero tienes una chapa dorada, así que <a class='once' href='./dar'>se la das</a> a cambio del libro.</p>");
 					}else{
 						system.write("<h1>Viaje hacia el sur</h1>\
+						<p><img src='media/games/tutorial/mike.jpg' class='float_left'></p>\
 						<p>Mientras vais camino al sur, haces buenas migas con Mike Towers, un veterano del yermo que llevaba\
 						años dirigiendo la caravana. Te habla de un libro muy útil para la supervivencia llamado 'Guía de supervivencia\
 						en el yermo', y te dice que ya no lo va a necesitar más, por lo que te lo ofrece a cambio de unas chapas.\
@@ -775,7 +779,7 @@ undum.game.situations = {
 
 	escape1: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
-		<p><img src='media/img/multitud.jpg' width= 500 class='float_left'></p>\
+		<p><img src='media/img/multitud.jpg' width= 300 class='float_left'></p>\
         <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud, al saber de la muerte del cacique los esclavos se han rebelado y hay luchas internas entre los saqueadores. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
 		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >",
 		{
@@ -808,7 +812,7 @@ undum.game.situations = {
 		
 	),
 	rescate: new undum.SimpleSituation(
-		"<img src='media/img/celda.jpg' width= 500 class= 'float_left' >\
+		"<img src='media/img/celda.jpg' width= 300 class= 'float_left' >\
         <p>Decides acompañarle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
 		{
 			enter: function (character, system, from) {
@@ -821,7 +825,7 @@ undum.game.situations = {
 			
 			actions: {
 				"abrir": function (character, system, action) {
-					if (character.qualities.destreza > 0) {
+					if (character.qualities.destreza >= 3) {
 						system.write("<p> Consigues abrir la celda rompiendo los barrotes que estaban en mal estado y salís huyendo del coliseo hasta llegar a un lugar seguro, decidís <a href='descanso'>Descansar ahí</a>.</p>");
 					} else {
 						system.write("<p>Intentas romper unos barrotes que están en mal estado pero no tienes fuerza suficiente. Unos soldados que corrían para calmar la revuelta os ven, os detienen y <a href='mfin'>os meten en la celda con la mujer de tu hermano.</a></p>");
@@ -834,7 +838,7 @@ undum.game.situations = {
 	
 	descanso: new undum.SimpleSituation(
 		"<h1>Claro del bosque</h1> \
-		<img src='media/img/bosque.jpg' width= 500 class= 'float_left' >\
+		<img src='media/img/bosque.jpg' width= 300 class= 'float_left' >\
         <p>Os sentais sobre un tronco caido. Aprovechais el momento de calma para observar mejor el entorno y veis que os encontrais en un bosque rodeado de arboles. debes <a  href='./buscar_madera' >buscar madera </a>, \
 		<a  href='./buscar_piedras' >buscar piedras</a> e intentar <a  href='./hacer_fuego' >hacer fuego</a></p >.", {
 						enter: function (character, system, from) {
@@ -867,7 +871,7 @@ undum.game.situations = {
 				if (character.qualities.madera && character.qualities.piedra) {
 					system.setQuality("piedra", false);
 					system.setQuality("madera", false);
-					system.write("<p><img src='media/img/hoguera.jpg' width = 500 class='float_left'></p>")
+					system.write("<p><img src='media/img/hoguera.jpg' width = 300 class='float_left'></p>")
 					system.write("<p>Junto a la luz tenue de la hoguera le preguntas a tu hermano sobre como llego al coliseo. Este te cuenta que tras salir del refugio y llegó a un asentamiento que se encontraba al sur de este. Vivía una vida tranquila, aunque con las obvias dificultades que este nuevo mundo impone.\
 					En el asentamiento conoció a Sofía, su pareja, hija de uno de los granjeros de la zona. Al ver como la tierra no era muy fértil y cada vez producía menos comida decidieron irse hacia el sur en busca de mejores condiciones pero cuando llevaban algunos kilómetros los saqueadores del Cacique los asaltaron y tomaron prisioneros, a tu hermano lo usaron como gladiador y con toda su fuerza de voluntad y física luchó por poder volver a ver a su amada.\
 					Ellos además te cuenta de como era la vida en el asentamiento antes de su secuestro y tú te das cuenta que antes eran felices pese a las dificultades. Decides <a href='lider'>ir con ellos hacia el asentamiento.</a><\p>");
@@ -1104,6 +1108,7 @@ undum.game.situations = {
 	enreotico: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Fuiste absorbido por la enrea, ahora eres un enreotico más.</h1>\
 	<p>Pese a los intentos de tu hermano por sacarte de allí tú rechazas su ayuda a empujones con una fuerza antinatural y te vas con el tipo por la ciénaga, tu mente solo piensa en beber más de ese extraño líquido y l ciénaga ya no te parece un lugar tan desagradable, solo puedes repetir la misma frase que ese tipo: 'La enrea te llama.' Te quedas lo que te queda de vida como otro habitante loco del pantano.</p>\
+	<p><img src='media/games/tutorial/hipnosis.gif' class='float_left'></p>\
 	",
 	{
 		enter: function (character, system, from) {
@@ -1173,8 +1178,9 @@ undum.game.situations = {
 	mfin: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Os devoran en la arena.</h1>\
 	<p>Pese a lo cerca que os quedásteis de escapar de esta pesadilla los guardias no os dan tregua, os encadenan a las paredes y os vigilan día y noche. El nuevo cacique os quiere trofeo para su primer gran juego y no os va a dejar escapar. </p>\
+	<p><img src='media/games/tutorial/conejo.jpg' class='float_left'></p>\
+	<p>A los pocos días os sacan de allí y os atan en mitad de la arena para que os devoren unos conejos enormes mutados por la radiación del yermo como venganza por la huída y la muerte del anterior cacique. Además de vosotros hay un grupo de esclavos rebeldes encadenados. El cacique da un pomposo discurso y abren las celdas de los animales de las que salen grotescas figuras. Al poco tiempo no queda nadie de tu familia salvo tu tía con vida.</p>\
 	<p><img src='media/img/martires.jpg' class='float_left'></p>\
-	<p>A los pocos días os sacan de allí y os atan en mitad de la arena para que os devoren las bestias del yermo como venganza por la huída y la muerte del anterior cacique. Además de vosotros hay un grupo de esclavos rebeldes encadenados. El cacique da un pomposo discurso y abren las celdas de los animales de las que salen grotescas figuras. Al poco tiempo no queda nadie de tu familia salvo tu tía con vida.</p>\
 	",
 	{
 		enter: function (character, system, from) {
