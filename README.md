@@ -54,7 +54,7 @@ URL de Trello: https://trello.com/b/XQQRDCRW/pr%C3%A1ctica-3-d%C3%A1gil
 
 - La historia 5 se ha completado, en cada nueva versión del juego se han añadido nuevas historias.
 
-- La historia 7 se ha comletado, el usuario puede saber su proceso en el juego.
+- La historia 7 se ha completado, el usuario puede saber su proceso durante el transcurro del juego.
 
 - La historia 8 se ha realizado correctamente, se ha añadido música en el juego para ambientar cada situación.
 
