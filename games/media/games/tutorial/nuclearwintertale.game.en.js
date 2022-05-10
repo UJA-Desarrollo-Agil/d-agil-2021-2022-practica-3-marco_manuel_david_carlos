@@ -149,7 +149,7 @@ undum.game.situations = {
 	salida: new undum.SimpleSituation(
 	"<p>Al ver el sol ponerse por primera vez te quedas paralizado viendo algo tan bonito por primera vez pues solo sabías que eso ocurría por los libros que has leído. Al poco de terminar el anochecer ves salir la luna llena y piensas en tu hermano perdido y en las ganas que tienes de explorar ese enorme aunque ruinoso mundo. A lo lejos ves unas luces de lo que parece ser un asentamiento.</p>\
 	<p><img src='media/img/asentamiento.jpg' class='float_left'></p>\
-	<p><a href='caminoasentamiento1'>Te pones rumbo hacia las luces que ves a lo lejos con cuidado.</a></p>\
+	<br><p><a href='caminoasentamiento1'>Te pones rumbo hacia las luces que ves a lo lejos con cuidado.</a></p></br>\
 	",
 	{
 		enter: function (character, system, from) {
@@ -159,7 +159,8 @@ undum.game.situations = {
 	}
 	),
 	caminoasentamiento1: new undum.SimpleSituation(
-        "<h1>Camino al asentamiento</h1>\
+		"<br></br>\
+        <h1>Camino al asentamiento</h1>\
 		<p>Intrigado por ver qué clase de cosas hay en ese asentamiento, decides poner rumbo hacía\
 		allí. A lo lejos ves como una caravana de personas se acerca al asentamiento con\
 		intención de entrar.</p>\
@@ -177,8 +178,8 @@ undum.game.situations = {
 		{
 			actions: {
                 "chapa": function (character, system, action) {
-					system.setQuality("chapaDorada", true);        //FIXME: cambiar esta basura de imagen
-                    system.write("<p><img src='media/img/sarpullido.jpg' class='float_left'></p>\
+					system.setQuality("chapaDorada", true);       
+					system.write("<p><img src='media/img/sarpullido.jpg' class='float_left' width= 300></p>\
 					<p>Coges lo que tiene en su interior, es una chapa dorada que no\
 					sabes para qué sirve, así que optas por guardarla en tu bolsillo. Al sacar tu\
 					mano del bolsillo notas un escozor que te quema la mano. Te fijas más detenidamente\
@@ -701,12 +702,20 @@ undum.game.situations = {
             },
 		actions: {
 			"buscar_madera": function (character, system, action) {
-				system.setQuality("madera", true);
-				system.write("<p>Tras caminar unos cuantos pasos encuentras unas ramas. Son un poco raras, debe ser porque han crecido sobre un liquido morado desconocido, pero supones que te serviran.<\p>");
+				if (!character.qualities.madera) {
+					system.setQuality("madera", true);
+					system.write("<p>Tras caminar unos cuantos pasos encuentras unas ramas. Son un poco raras, debe ser porque han crecido sobre un liquido morado desconocido, pero supones que te serviran.<\p>");
+				} else {
+					system.write("<p>Ya tienes suficiente madera para hacer un fuego<\p>");
+                }
 			},
 			"buscar_piedras": function (character, system, action) {
-				system.setQuality("piedra", true);
-				system.write("<p>Te acercas a un riachuelo y encuentras dos brillantes rocas que parece que con el choque adecuado pueden producir una chispa<\p>.")
+				if (!character.qualities.piedra) {
+					system.setQuality("piedra", true);
+					system.write("<p>Te acercas a un riachuelo y encuentras dos brillantes rocas que parece que con el choque adecuado pueden producir una chispa<\p>.")
+				} else {
+					system.write("<p>Ya tienes suficiente piedra para hacer un fuego<\p>");
+                }
 			},
 			"hacer_fuego": function (character, system, action) {
 				if (character.qualities.madera && character.qualities.piedra) {
