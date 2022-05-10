@@ -265,8 +265,8 @@ undum.game.situations = {
 						system.doLink("asentamiento");
 					} else {
 						system.write("<p>Te inventas un cuento sobre un restaurante.</p>");
-						system.write("<p> - P: ...Y as� es como me acab� todos los platos del restaurante .</p>");
-						system.write("<p> - Guardias: �Y a nosotros que nos cuentas? �Fuera de aqu� ahora mismo! .</p>");
+						system.write("<p> - P: ...Y así es como me acab� todos los platos del restaurante .</p>");
+						system.write("<p> - Guardias: ¿Y a nosotros que nos cuentas? ¡Fuera de aquí ahora mismo! .</p>");
 						system.doLink("./entrar");
 					}
                 },
