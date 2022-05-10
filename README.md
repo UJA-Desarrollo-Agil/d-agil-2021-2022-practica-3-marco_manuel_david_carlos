@@ -5,6 +5,19 @@ Juego conversacional creado en el framework Undum para la asignatura Desarrollo 
 
 3º Ingeniería del software - Ingeniería informática
 
+
+**Trabajo desarrollado por:**
+
+
+- David Fernández Arenas - dfa00011@red.ujaen.es
+
+- Marco Antonio Carrión Soriano - macs0021@red.ujaen.es
+
+- Carlos Garrido Alcántara - cga00037@red.ujaen.es
+
+- Manuel Ruiz Fernández - mrf00020@red.ujaen.es
+
+
 ## Índice
  1. [Descripción historia conversacional](#historia)
  2. [URL de Trello](#Trello)
@@ -35,25 +48,35 @@ URL de Trello: https://trello.com/b/XQQRDCRW/pr%C3%A1ctica-3-d%C3%A1gil
 <a name="Review"></a>
 ## Sprint Review
 
+**Product Owner: qué se ha “hecho” y qué no**
+
+- La historia 4 se ha completado, se han añadido objetos a la historia para que el usuario pueda utilizarlos en diferentes situaciones.
+
+- La historia 5 se ha completado, en cada nueva versión del juego se han añadido nuevas historias.
+
+- La historia 7 se ha comletado, el usuario puede saber su proceso en el juego.
+
+- La historia 8 se ha realizado correctamente, se ha añadido música en el juego para ambientar cada situación.
+
+- La situación 9 se ha conseguido realizar con éxito, hemos añadido diálogos entre el protagonista y otros personajes.
+
+- La historia 10.2 se ha completado, hemos cambiado la letra del juego para que el usuario pueda leer más intuitivamente.
+
+- La historia 11 se ha hecho correctamente, se ha añadido una imagen descriptiva en cada situación.
+
+
 **Equipo: qué ha ido bien, qué problemas surgieron y qué soluciones dimos**
 
-- En cuanto al Sprint Backlog se ha elegido un reparto más o menos equitativo de valor entre los dos Sprints. 
-Hemos cumplido prácticamente todas las historias de usuario, completando primero las historias con un mayor valor, excepto la historia de usuario
-donde el cliente quiere nuevas situaciones en cada versión del juego.
-Surgieron problemas como muchas faltas de ortografía y se solucionaron dando un repaso general.
+- Se han completado todas las tareas que hemos seleccionado para el proyecto en este nuevo sprint, junto a nuevas mejoras de anteriores tareas.
 
-- Hubo un atasco a la hora de desarrollar la historia de forma orgánica aunque al final salió correctamente de forma coherente.
+- Durante este sprint han surgido problemas como fotos que se superponían, el espaciado entre párrafos y líneas, faltas de ortografía, etc. Pero haciendo un repaso exhaustivo de cada situación hemos conseguido solucionar estos errores menores. 
 
-- Uno de los problemas que nos surgió fue que muchas de las escenas finales, las cuales no permiten acceder a otra situación, no dejaban claro que eran escenas finales. Este problema lo hemos solucionado añadiendo un resultado a cada situación final, con su propio indicador de final e imagen.
 
-- Otro problema que tuvimos fue repartir la carga de trabajo. Para repartirla de forma igualitaria dividimos las tareas en “subtareas” para cada persona del grupo, por ejemplo en vez de encargar las nueve situaciones a una persona, le encargamos un número equitativo de situaciones a cada miembro del equipo.
 
-**Revisión de plazos**
+**¿Por dónde seguir?**
 
-- Tendremos 20 días para dar una versión definitiva del juego, es algo que vemos posible añadiendo las mejoras mecánicas y lo que consideramos que falta de la historia, sobre todo mejorar la calidad de lo ya hecho y mantenerla para lo nuevo que se añada, intentando de unificar las formas del juego para que no haya unas diferencias significativas a la hora de tomar decisiones o tomar objetos dentro del juego y llevar a cabo diálogos que se entiendan y sean lo más resolutivos posibles.
-Además de eso, añadir diálogos, música, cambios 
+- Si tuviéramos que continuar con el proyecto, podríamos pulir aspectos relacionados con la interfaz, mejorar imágenes e incorporar nuevas historias secundarias como la introducción de un nuevo jefe al que eliminar y alguna misión secundaria que pueda proponer algún personaje secundario.
 
-- La idea sería dedicar las primeras semanas a terminar las situaciones de la historia y la última semana y media en mejorar la calidad de todo y añadir nuevas mecánicas.
 
 <a name="Retro"></a>
 ## Sprint Retrospective
@@ -113,17 +136,4 @@ Se pueden añadir situaciones o alargar las ya hechas para dar mayor profundidad
 
 
 <a name="Evolución"></a>
-## Integrantes del proyecto
-
-Trabajo desarrollado por:
-
-
-- David Fernández Arenas - dfa00011@red.ujaen.es
-
-- Marco Antonio Carrión Soriano - macs0021@red.ujaen.es
-
-- Carlos Garrido Alcántara - cga00037@red.ujaen.es
-
-- Manuel Ruiz Fernández - mrf00020@red.ujaen.es
-
 

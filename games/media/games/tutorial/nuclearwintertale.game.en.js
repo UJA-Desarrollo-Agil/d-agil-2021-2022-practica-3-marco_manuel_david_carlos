@@ -53,6 +53,13 @@ undum.game.situations = {
 		<a href='./mejora-inteligencia'>Inteligencia</a> y <a href='./mejora-suerte'>Suerte</a> además de varias herramientas preparas un <a href='hub'>plan de huída.</a></p>\
 		",
 		{
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 0%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			actions: {
                 'mejora-fuerza': function(character, system, action) {
 					if(character.qualities.stats>0){
@@ -90,6 +97,13 @@ undum.game.situations = {
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 4%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 	tags: ["topic"],
         optionText: "Tratas de ir sigilosamente y usas una ganzúa.",
         displayOrder: 1,
@@ -106,6 +120,13 @@ undum.game.situations = {
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
 	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 4%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 	tags: ["topic"],
         optionText: "Te pones una bata y tratas de convencer a los guardias con tu inteligencia sobre ciencia.",
         displayOrder: 2,
@@ -121,7 +142,13 @@ undum.game.situations = {
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
-	{
+	{ enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 4%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 	tags: ["topic"],
         optionText: "Decides que entrarás por la fuerza al despacho del administrador sea como sea.",
         displayOrder: 3,
@@ -137,7 +164,13 @@ undum.game.situations = {
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
 	",
-	{
+	{ enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 4%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 	tags: ["topic"],
         optionText: "Vas confiado en ti mismo y en tu suerte hacia la puerta del despacho del administrador.",
         displayOrder: 4,
@@ -151,11 +184,16 @@ undum.game.situations = {
 	<p><img src='media/img/asentamiento.jpg' class='float_left'></p>\
 	<br><p><a href='caminoasentamiento1'>Te pones rumbo hacia las luces que ves a lo lejos con cuidado.</a></p></br>\
 	",
-	{
+	{ 
 		enter: function (character, system, from) {
+			system.setCharacterText(
+                            "<p>Progreso del juego 8%\
+							Características del personaje: </p>\
+							"
+                            );
                 atmosphere.play();
 
-            }
+            },
 	}
 	),
 	caminoasentamiento1: new undum.SimpleSituation(
@@ -175,7 +213,14 @@ undum.game.situations = {
 		Te acercas, le abres la mano al esqueleto y <a class='once' href='./chapa'>coges lo que tiene en su interior</a>,\
 		o haces caso a tu querida tía con los peligros del yermo y <a class ='once' href='./nada'>no tocas nada</a>.</p>\
 		",
-		{
+		{ 
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 12%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			actions: {
                 "chapa": function (character, system, action) {
 					system.setQuality("chapaDorada", true);       
@@ -205,6 +250,13 @@ undum.game.situations = {
 		o <a class='once' href='./nada'>no lo coges</a> puesto que parece no tener ninguna importancia.</p>\
 		",
 		{
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 16%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			actions: {
                 "linterna": function (character, system, action) {
 					system.setQuality("linterna", true);
@@ -235,7 +287,13 @@ undum.game.situations = {
 		<p> - P: ¿Entrada? Está bien... deja que mire en  <a class='once' href='./bolsillo'>mis bolsillos</a>.\
 		</p>\
 		",
-		{
+		{ enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 20%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			actions: {
                 "bolsillo": function (character, system, action) {
 					if (character.qualities.chapaDorada == true) {
@@ -289,7 +347,13 @@ undum.game.situations = {
     ),
 	entrada2: new undum.SimpleSituation(
         "",
-		{
+		{ enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 24%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			actions: {
                 "entrar": function (character, system, action) {
 					if (character.qualities.destreza > 2) {
@@ -375,6 +439,11 @@ undum.game.situations = {
 			enter: function (character, system, from) {
 				atmosphere.pause();
 				taberna.play();
+				system.setCharacterText(
+                            "<p>Progreso del juego 28%\
+							Características del personaje: </p>\
+							"
+                            );
             },
 			actions: {
                 "daga": function (character, system, action) {
@@ -402,7 +471,13 @@ undum.game.situations = {
 		<p> - P: Me parece justo, además podremos hacernos compañia</p>\
 		<p>Sin más dilación <a href='caravana/chapa'>ponéis rumbo\
 		hacia el sur.</a></p>",
-		{
+		{ enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 32%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 
 			
 		}
@@ -413,6 +488,11 @@ undum.game.situations = {
 			enter: function (character, system, from) {
 				taberna.pause();
                 atmosphere.play();
+				system.setCharacterText(
+                            "<p>Progreso del juego 36%\
+							Características del personaje: </p>\
+							"
+                            );
 
             },
 			actions: {
@@ -480,7 +560,13 @@ undum.game.situations = {
     ),
 	caravana2: new undum.SimpleSituation(
 	    "",
-		{
+		{ enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 40%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			
 			actions: {
                 "defender": function (character, system, action) {
@@ -502,6 +588,11 @@ undum.game.situations = {
 			enter: function (character, system, from) {
                 atmosphere.pause();
 				peleas.play();
+				system.setCharacterText(
+                            "<p>Progreso del juego 44%\
+							Características del personaje: </p>\
+							"
+                            );
             },
 			actions: {
                 "primero": function (character, system, action) {
@@ -587,7 +678,13 @@ undum.game.situations = {
 	
 	gladiador: new undum.SimpleSituation(
 	 "",
-		{
+		{ enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 48%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			actions: {
                 "combate": function (character, system, action) {
 					system.write("<h1>Combate final</h1>");
@@ -611,7 +708,8 @@ undum.game.situations = {
 						de personas, tú habías combatido por obligación no por gusto, por lo que decides <a  href='./quitar_mascara' >quitarle la \
 						máscara al cyborg </a> para ver quién es o <a  href='./salir_correr' >irte </a> sin saber nada y con la mayor rapidez posible</p>");
 					}else if (character.qualities.inteligencia<2){
-						system.write("<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
+						system.write("<h1>BAD ENDING: Pierdes contra el cyborg</h1>\
+						<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
 						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con\
 						todo para acabar el combate. No eres capaz de ver ningún punto débil en su postura, por lo que\
 						consigue llegar hasta a ti y te corta el cuello sin siquiera haberte percatado. FIN.</p>");
@@ -629,7 +727,8 @@ undum.game.situations = {
 						de personas, tú habías combatido por obligación no por gusto, por lo que decides <a  href='./quitar_mascara' >quitarle la \
 						máscara al cyborg </a> para ver quién es o <a  href='./salir_correr' >irte </a> sin saber nada y con la mayor rapidez posible</p>");
 					}else{
-						system.write("<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
+						system.write("<h1>BAD ENDING: Pierdes contra el cyborg</h1>\
+						<p> El combate empieza tranquilo pero con  el tiempo el cansancio y el dolor de las\
 						heridas causadas en los anteriores combates provocan que el campeón vaya a por ti con\
 						todo para acabar el combate. No eres capaz mover ningún músculo al no quedarte fuerzas ya\
 						para pelear, por lo que consigue llegar hasta a ti y te corta el cuello sin siquiera poder hacer nada. FIN.</p>");
@@ -657,13 +756,35 @@ undum.game.situations = {
 		con vida del coliseo. Tras luchar y derrotar al cacique, tu hermano te explica que lo habían  \
 		chantajeado con luchar para poder <a  href='escape1' >liberar a su mujer </a>.\
 		</p> ",
+		{
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 52%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+			
+			
+			
+		}
 		
 	),
 
 	escape1: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
         <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud, al saber de la muerte del cacique los esclavos se han rebelado y hay luchas internas entre los saqueadores. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
-		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >"
+		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >",
+		{
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 56%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+			
+		}
 
 	),
 	convencer: new undum.SimpleSituation(
@@ -671,14 +792,29 @@ undum.game.situations = {
         <p>Intentas convencer a tu hermano de huir y buscar ayuda para rescatar a su esposa pero él se niega y corre en su búsqueda perdiendose en la multitud. Intentas \
 		ir tras él pero lo has perdido de vista. No quieres volver a perder a tu hermano así que lo buscas sin parar hasta que el revuelo se calma. Aprovechando que todo está más calmado unos soldados se acercan y te detienen, un nuevo cacique se alza y te toman como nuevo campeón.</p>\
 		<p><img src='media/img/nuevogladiador.jpg' class='float_left'></p>\
-		"
-
+		",{
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+			
+		}
+		
 	),
 	rescate: new undum.SimpleSituation(
 		"<img src='media/img/celda.jpg' width= 500 class= 'float_left' >\
         <p>Decides acompañarle y llegais hasta las mazmorras. Alli tu hermano grita el nombre de su mujer hasta que ella responde a lo lejos. Su mujer esta dentro de una celda asi que <a  href='./abrir' > intentas abrirla </a> </p >",
 		{
-
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 60%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 			
 			actions: {
 				"abrir": function (character, system, action) {
@@ -692,14 +828,20 @@ undum.game.situations = {
 		}
 
 	),
+	/*
 	descanso: new undum.SimpleSituation(
 		"<h1>Claro del bosque</h1> \
 		<img src='media/img/bosque.jpg' width= 500 class= 'float_left' >\
         <p>Os sentais sobre un tronco caido. Aprovechais el momento de calma para observar mejor el entorno y veis que os encontrais en un bosque rodeado de arboles. debes <a  href='./buscar_madera' >buscar madera </a>, \
 		<a  href='./buscar_piedras' >buscar piedras</a> e intentar <a  href='./hacer_fuego' >hacer fuego</a></p >.", {
 						enter: function (character, system, from) {
-                peleas.pause();
-				atmosphere.play();
+							peleas.pause();
+							atmosphere.play();
+							system.setCharacterText(
+								"<p>Progreso del juego 64%\
+								Características del personaje: </p>\
+								"
+                            );
             },
 		actions: {
 			"buscar_madera": function (character, system, action) {
@@ -750,6 +892,15 @@ undum.game.situations = {
 		 en ese momento. Tras quedarte inmóvil el cacique te mata, provocando que tu tía se quede sola y tu hermano   \
 		 no pueda salir de allí. </p>\
 		 ",
+		 {
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                }, 
+		 }
 	
     ),
 	lider: new undum.SimpleSituation(
@@ -760,30 +911,88 @@ undum.game.situations = {
 	</p>\
 	<p><img src='media/games/tutorial/bailetribal.gif' class='float_left'></p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 68%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	reunion: new undum.SimpleSituation(
 	"<p>A la mañana siguiente te reunes con los más ancianos del asentamiento, junto a ellos un grupo de habitantes más jóvenes del asentamiento, todos ellos te cuentan que han desaparecido hace tiempo a bastantes habitantes en la ciénaga del Olivar, donde hay un olivo gigantesco mutado que provoca que se pierda todo el que allí entra y nunca vuelva. \
 	Los habitantes cansados y conociendo tu anterior gesta te piden de rodillas suplicando que busques a sus familiares y les ayudes a parar el mal que allí habita. Tu hermano te aconseja que lo intentéis juntos que él te ayudará en esta misión pues su esposa perdió a su madre de esta forma hace ya bastantes años.</p>\
 	<p>Ante esto te encuentras duditativo, piensas por un rato y te decides a <a href='preparar'>ir con él y ayudar a esta pobre gente</a> o <a href='cobardia'>huir como un cobarde esa misma noche.</a></p>\
 	",
+	{
+		
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 72%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	preparar: new undum.SimpleSituation(
 	"<p>Tu hermano y tú preparáis las cosas para salir a la mañana siguiente hacia la ciénaga del Olivar, os recomponéis y tratáis vuestras heridas con lo mejor que puede ofrecer el médico del asentamiento (que no es mucho), poco antes de partir el consejo de ancianos del pueblo te otorgan una armadura antirradiación guardada durante décadas en por los habitantes de la tribu desde que murió el último gran lider.</p>\
 	<p>Os ponéis en camino hacia la ciénaga y a lo lejos se ve una gran sombra de un árbol gigante tras una espesa niebla hedionda. Con el traje puesto te vas acercando y conforme te vas internando en la ciénaga escuchas un extraño canto, te vas acercando al sonido y ves una figura extraña, <a href='locoen'>te acercas a esa figura.</a> </p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 76%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	cobardia: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Huyes y dejas a tu hermano y a los habitantes del asentamiento en la estacada.</h1>\
 	<p>Decides que esto te supera, has tenido suficiente lucha para lo que te queda de vida y te preparas para escapar esa noche sin que te vean. Antes de irte recoges tus cosas y dejas una nota a tu hermano diciéndole que lo sientes pero que no te siga, la experiencia en el coliseo fue demasiado dura y no quieres volver a vivir algo así.</p>",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+	}
 	),
 	locoen: new undum.SimpleSituation(
 	"<p>Os acercáis a la figura, este es un hombre encapuchado, sucio, barbudo y aunque no es un anciano, se nota que está demacrado, llevando una ropa hecha jirones, manchada de barro y verde por el musgo al haber pasado tanto tiempo en la ciénaga.\
 	El hombre se os acerca más y más con una suciam extraña botella en la mano llena de un líquido verde esmeralda y un olor a alcohol y aceite, diciendo una y otra vez: 'La enrea te llama. La enrea te llama.' </p>\
 	<p>Tú lo miras extrañado y dudas si <a href='cercaloco'>acercarte</a> o <a href='arbol'>seguir con tu hermano hacia el interior de la ciénaga.</a></p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 80%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	cercaloco: new undum.SimpleSituation(
 	"<p>Al acercarte al tipo este intenta darte de beber de la botella, continuando con más que manida frase. Tú intentas <a href='./pararlo'>pararlo</a> como puedes. </p>",{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 84%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
 		actions: {
 				 "pararlo": function (character, system, action) {
 					if (character.qualities.linterna == true) {
@@ -804,10 +1013,27 @@ undum.game.situations = {
 	arbol: new undum.SimpleSituation(
 	"<p>Lleváis toda la mañana caminando con la espesa niebla a vuestro alrededor cuando al fin llegáis hasta un imponente olivo del tamaño de un edificio grande. El olivo parece moverse lentamente, tú y tu hermano os acercáis con cuidado para no pisar su ráices y no alertarlo, aunque este parece reaccionar a vuestra presencia de todas formas.</p>\
 	<p>Os acercáis hasta poder subir a las ramas que conectan su tronco con sus raíces, el árbol os da una tremenda sacudida antes de que podáis subir pero no os hace mucho daño, tu hermano te propone que él lo distraerá y mientras tú intentes quemarlo, cortarlo o algo así para <a href='pelearbol'>terminar con él.</a> </p>",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 88%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	pelearbol: new undum.SimpleSituation(
 	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso mutado que no puede ser quemado tan fácilmente. <a href='./usardaga'>Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</a></p>",
 	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 92%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
 		actions:{
 				"usardaga": function(character, system,action) {
 				if(character.qualities.daga==true){
@@ -832,32 +1058,91 @@ undum.game.situations = {
 	"<h1>NEUTRAL ENDING: La explosión os mató a tu hermano y a ti, pero salvasteis a el asentamiento.</h1>\
 	<p>Tu hermano y tú fuisteis alcanzados de lleno por la explosión del olivo, este se consumió rápidamente al poco de explotar, las gentes del pueblo ven esto preocupadas, aunque al pasar el tiempo tienen una reacción agridulce. Se alegran de que el olivo mutante haya sido destruido y sus efectos con él pero se entristecen por la desaparición de tu hermano y de ti. La familia y esposa de tu hermano os hacen un funeral como es debido y todo el pueblo os rinde homenaje como a héroes. La flora y fauna cercana al asentamiento sana y permiten que sus gentes puedan alimentarse más y mejor.</p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+	}
 	),
 	huirarbol: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Tu hermano y tú no lo lográsteis contra el olivo mutante.</h1>\
 	<p>Intentas salir corriendo del tronco del árbol, este falla al intentar darte varios golpes con sus ramas y cuando parecía que habías conseguido escapar una de sus ramas subterráneas aparece por debajo del suelo y te agarra llevándote al interior de la tierra y matándote por la fuerza. Pese a vuestra valentía no lo conseguísteis.</p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	enreotico: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Fuiste absorbido por la enrea, ahora eres un enreotico más.</h1>\
 	<p>Pese a los intentos de tu hermano por sacarte de allí tú rechazas su ayuda a empujones con una fuerza antinatural y te vas con el tipo por la ciénaga, tu mente solo piensa en beber más de ese extraño líquido y l ciénaga ya no te parece un lugar tan desagradable, solo puedes repetir la misma frase que ese tipo: 'La enrea te llama.' Te quedas lo que te queda de vida como otro habitante loco del pantano.</p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	endfin: new undum.SimpleSituation(
 	"<p>Marcháis hacia el poblado mientras se escuchan extraños ruidos en la ciénaga, veis como muchos de los olivos que no veíais antes por la niebla tan espesa son en verdad personas transformadas en olivo con cara y forma de haber pasado bastante dolor por esto. Finalmente cuando llegáis al poblado le contáis a los habitantes lo ocurrido y estos os vitorean y felicitan. Te alzan en brazos y os llevan a un banquete con lo mejor que tienen. </p>\
 	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano a un verde mucho más sano lentamente. Tras un día de celebraciones <a href='nfin'>te planteas si este realmente es tu sitio </a> o es mejor <a href='gfin'>quedarte aquí como líder del asentamiento.</a></p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 96%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	gfin: new undum.SimpleSituation(
 	"<h1>GOOD ENDING: Te quedas en el asentamiento como líder de sus habitantes.</h1>\
 	<p>Decides quedarte en el asentamiento lo que te queda de vida y guiar a los habitantes de este en una nueva época de properidad nunca vista en el yermo de Jaén, el olivar vuelve a ser fértil como una vez fue, no hay más desaparecidos ni esclavos, las caravanas pasan sin problema permitiendo un comercio sano y las aceitunas y el aceite vuelven a ser el producto estrella de la zona.</p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	nfin: new undum.SimpleSituation(
 	"<h1>NEUTRAL ENDING: Sigues tu camino de explorador del yermo.</h1>\
 	<p>Te despides de los habitantes del asentamiento con el traje que te regalaron y te diriges al gran yermo inexplorado, les prometes que intentarás volver aunque no es algo seguro, tú no sientes que este sea tu lugar y quieres seguir explorando y haciendo bien por este desolado yermo. Ellos te dan su bendición y sus mejores deseos mientras partes hacia lo desconocido.</p>\
 	<p><img src='media/img/ending.gif' class='float_left'></p>\
 	"
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	),
 	mfin: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Os devoran en la arena.</h1>\
@@ -865,8 +1150,18 @@ undum.game.situations = {
 	<p><img src='media/img/martires.jpg' class='float_left'></p>\
 	<p>A los pocos días os sacan de allí y os atan en mitad de la arena para que os devoren las bestias del yermo como venganza por la huída y la muerte del anterior cacique. Además de vosotros hay un grupo de esclavos rebeldes encadenados. El cacique da un pomposo discurso y abren las celdas de los animales de las que salen grotescas figuras. Al poco tiempo no queda nadie de tu familia salvo tu tía con vida.</p>\
 	",
+	{
+		enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+		
+	}
 	)
-	
+	*/
 };
 
 // ---------------------------------------------------------------------------
