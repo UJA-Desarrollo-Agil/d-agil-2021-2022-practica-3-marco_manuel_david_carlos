@@ -31,6 +31,7 @@ var taberna = document.getElementById("taberna");
 var atmosphere = document.getElementById("atmosphere");
 var peleas = document.getElementById("peleas");
 var lince = document.getElementById("lince");
+var fini = document.getElementById("fini");
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
@@ -925,6 +926,7 @@ undum.game.situations = {
 	reunion: new undum.SimpleSituation(
 	"<p>A la mañana siguiente te reunes con los más ancianos del asentamiento, junto a ellos un grupo de habitantes más jóvenes del asentamiento, todos ellos te cuentan que han desaparecido hace tiempo a bastantes habitantes en la ciénaga del Olivar, donde hay un olivo gigantesco mutado que provoca que se pierda todo el que allí entra y nunca vuelva. \
 	Los habitantes cansados y conociendo tu anterior gesta te piden de rodillas suplicando que busques a sus familiares y les ayudes a parar el mal que allí habita. Tu hermano te aconseja que lo intentéis juntos que él te ayudará en esta misión pues su esposa perdió a su madre de esta forma hace ya bastantes años.</p>\
+	<p><img src='media/img/reunion.jpg' class='float_left'></p>\
 	<p>Ante esto te encuentras duditativo, piensas por un rato y te decides a <a href='preparar'>ir con él y ayudar a esta pobre gente</a> o <a href='cobardia'>huir como un cobarde esa misma noche.</a></p>\
 	",
 	{
@@ -1075,11 +1077,13 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							fini.play();
                 },
 	}
 	),
 	huirarbol: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Tu hermano y tú no lo lográsteis contra el olivo mutante.</h1>\
+	<p><img src='media/img/olivar.gif' class='float_left'></p>\
 	<p>Intentas salir corriendo del tronco del árbol, este falla al intentar darte varios golpes con sus ramas y cuando parecía que habías conseguido escapar una de sus ramas subterráneas aparece por debajo del suelo y te agarra llevándote al interior de la tierra y matándote por la fuerza. Pese a vuestra valentía no lo conseguísteis.</p>\
 	",
 	{
@@ -1141,6 +1145,7 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							fini.play();
                 },
 		
 	}
