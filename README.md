@@ -102,16 +102,11 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 <a name="Tablero"></a>
 ## Evolución del tablero de Trello
 
-- **Tablero en el primer momento**
-<img src="capturas/06-04-22.png" alt="imagen 3" title="Imagen 3">
+- **Tablero al comienzo del Sprint**
+<img src="capturas/inicio.JPG" alt="imagen 3" title="Imagen 3">
 
-
-- **Tablero después del Product backlog Refinement**
-<img src="capturas/11-04-22.JPG" alt="imagen 3" title="Imagen 3">
-
-
-- **Tablero terminado el primer sprint**
-<img src="capturas/final.png" alt="imagen 3" title="Imagen 3">
+- **Tablero terminado el segundo sprint**
+<img src="capturas/finaltotal.png" alt="imagen 3" title="Imagen 3">
 
 
 <a name="Evolución"></a>
