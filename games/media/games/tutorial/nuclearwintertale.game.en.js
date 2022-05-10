@@ -193,7 +193,7 @@ undum.game.situations = {
                             );
                 atmosphere.play();
 
-            }
+            },
 	}
 	),
 	caminoasentamiento1: new undum.SimpleSituation(
@@ -774,7 +774,7 @@ undum.game.situations = {
 	escape1: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
         <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud, al saber de la muerte del cacique los esclavos se han rebelado y hay luchas internas entre los saqueadores. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
-		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >"
+		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >",
 		{
 			enter: function (character, system, from) {
                     system.setCharacterText(
@@ -792,7 +792,16 @@ undum.game.situations = {
         <p>Intentas convencer a tu hermano de huir y buscar ayuda para rescatar a su esposa pero él se niega y corre en su búsqueda perdiendose en la multitud. Intentas \
 		ir tras él pero lo has perdido de vista. No quieres volver a perder a tu hermano así que lo buscas sin parar hasta que el revuelo se calma. Aprovechando que todo está más calmado unos soldados se acercan y te detienen, un nuevo cacique se alza y te toman como nuevo campeón.</p>\
 		<p><img src='media/img/nuevogladiador.jpg' class='float_left'></p>\
-		"
+		",{
+			enter: function (character, system, from) {
+                    system.setCharacterText(
+                            "<p>Progreso del juego 100%\
+							Características del personaje: </p>\
+							"
+                            );
+                },
+			
+		}
 		
 	),
 	rescate: new undum.SimpleSituation(
@@ -819,6 +828,7 @@ undum.game.situations = {
 		}
 
 	),
+	/*
 	descanso: new undum.SimpleSituation(
 		"<h1>Claro del bosque</h1> \
 		<img src='media/img/bosque.jpg' width= 500 class= 'float_left' >\
@@ -1151,7 +1161,7 @@ undum.game.situations = {
 		
 	}
 	)
-	
+	*/
 };
 
 // ---------------------------------------------------------------------------
