@@ -1109,8 +1109,13 @@ undum.game.situations = {
 	}
 	),
 	endfin: new undum.SimpleSituation(
-	"<p>Marcháis hacia el poblado mientras se escuchan extraños ruidos en la ciénaga, veis como muchos de los olivos que no veíais antes por la niebla tan espesa son en verdad personas transformadas en olivo con cara y forma de haber pasado bastante dolor por esto. Finalmente cuando llegáis al poblado le contáis a los habitantes lo ocurrido y estos os vitorean y felicitan. Te alzan en brazos y os llevan a un banquete con lo mejor que tienen. </p>\
-	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano a un verde mucho más sano lentamente. Tras un día de celebraciones <a href='nfin'>te planteas si este realmente es tu sitio </a> o es mejor <a href='gfin'>quedarte aquí como líder del asentamiento.</a></p>\
+	"<p>Marcháis hacia el poblado mientras se escuchan extraños ruidos en la ciénaga, veis como muchos de los olivos que no veíais antes por la niebla tan espesa \
+	son en verdad personas transformadas en olivo con cara y forma de haber pasado bastante dolor por esto. \
+	 Finalmente cuando llegáis al poblado le contáis a los habitantes lo ocurrido y estos os vitorean y felicitan. \
+	 Te alzan en brazos y os llevan a un banquete con lo mejor que tienen. </p>\
+	 <p><img src='media/img/victoria.jpg' class='float_left'></p>\
+	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano\
+	a un verde mucho más sano lentamente. Tras un día de celebraciones <a href='nfin'>te planteas si este realmente es tu sitio </a> o es mejor <a href='gfin'>quedarte aquí como líder del asentamiento.</a></p>\
 	",
 	{
 		enter: function (character, system, from) {
@@ -1125,7 +1130,9 @@ undum.game.situations = {
 	),
 	gfin: new undum.SimpleSituation(
 	"<h1>GOOD ENDING: Te quedas en el asentamiento como líder de sus habitantes.</h1>\
-	<p>Decides quedarte en el asentamiento lo que te queda de vida y guiar a los habitantes de este en una nueva época de properidad nunca vista en el yermo de Jaén, el olivar vuelve a ser fértil como una vez fue, no hay más desaparecidos ni esclavos, las caravanas pasan sin problema permitiendo un comercio sano y las aceitunas y el aceite vuelven a ser el producto estrella de la zona.</p>\
+	<p>Decides quedarte en el asentamiento lo que te queda de vida y guiar a los habitantes de este en una nueva época de properidad nunca vista en el yermo de Jaén, el olivar vuelve a ser fértil como una vez fue, no hay más desaparecidos ni esclavos, \
+	 las caravanas pasan sin problema permitiendo un comercio sano y las aceitunas y el aceite vuelven a ser el producto estrella de la zona.</p>\
+	 <p><img src='media/img/jaen.jpg' class='float_left'></p>\
 	",
 	{
 		enter: function (character, system, from) {
