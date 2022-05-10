@@ -103,7 +103,7 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 ## Evolución del tablero de Trello
 
 - **Tablero al comienzo del Sprint**
-<img src="capturas/inicio.JPG" alt="imagen 3" title="Imagen 3">
+<img src="capturas/Inicio.JPG" alt="imagen 3" title="Imagen 3">
 
 - **Tablero terminado el segundo sprint**
 <img src="capturas/finaltotal.png" alt="imagen 3" title="Imagen 3">
