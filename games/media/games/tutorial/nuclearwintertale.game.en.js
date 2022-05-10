@@ -711,7 +711,7 @@ undum.game.situations = {
 					system.write("<p class= transient><img src='media/img/hoguera.jpg' width = 500 class='float_left'></p>")
 					system.write("<p>Junto a la luz tenue de la hoguera le preguntas a tu hermano sobre como llego al coliseo. Este te cuenta que tras salir del refugio y llegó a un asentamiento que se encontraba al sur de este. Vivía una vida tranquila, aunque con las obvias dificultades que este nuevo mundo impone.\
 					En el asentamiento conoció a Sofía, su pareja, hija de uno de los granjeros de la zona. Al ver como la tierra no era muy fértil y cada vez producía menos comida decidieron irse hacia el sur en busca de mejores condiciones pero cuando llevaban algunos kilómetros los saqueadores del Cacique los asaltaron y tomaron prisioneros, a tu hermano lo usaron como gladiador y con toda su fuerza de voluntad y física luchó por poder volver a ver a su amada.\
-					Ellos además te cuenta de como era la vida en el asentamiento antes de su secuestro y tú te das cuenta que antes eran felices pese a las dificultades. Decides <a href='bfin'>ir con ellos hacia el asentamiento.</a> o que <a href='nfin'>este no es tu lugar y que quieres seguir explorando mundo.</a><\p>");
+					Ellos además te cuenta de como era la vida en el asentamiento antes de su secuestro y tú te das cuenta que antes eran felices pese a las dificultades. Decides <a href='lider'>ir con ellos hacia el asentamiento.</a><\p>");
 				} else if (!character.qualities.madera && character.qualities.piedra) {
 					system.write("<p>Aun necesitas <a  href='./buscar_madera' >buscar madera</a><\p>");
 				} else if (character.qualities.madera && !character.qualities.piedra) {
@@ -738,13 +738,29 @@ undum.game.situations = {
 		 ",
 	
     ),
-	bfin: new undum.SimpleSituation(
-	"<h1>GOOD ENDING: Te vas con tu hermano</h1>\
-	<p>Te vas con tu hermano y su pareja al asentamiento, allí el padre de ella os recibe con gran alegría aunque en este tiempo ha perdido una mano por culpa de los animales salvajes.\
-	Tu hermano y su pareja deciden que se van a quedar en la granja ayudando y tú te sientes uno más con ellos así que decides quedarte con ellos como un granjero más en esta tierra. Mientras tanto mucho de los esclavos y sirvientes del antiguo cacique llegan al asentamiento dispuestos a recuperar sus vidas.\
+	lider: new undum.SimpleSituation(
+	"<p>Te vas con tu hermano y su pareja al asentamiento, allí el padre de ella os recibe con gran alegría aunque en este tiempo ha perdido una mano por culpa de los animales salvajes.\
+	Muchos más habitantes se reencuentran con sus familiares antiguamente esclavizados quienes se alegran enormemente y el asentamiento clama en euforia.\
+	Todos ellos saben que la chispa de la rebelión ha sido tu acción contra el cacique y la liberación de tu hermano, al poco rato empieza la fiesta, todos bailan en grandes hogueras, cenáis todos juntos y tras un rato de baile y música los habitantes te rodean, de entre ellos el más anciano de la tribu se te acerca y te agradece en nombre de todos lo que has hecho, todos te ovacionan.\
+	El pueblo te elige como su guerrero y líder. Seguís festejando toda la noche hasta que te <a href='reunion'>duermes en un camastro </a> en la casa familiar de la mujer de tu hermano.\
 	</p>\
 	<p><img src='media/img/farm.jpg' class='float_left'></p>\
 	",
+	),
+	reunion: new undum.SimpleSituation(
+	"<p>A la mañana siguiente te reunes con los más ancianos del asentamiento, junto a ellos un grupo de habitantes más jóvenes del asentamiento, todos ellos te cuentan que han desaparecido hace tiempo a bastantes habitantes en la ciénaga del Olivar, donde hay un olivo gigantesco mutado que provoca que se pierda todo el que allí entra y nunca vuelva. \
+	Los habitantes cansados y conociendo tu anterior gesta te piden de rodillas suplicando que busques a sus familiares y les ayudes a parar el mal que allí habita. Tu hermano te aconseja que lo intentéis juntos que él te ayudará en esta misión pues su esposa perdió a su madre de esta forma hace ya bastantes años.</p>\
+	<p>Ante esto te encuentras duditativo, piensas por un rato y te decides a <a href='preparar'>ir con él y ayudar a esta pobre gente</a> o <a href='cobardia'>huir como un cobarde esa misma noche.</a></p>\
+	",
+	),
+	preparar: new undum.SimpleSituation(
+	"<p>Tu hermano y tú preparáis las cosas para salir a la mañana siguiente hacia la ciénaga del Olivar, os recomponéis y tratáis vuestras heridas con lo mejor que puede ofrecer el médico del asentamiento (que no es mucho), poco antes de partir el consejo de ancianos del pueblo te otorgan una armadura antirradiación guardada durante décadas en por los habitantes de la tribu desde que murió el último gran lider.</p>\
+	<p>Os ponéis en camino hacia la ciénaga y a lo lejos se ve una gran sombra de un árbol gigante tras una espesa niebla hedionda. Con el traje puesto te vas acercando y conforme te vas internando en la ciénaga escuchas un extraño canto, te vas acercando al sonido y ves una figura extraña, te acercas a esa figura. </p>\
+	",
+	),
+	cobardia: new undum.SimpleSituation(
+	"<h1>BAD ENDING: Huyes y dejas a tu hermano y a los habitantes del asentamiento en la estacada.</h1>\
+	<p>Decides que esto te supera, has tenido suficiente lucha para lo que te queda de vida y te preparas para escapar esa noche sin que te vean. Antes de irte recoges tus cosas y dejas una nota a tu hermano diciéndole que lo sientes pero que no te siga, la experiencia en el coliseo fue demasiado dura y no quieres volver a vivir algo así.</p>",
 	),
 	nfin: new undum.SimpleSituation(
 	"<h1>NEUTRAL ENDING: Sigues tu camino de explorador del yermo.</h1>\
@@ -759,6 +775,7 @@ undum.game.situations = {
 	<p>A los pocos días os sacan de allí y os atan en mitad de la arena para que os devoren las bestias del yermo como venganza por la huída y la muerte del anterior cacique. Además de vosotros hay un grupo de esclavos rebeldes encadenados. El cacique da un pomposo discurso y abren las celdas de los animales de las que salen grotescas figuras. Al poco tiempo no queda nadie de tu familia salvo tu tía con vida.</p>\
 	",
 	)
+	
 };
 
 // ---------------------------------------------------------------------------
