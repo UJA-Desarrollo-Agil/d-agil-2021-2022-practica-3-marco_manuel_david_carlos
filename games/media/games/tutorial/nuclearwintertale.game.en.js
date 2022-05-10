@@ -231,7 +231,7 @@ undum.game.situations = {
 		<p>Al verte con esa ropa\
 		característica del refugio donde has vivido toda tu vida, se miran con una sonrisa malévola. </p>\
 		<p> - Guardias: Para pasar necesitas pagar la entrada</p>\
-		<p> - P: �Entrada? Est� bien... deja que mire en  <a class='once' href='./bolsillo'>mis bolsillos</a>.\
+		<p> - P: ¿Entrada? Está bien... deja que mire en  <a class='once' href='./bolsillo'>mis bolsillos</a>.\
 		</p>\
 		",
 		{
@@ -253,19 +253,19 @@ undum.game.situations = {
 					system.setCharacterText("<p>Has perdido la chapa dorada</p>");
 					system.write("<p>Les entregas la chapa dorada.</p>");
 					system.write("<p> - P: Esto me parece una entrada razonable.</p>");
-					system.write("<p> - Guardias: No parece demasiado valioso, a�n as� te dejaremos entrar por esta vez .</p>");
+					system.write("<p> - Guardias: No parece demasiado valioso, aún así te dejaremos entrar por esta vez .</p>");
 					system.doLink("asentamiento");
                 },
 				"suerte": function (character, system, action) {
 					if (character.qualities.suerte >= 3) {
 						system.write("<p>Te inventas una historia de como salvaste a un perrito.</p>");
-						system.write("<p> - P: ...y as� es como salv� a ese peque�o perrito .</p>");
-						system.write("<p> - Guardias: Eres todo un h�roe, nos hemos emocionado, te dejaremos pasar.</p>");
+						system.write("<p> - P: ...y así es como salvé a ese peque�o perrito .</p>");
+						system.write("<p> - Guardias: Eres todo un héroe, nos hemos emocionado, te dejaremos pasar.</p>");
 						system.doLink("asentamiento");
 					} else {
 						system.write("<p>Te inventas un cuento sobre un restaurante.</p>");
-						system.write("<p> - P: ...Y as� es como me acab� todos los platos del restaurante .</p>");
-						system.write("<p> - Guardias: �Y a nosotros que nos cuentas? �Fuera de aqu� ahora mismo! .</p>");
+						system.write("<p> - P: ...Y as� es como me acab� todos los platos del restaurante .</p>");
+						system.write("<p> - Guardias: �Y a nosotros que nos cuentas? �Fuera de aqu� ahora mismo! .</p>");
 						system.doLink("./entrar");
 					}
                 },
@@ -394,8 +394,12 @@ undum.game.situations = {
 		caravana de gente que viste anteriormente y te acercas a husmear. Por lo visto, están\
 		preparados ellos también para salir y te enteras de que van en dirección al sur, por lo que\
 		recuerdas las palabras del tabernero hablándote de todos los peligros del yermo de Jaén y\
-		decides preguntarles si puedes ir con ellos. Ellos no dudan en aceptarte ya que toda ayuda\
-		y compañía en estos tiempos postapocalípticos es buena. Sin más dilación <a href='caravana/chapa'>ponéis rumbo\
+		decides preguntarles si puedes ir con ellos. </p>\
+		<p> - P: Necesito viajar hacia el sur, ¿Podría ir con vosotros?.</p>\
+		<p>Ellos se juntan en un coro para discutir si llevarte con ellos o no </p>\
+		<p> - Conductores: Está bien, puedes venir con nosotros, pero deberás ayudarnos con las tareas diarias.</p>\
+		<p> - P: Me parece justo, además podremos hacernos compañia</p>\
+		<p>Sin más dilación <a href='caravana/chapa'>ponéis rumbo\
 		hacia el sur.</a></p>",
 		{
 
