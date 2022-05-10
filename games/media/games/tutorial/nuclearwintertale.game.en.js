@@ -828,7 +828,7 @@ undum.game.situations = {
 		}
 
 	),
-	/*
+	
 	descanso: new undum.SimpleSituation(
 		"<h1>Claro del bosque</h1> \
 		<img src='media/img/bosque.jpg' width= 500 class= 'float_left' >\
@@ -1132,7 +1132,7 @@ undum.game.situations = {
 	"<h1>NEUTRAL ENDING: Sigues tu camino de explorador del yermo.</h1>\
 	<p>Te despides de los habitantes del asentamiento con el traje que te regalaron y te diriges al gran yermo inexplorado, les prometes que intentarás volver aunque no es algo seguro, tú no sientes que este sea tu lugar y quieres seguir explorando y haciendo bien por este desolado yermo. Ellos te dan su bendición y sus mejores deseos mientras partes hacia lo desconocido.</p>\
 	<p><img src='media/img/ending.gif' class='float_left'></p>\
-	"
+	",
 	{
 		enter: function (character, system, from) {
                     system.setCharacterText(
@@ -1161,7 +1161,7 @@ undum.game.situations = {
 		
 	}
 	)
-	*/
+	
 };
 
 // ---------------------------------------------------------------------------
