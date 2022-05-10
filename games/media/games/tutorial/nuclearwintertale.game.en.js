@@ -265,8 +265,8 @@ undum.game.situations = {
 						system.doLink("asentamiento");
 					} else {
 						system.write("<p>Te inventas un cuento sobre un restaurante.</p>");
-						system.write("<p> - P: ...Y as� es como me acab� todos los platos del restaurante .</p>");
-						system.write("<p> - Guardias: �Y a nosotros que nos cuentas? �Fuera de aqu� ahora mismo! .</p>");
+						system.write("<p> - P: ...Y así es como me acab� todos los platos del restaurante .</p>");
+						system.write("<p> - Guardias: ¿Y a nosotros que nos cuentas? ¡Fuera de aquí ahora mismo! .</p>");
 						system.doLink("./entrar");
 					}
                 },
@@ -535,11 +535,12 @@ undum.game.situations = {
 						viajando en una caravana a estar en la arena para realizar peleas.<p>\
 						<br/>\
 						<p><img src='media/img/combate.jpg' class='float_left'></p>\
+						<h1>BAD ENDING: Perdiste en el combate contra los 2 saqueadores </h1>\
 						<p>En el primer combate era contra 2 saqueadores, a los cuales no consigues derrotar ya que no\
 						tienes fuerza suficiente como para empuñar un arma, por lo que al segundo del combate, uno de\
 						ellos te corta la cabeza y cae entre el público, quienes deciden jugar con tu cabeza pasandosela\
-						entre todos.</p>\
-						FIN.");
+						entre todos. FIN</p>\
+						");
 					}
 				},
 				"segundo": function (character, system, action) {
@@ -757,7 +758,7 @@ undum.game.situations = {
 	Todos ellos saben que la chispa de la rebelión ha sido tu acción contra el cacique y la liberación de tu hermano, al poco rato empieza la fiesta, todos bailan en grandes hogueras, cenáis todos juntos y tras un rato de baile y música los habitantes te rodean, de entre ellos el más anciano de la tribu se te acerca y te agradece en nombre de todos lo que has hecho, todos te ovacionan.\
 	El pueblo te elige como su guerrero y líder. Seguís festejando toda la noche hasta que te <a href='reunion'>duermes en un camastro </a> en la casa familiar de la mujer de tu hermano.\
 	</p>\
-	<p><img src='media/img/bailetribal.gif' class='float_left'></p>\
+	<p><img src='media/games/tutorial/bailetribal.gif' class='float_left'></p>\
 	",
 	),
 	reunion: new undum.SimpleSituation(
@@ -788,7 +789,7 @@ undum.game.situations = {
 					if (character.qualities.linterna == true) {
 						system.setQuality("linterna",false);
 						system.write("<p>Te rebuscas entre tus objetos y encuentras la linterna, antes de que el tipo pueda darte de beber, la enciendes y esto lo distrae profundamente, él se queda extasiado mirando a la linterna y te la quita, dejando la botella a tu lado\
-						Tu hermano se ríe al ver la reacción del tipo y <a href='./botella'>recogéis la botella</a> por si pudiera serviros para más adelante. Seguís vuestro camino hacia el interior de la ciénaga.</p>");
+						Tu hermano se ríe al ver la reacción del tipo y <a href='./botella'>recogéis la botella</a> por si pudiera serviros para más adelante. <a href='arbol'>Seguís vuestro camino hacia el interior de la ciénaga.</a></p>");
 					}else{
 						system.write("<p> El tipo te obliga a beber con una fuerza colosal, aunque tu hermano intenta pararlo no puede y cuando das un trago a ese asqueroso licor tu mente se descompone. <a href='enreotico'>Has sido absorbido por la enrea.</a></p>");	
 					}
@@ -805,23 +806,23 @@ undum.game.situations = {
 	<p>Os acercáis hasta poder subir a las ramas que conectan su tronco con sus raíces, el árbol os da una tremenda sacudida antes de que podáis subir pero no os hace mucho daño, tu hermano te propone que él lo distraerá y mientras tú intentes quemarlo, cortarlo o algo así para <a href='pelearbol'>terminar con él.</a> </p>",
 	),
 	pelearbol: new undum.SimpleSituation(
-	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso mutado que no puede ser quemado tan fácilmente. Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</p>",
+	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso mutado que no puede ser quemado tan fácilmente. <a href='./usardaga'>Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</a></p>",
 	{
 		actions:{
 				"usardaga": function(character, system,action) {
 				if(character.qualities.daga==true){
 					system.setQuality("daga", false);					
-					system.write("<p>De entre tus objetos encuentras la daga que te dieron en la taberna hace días, pese a ser una simple daga parece que podría servir para esta ocasión al tener un filo de obsidiana. Le das un corte a la corteza del tronco del árbol y de este empieza a salir una savia marrón oscuro con un pútrido olor. Buscas entre tus cosas algo que pueda servir para hacerle daño al interior del árbol.</p>");
+					system.write("<p>De entre tus objetos encuentras la daga que te dieron en la taberna hace días, pese a ser una simple daga parece que podría servir para esta ocasión al tener un filo de obsidiana. Le das un corte a la corteza del tronco del árbol y de este empieza a salir una savia marrón oscuro con un pútrido olor. <a href='./usarbotella'>Buscas entre tus cosas algo que pueda servir para hacerle daño al interior del árbol.</a></p>");
 				} else{
-					system.write("<p>No encuentras nada con filo lo suficientemente fuerte como para atravesar el tronco y la corteza del árbol, lo intentas con una piedra afilada pero esta se parte en apenas 3 intentos, tardas demasiado y ya es demasiado tarde para tu hermano quien es empalado por el árbol con una rama afilada muriendo al instante gritándote antes de terminar de agonizar para que huyas, aunque el árbol ya te ha localizado.</p>");
+					system.write("<p>No encuentras nada con filo lo suficientemente fuerte como para atravesar el tronco y la corteza del árbol, lo intentas con una piedra afilada pero esta se parte en apenas 3 intentos, tardas demasiado y ya es demasiado tarde para tu hermano quien es empalado por el árbol con una rama afilada muriendo al instante gritándote antes de terminar de agonizar para que <a href='huirarbol'>huyas, aunque el árbol ya te ha localizado.</a></p>");
 				}
 				},
 				"usarbotella": function(character, system,action) {
 					if(character.qualities.botella==true){
 						system.setQuality("botella", false);
-						system.write("<p>De entre tus cosas encuentras la botella que os dio el loco del pantano que os encontrasteis, te acercas al corte que hiciste al árbol y le echas el contenido de la botella entero. Esto calma al árbol a los pocos segundos y se nota como algo en su interior va sanando. Os marcháis de allí por donde vinisteis, magullados pero vivos.</p>");
+						system.write("<p>De entre tus cosas encuentras la botella que os dio el loco del pantano que os encontrasteis, te acercas al corte que hiciste al árbol y le echas el contenido de la botella entero. Esto calma al árbol a los pocos segundos y se nota como algo en su interior va sanando. <a href='endfin'>Os marcháis de allí por donde vinisteis, magullados pero vivos.</a></p>");
 					}else{
-						system.write("<p>De entre tus cosas solo encuentras una antorcha apagada que usásteis antes, la enciendes y la acercas a la asquerosa savia, esta reacciona rápidamente como si fuera gasolina mezclada con TNT y explota brutalmente, el árbol explota de dentro a afuera de una forma colosal.</p>");
+						system.write("<p>De entre tus cosas solo encuentras una antorcha apagada que usásteis antes, la enciendes y la acercas a la asquerosa savia, esta reacciona rápidamente como si fuera gasolina mezclada con TNT y explota brutalmente, <a href='explosionarbol'>el árbol explota de dentro a afuera de una forma colosal.</a></p>");
 					}
 				},
 		}
@@ -844,7 +845,7 @@ undum.game.situations = {
 	),
 	endfin: new undum.SimpleSituation(
 	"<p>Marcháis hacia el poblado mientras se escuchan extraños ruidos en la ciénaga, veis como muchos de los olivos que no veíais antes por la niebla tan espesa son en verdad personas transformadas en olivo con cara y forma de haber pasado bastante dolor por esto. Finalmente cuando llegáis al poblado le contáis a los habitantes lo ocurrido y estos os vitorean y felicitan. Te alzan en brazos y os llevan a un banquete con lo mejor que tienen. </p>\
-	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano a un verde mucho más sano lentamente. Tras un día de celebraciones te planteas si este realmente es tu sitio o es mejor quedarte aquí como líder del asentamiento.</p>\
+	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano a un verde mucho más sano lentamente. Tras un día de celebraciones <a href='nfin'>te planteas si este realmente es tu sitio </a> o es mejor <a href='gfin'>quedarte aquí como líder del asentamiento.</a></p>\
 	",
 	),
 	gfin: new undum.SimpleSituation(
