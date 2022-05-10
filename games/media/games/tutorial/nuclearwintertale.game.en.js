@@ -365,7 +365,7 @@ undum.game.situations = {
 		hace 5 años estuvo en esta misma taberna, lo cual te recuerda a tu hermano mellizo\
 		perdido, y que se fue dirección al sur con una chica del asentamiento. Sorprendido\
 		por esta noticia no dudas en salir en su búsqueda. Antes de irte, el extraño te ofrece una\
-		daga de chatarra diciéndote que él ya no la iba a necesitar más.</p>\
+		daga de chatarra y filo de obsidiana diciéndote que él ya no la iba a necesitar más.</p>\
 		<p class = transient><a href='./daga'>Coges la daga\
 		</a>sin pensarlo ya que no sabes cuándo te puede venir bien, o <a href='./nada'>no la coges\
 		</a>puesto que tú eres un ser de luz y no tienes intención de hacerle daño a nadie.</p>\
@@ -748,7 +748,7 @@ undum.game.situations = {
 	Todos ellos saben que la chispa de la rebelión ha sido tu acción contra el cacique y la liberación de tu hermano, al poco rato empieza la fiesta, todos bailan en grandes hogueras, cenáis todos juntos y tras un rato de baile y música los habitantes te rodean, de entre ellos el más anciano de la tribu se te acerca y te agradece en nombre de todos lo que has hecho, todos te ovacionan.\
 	El pueblo te elige como su guerrero y líder. Seguís festejando toda la noche hasta que te <a href='reunion'>duermes en un camastro </a> en la casa familiar de la mujer de tu hermano.\
 	</p>\
-	<p><img src='media/img/farm.jpg' class='float_left'></p>\
+	<p><img src='media/img/bailetribal.gif' class='float_left'></p>\
 	",
 	),
 	reunion: new undum.SimpleSituation(
@@ -759,7 +759,7 @@ undum.game.situations = {
 	),
 	preparar: new undum.SimpleSituation(
 	"<p>Tu hermano y tú preparáis las cosas para salir a la mañana siguiente hacia la ciénaga del Olivar, os recomponéis y tratáis vuestras heridas con lo mejor que puede ofrecer el médico del asentamiento (que no es mucho), poco antes de partir el consejo de ancianos del pueblo te otorgan una armadura antirradiación guardada durante décadas en por los habitantes de la tribu desde que murió el último gran lider.</p>\
-	<p>Os ponéis en camino hacia la ciénaga y a lo lejos se ve una gran sombra de un árbol gigante tras una espesa niebla hedionda. Con el traje puesto te vas acercando y conforme te vas internando en la ciénaga escuchas un extraño canto, te vas acercando al sonido y ves una figura extraña, te acercas a esa figura. </p>\
+	<p>Os ponéis en camino hacia la ciénaga y a lo lejos se ve una gran sombra de un árbol gigante tras una espesa niebla hedionda. Con el traje puesto te vas acercando y conforme te vas internando en la ciénaga escuchas un extraño canto, te vas acercando al sonido y ves una figura extraña, <a href='locoen'>te acercas a esa figura.</a> </p>\
 	",
 	),
 	cobardia: new undum.SimpleSituation(
@@ -769,15 +769,83 @@ undum.game.situations = {
 	locoen: new undum.SimpleSituation(
 	"<p>Os acercáis a la figura, este es un hombre encapuchado, sucio, barbudo y aunque no es un anciano, se nota que está demacrado, llevando una ropa hecha jirones, manchada de barro y verde por el musgo al haber pasado tanto tiempo en la ciénaga.\
 	El hombre se os acerca más y más con una suciam extraña botella en la mano llena de un líquido verde esmeralda y un olor a alcohol y aceite, diciendo una y otra vez: 'La enrea te llama. La enrea te llama.' </p>\
-	<p>Tú lo miras extrañado y dudas si acercarte o seguir con tu hermano hacia la ciénaga.</p>\
+	<p>Tú lo miras extrañado y dudas si <a href='cercaloco'>acercarte</a> o <a href='arbol'>seguir con tu hermano hacia el interior de la ciénaga.</a></p>\
 	",
 	),
 	cercaloco: new undum.SimpleSituation(
-	"<p>Al acercarte al tipo este intenta darte de la botella </p>",
+	"<p>Al acercarte al tipo este intenta darte de beber de la botella, continuando con más que manida frase. Tú intentas <a href='./pararlo'>pararlo</a> como puedes. </p>",{
+		actions: {
+				 "pararlo": function (character, system, action) {
+					if (character.qualities.linterna == true) {
+						system.setQuality("linterna",false);
+						system.write("<p>Te rebuscas entre tus objetos y encuentras la linterna, antes de que el tipo pueda darte de beber, la enciendes y esto lo distrae profundamente, él se queda extasiado mirando a la linterna y te la quita, dejando la botella a tu lado\
+						Tu hermano se ríe al ver la reacción del tipo y <a href='./botella'>recogéis la botella</a> por si pudiera serviros para más adelante. Seguís vuestro camino hacia el interior de la ciénaga.</p>");
+					}else{
+						system.write("<p> El tipo te obliga a beber con una fuerza colosal, aunque tu hermano intenta pararlo no puede y cuando das un trago a ese asqueroso licor tu mente se descompone. <a href='enreotico'>Has sido absorbido por la enrea.</a></p>");	
+					}
+                },
+				"botella": function (character, system, action) {
+					system.setQuality("botella", true);
+				},
+			 }
+	}
+			 
+	),
+	arbol: new undum.SimpleSituation(
+	"<p>Lleváis toda la mañana caminando con la espesa niebla a vuestro alrededor cuando al fin llegáis hasta un imponente olivo del tamaño de un edificio grande. El olivo parece moverse lentamente, tú y tu hermano os acercáis con cuidado para no pisar su ráices y no alertarlo, aunque este parece reaccionar a vuestra presencia de todas formas.</p>\
+	<p>Os acercáis hasta poder subir a las ramas que conectan su tronco con sus raíces, el árbol os da una tremenda sacudida antes de que podáis subir pero no os hace mucho daño, tu hermano te propone que él lo distraerá y mientras tú intentes quemarlo, cortarlo o algo así para <a href='pelearbol'>terminar con él.</a> </p>",
+	),
+	pelearbol: new undum.SimpleSituation(
+	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso mutado que no puede ser quemado tan fácilmente. Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</p>",
+	{
+		actions:{
+				"usardaga": function(character, system,action) {
+				if(character.qualities.daga==true){
+					system.setQuality("daga", false);					
+					system.write("<p>De entre tus objetos encuentras la daga que te dieron en la taberna hace días, pese a ser una simple daga parece que podría servir para esta ocasión al tener un filo de obsidiana. Le das un corte a la corteza del tronco del árbol y de este empieza a salir una savia marrón oscuro con un pútrido olor. Buscas entre tus cosas algo que pueda servir para hacerle daño al interior del árbol.</p>");
+				} else{
+					system.write("<p>No encuentras nada con filo lo suficientemente fuerte como para atravesar el tronco y la corteza del árbol, lo intentas con una piedra afilada pero esta se parte en apenas 3 intentos, tardas demasiado y ya es demasiado tarde para tu hermano quien es empalado por el árbol con una rama afilada muriendo al instante gritándote antes de terminar de agonizar para que huyas, aunque el árbol ya te ha localizado.</p>");
+				}
+				},
+				"usarbotella": function(character, system,action) {
+					if(character.qualities.botella==true){
+						system.setQuality("botella", false);
+						system.write("<p>De entre tus cosas encuentras la botella que os dio el loco del pantano que os encontrasteis, te acercas al corte que hiciste al árbol y le echas el contenido de la botella entero. Esto calma al árbol a los pocos segundos y se nota como algo en su interior va sanando. Os marcháis de allí por donde vinisteis, magullados pero vivos.</p>");
+					}else{
+						system.write("<p>De entre tus cosas solo encuentras una antorcha apagada que usásteis antes, la enciendes y la acercas a la asquerosa savia, esta reacciona rápidamente como si fuera gasolina mezclada con TNT y explota brutalmente, el árbol explota de dentro a afuera de una forma colosal.</p>");
+					}
+				},
+		}
+	}
+	),
+	explosionarbol: new undum.SimpleSituation(
+	"<h1>NEUTRAL ENDING: La explosión os mató a tu hermano y a ti, pero salvasteis a el asentamiento.</h1>\
+	<p>Tu hermano y tú fuisteis alcanzados de lleno por la explosión del olivo, este se consumió rápidamente al poco de explotar, las gentes del pueblo ven esto preocupadas, aunque al pasar el tiempo tienen una reacción agridulce. Se alegran de que el olivo mutante haya sido destruido y sus efectos con él pero se entristecen por la desaparición de tu hermano y de ti. La familia y esposa de tu hermano os hacen un funeral como es debido y todo el pueblo os rinde homenaje como a héroes. La flora y fauna cercana al asentamiento sana y permiten que sus gentes puedan alimentarse más y mejor.</p>\
+	",
+	),
+	huirarbol: new undum.SimpleSituation(
+	"<h1>BAD ENDING: Tu hermano y tú no lo lográsteis contra el olivo mutante.</h1>\
+	<p>Intentas salir corriendo del tronco del árbol, este falla al intentar darte varios golpes con sus ramas y cuando parecía que habías conseguido escapar una de sus ramas subterráneas aparece por debajo del suelo y te agarra llevándote al interior de la tierra y matándote por la fuerza. Pese a vuestra valentía no lo conseguísteis.</p>\
+	",
+	),
+	enreotico: new undum.SimpleSituation(
+	"<h1>BAD ENDING: Fuiste absorbido por la enrea, ahora eres un enreotico más.</h1>\
+	<p>Pese a los intentos de tu hermano por sacarte de allí tú rechazas su ayuda a empujones con una fuerza antinatural y te vas con el tipo por la ciénaga, tu mente solo piensa en beber más de ese extraño líquido y l ciénaga ya no te parece un lugar tan desagradable, solo puedes repetir la misma frase que ese tipo: 'La enrea te llama.' Te quedas lo que te queda de vida como otro habitante loco del pantano.</p>\
+	",
+	),
+	endfin: new undum.SimpleSituation(
+	"<p>Marcháis hacia el poblado mientras se escuchan extraños ruidos en la ciénaga, veis como muchos de los olivos que no veíais antes por la niebla tan espesa son en verdad personas transformadas en olivo con cara y forma de haber pasado bastante dolor por esto. Finalmente cuando llegáis al poblado le contáis a los habitantes lo ocurrido y estos os vitorean y felicitan. Te alzan en brazos y os llevan a un banquete con lo mejor que tienen. </p>\
+	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano a un verde mucho más sano lentamente. Tras un día de celebraciones te planteas si este realmente es tu sitio o es mejor quedarte aquí como líder del asentamiento.</p>\
+	",
+	),
+	gfin: new undum.SimpleSituation(
+	"<h1>GOOD ENDING: Te quedas en el asentamiento como líder de sus habitantes.</h1>\
+	<p>Decides quedarte en el asentamiento lo que te queda de vida y guiar a los habitantes de este en una nueva época de properidad nunca vista en el yermo de Jaén, el olivar vuelve a ser fértil como una vez fue, no hay más desaparecidos ni esclavos, las caravanas pasan sin problema permitiendo un comercio sano y las aceitunas y el aceite vuelven a ser el producto estrella de la zona.</p>\
+	",
 	),
 	nfin: new undum.SimpleSituation(
 	"<h1>NEUTRAL ENDING: Sigues tu camino de explorador del yermo.</h1>\
-	<p>Te despides de tu hermano y su pareja, les prometes que intentarás volver aunque no es algo seguro, tú no sientes que este sea tu lugar y quieres seguir explorando y haciendo bien por este desolado yermo. Ellos te dan su bendición y sus mejores deseos mientras partes hacia lo desconocido.</p>\
+	<p>Te despides de los habitantes del asentamiento con el traje que te regalaron y te diriges al gran yermo inexplorado, les prometes que intentarás volver aunque no es algo seguro, tú no sientes que este sea tu lugar y quieres seguir explorando y haciendo bien por este desolado yermo. Ellos te dan su bendición y sus mejores deseos mientras partes hacia lo desconocido.</p>\
 	<p><img src='media/img/ending.gif' class='float_left'></p>\
 	"
 	),
@@ -833,6 +901,9 @@ undum.game.qualities = {
 	piedra: new undum.OnOffQuality(
 		"Piedra", { priority: "0007", group: 'inventario', onDisplay: "&#10003;" }
 	),
+	botella: new undum.OnOffQuality(
+		"Botella", { priority: "0008", group: 'inventario', onDisplay: "&#127870;" }
+	),
 	stats: new undum.NumericQuality(
 	"Stats a Repartir",{priority:"0005",group:'stats'}
 	)
@@ -866,4 +937,5 @@ undum.game.init = function(character, system) {
 	system.setQuality("libro", false);
 	system.setQuality("piedra", false);
 	system.setQuality("madera", false);
+	system.setQuality("botella",false);
 };
