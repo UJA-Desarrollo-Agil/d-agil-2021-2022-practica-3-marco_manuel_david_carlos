@@ -766,6 +766,15 @@ undum.game.situations = {
 	"<h1>BAD ENDING: Huyes y dejas a tu hermano y a los habitantes del asentamiento en la estacada.</h1>\
 	<p>Decides que esto te supera, has tenido suficiente lucha para lo que te queda de vida y te preparas para escapar esa noche sin que te vean. Antes de irte recoges tus cosas y dejas una nota a tu hermano diciéndole que lo sientes pero que no te siga, la experiencia en el coliseo fue demasiado dura y no quieres volver a vivir algo así.</p>",
 	),
+	locoen: new undum.SimpleSituation(
+	"<p>Os acercáis a la figura, este es un hombre encapuchado, sucio, barbudo y aunque no es un anciano, se nota que está demacrado, llevando una ropa hecha jirones, manchada de barro y verde por el musgo al haber pasado tanto tiempo en la ciénaga.\
+	El hombre se os acerca más y más con una suciam extraña botella en la mano llena de un líquido verde esmeralda y un olor a alcohol y aceite, diciendo una y otra vez: 'La enrea te llama. La enrea te llama.' </p>\
+	<p>Tú lo miras extrañado y dudas si acercarte o seguir con tu hermano hacia la ciénaga.</p>\
+	",
+	),
+	cercaloco: new undum.SimpleSituation(
+	"<p>Al acercarte al tipo este intenta darte de la botella </p>",
+	),
 	nfin: new undum.SimpleSituation(
 	"<h1>NEUTRAL ENDING: Sigues tu camino de explorador del yermo.</h1>\
 	<p>Te despides de tu hermano y su pareja, les prometes que intentarás volver aunque no es algo seguro, tú no sientes que este sea tu lugar y quieres seguir explorando y haciendo bien por este desolado yermo. Ellos te dan su bendición y sus mejores deseos mientras partes hacia lo desconocido.</p>\
