@@ -36,18 +36,18 @@ var lince = document.getElementById("lince");
 undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>20-05-2152 Refugio J100</h1>\
-		<p class = transient><img src='media/games/tutorial/cabum.jpg' class='float_left'></p>\
+		<p><img src='media/games/tutorial/cabum.jpg' class='float_left'></p>\
 		<p>Hace 100 años que el mundo entró en la tercera guerra mundial, tras una guerra convencional finalmente alguna nación empezó a usar las bombas nucleares y todas lanzaron a su vez.\
 		Algunos pudieron refugiarse en refugios preparados para la ocasión, entre ellos tu familia. La gran mayoría murieron y muchos otros sufrieron los efectos de la radiación y el invierno nuclear.\
 		</p>\
 		<p> Mientras que los habitantes de los refugios sobrevivían con purificadores, cultivos hidropónicos y reactores nucleares en miniatura en el yermo exterior se levantaban de entre las ruinas los habitantes creando pequeños asentamientos con lo que tenían a su alcance.  \
 		</p>\
-		<p class = transient><img src='media/games/tutorial/yermo.jpg' class='float_left'></p>\
+		<p><img src='media/games/tutorial/yermo.jpg' class='float_left'></p>\
 		<p>Eres un habitante del refugio J100, con apenas 18 años, llevas viviendo aquí toda tu vida, de tu familia solo te queda tu tía Josefina, tus padres murieron hace años debido a una epidemia de cólera que hubo en el refugio cuando el purificador de agua se estropeó.</p>\
 		<p>Tu tía se hizo cargo de ti pues apenas tenías 4 años y desde entonces siempre has vivido con ella, aunque sois bien distintos la quieres como es.\
 		Ella siempre ha querido que seas parte del refugio y tengas algún puesto de responsabilidad en este, aunque tú te has metido en líos varias veces ella siempre te ha sacado de ellos.\
 		Pero tú por tu parte siempre has pensado más allá de las paredes del refugio y te han llamado la atención las historias de antes de la guerra que se contaban dentro del refugio.</p>\
-		<p class = transient><img src='media/games/tutorial/refugio.jpg' class='float_left'></p>\
+		<p><img src='media/games/tutorial/refugio.jpg' class='float_left'></p>\
 		<p>Con todo esto hace ya varios años que sabes por rumores de los guardias del refugio que el gobernador del refugio periódicamente comercia con caravanas del exterior y que este es relativamente habitable, pues si no, nadie quedaría fuera para comerciar.\
 		Desde hace semanas llevas preparándote para escapar de aquí con tu <a href='./mejora-fuerza'>Fuerza</a>, <a href='./mejora-destreza'>Destreza</a>,\
 		<a href='./mejora-inteligencia'>Inteligencia</a> y <a href='./mejora-suerte'>Suerte</a> además de varias herramientas preparas un <a href='hub'>plan de huída.</a></p>\
@@ -83,8 +83,8 @@ undum.game.situations = {
 		}
     ),
 	ganzua: new undum.SimpleSituation(
-	"<p>Te escapas por el interior del refugio con tu  más que probada destreza abriendo las cerraduras con pinzas para el pelo, mientras que nadie te ve pues te escabulles como una sabandija sin ser detectado. Llegas a la puerta del despacho del administrador del refugio y la abres sin problema.</p>\
-	<p class = transient><img src='media/games/tutorial/ganzua.jpg' class='float_left'></p>\
+	"<p>Te escapas por el interior del refugio con tu más que probada destreza abriendo las cerraduras con pinzas para el pelo, mientras que nadie te ve, pues te escabulles como una sabandija sin ser detectado. Llegas a la puerta del despacho del administrador del refugio y la abres sin problema.</p>\
+	<p><img src='media/games/tutorial/ganzua.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
@@ -100,7 +100,7 @@ undum.game.situations = {
 	),
 	conver: new undum.SimpleSituation(
 	"<p>Te diriges a la oficina del gobernador donde te espera uno de los guardias, con tu inteligencia y tu bata de científico robada lo convences en base a palabrería científica de que debe de dejarte pasar porque necesitas una de las llaves para el reactor del refugio que solo están en esa oficina.</p>\
-	<p class = transient><img src='media/games/tutorial/cientifico.jpg' class='float_left'></p>\
+	<p><img src='media/games/tutorial/cientifico.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
@@ -116,7 +116,7 @@ undum.game.situations = {
 	),
 	duelo: new undum.SimpleSituation(
 	"<p>Te armas con un tubo de metal bien duro y vas cuidadosamente hacia la puerta del despacho del administrador, cuando llegas, ves a un guardia esperando, te lanzas sobre él con el tubo y lo sorprendes, dejándolo insconciente con un par de golpes, abres la puerta con las llaves del guardia.</p>\
-	<p class = transient><img src='media/games/tutorial/fuerza.jpg' class='float_left'></p>\
+	<p><img src='media/games/tutorial/fuerza.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
@@ -132,7 +132,7 @@ undum.game.situations = {
 	),
 	suertudo: new undum.SimpleSituation(
 	"<p>Tienes tanta suerte que los guardias parecen ni siquiera mirar en tu dirección, llegas al despacho del gobernador y te encuentras la llave del despacho en una maceta cercana a la puerta. Entras sin problema.</p>\
-	<p class = transient><img src='media/games/tutorial/trebol.jpg' class='float_left'></p>\
+	<p><img src='media/games/tutorial/trebol.jpg' class='float_left'></p>\
 	<p>Una vez dentro del despacho buscas la tarjeta de acceso de repuesto de el administrador del refugio para poder abrir la puerta del refugio, buscando entre los cajones das con un documento que tiene el apellido de tu familia, lo examinas y ves que no eras hijo único, si no que tenías un hermano mellizo.\
 	Tu hermano según el documento fue entregado a unos comerciantes del exterior durante la gran plaga de cólera en la que murieron tus padres a cambio de medicinas. Todo esto te causa bastante shock y frustración contra los habitantes del refugio. Te llevas el documento y al poco rato encuentras la tarjeta.</p>\
 	<p>Con la tarjeta en el bolsillo te vas hacia el vestíbulo y esperas al cambio de guardia para abrir la tremenda puerta que hay allí cerrada desde hace semanas. Esta al abrirse activa una alarma y hace bastante ruido, por lo que sales corriendo hacia el exterior con la mayor rapidez posible. Al llegar al <a href='salida'>exterior ves por primera vez la luz solar a poco de anochecer.</a> </p>\
@@ -149,7 +149,7 @@ undum.game.situations = {
 	salida: new undum.SimpleSituation(
 	"<p>Al ver el sol ponerse por primera vez te quedas paralizado viendo algo tan bonito por primera vez pues solo sabías que eso ocurría por los libros que has leído. Al poco de terminar el anochecer ves salir la luna llena y piensas en tu hermano perdido y en las ganas que tienes de explorar ese enorme aunque ruinoso mundo. A lo lejos ves unas luces de lo que parece ser un asentamiento.</p>\
 	<p><img src='media/img/asentamiento.jpg' class='float_left'></p>\
-	<p><a href='caminoasentamiento1'>Te pones rumbo hacia las luces que ves a lo lejos con cuidado.</a></p>\
+	<br><p><a href='caminoasentamiento1'>Te pones rumbo hacia las luces que ves a lo lejos con cuidado.</a></p></br>\
 	",
 	{
 		enter: function (character, system, from) {
@@ -159,7 +159,8 @@ undum.game.situations = {
 	}
 	),
 	caminoasentamiento1: new undum.SimpleSituation(
-        "<h1>Camino al asentamiento</h1>\
+		"<br></br>\
+        <h1>Camino al asentamiento</h1>\
 		<p>Intrigado por ver qué clase de cosas hay en ese asentamiento, decides poner rumbo hacía\
 		allí. A lo lejos ves como una caravana de personas se acerca al asentamiento con\
 		intención de entrar.</p>\
@@ -177,8 +178,8 @@ undum.game.situations = {
 		{
 			actions: {
                 "chapa": function (character, system, action) {
-					system.setQuality("chapaDorada", true);        //FIXME: cambiar esta basura de imagen
-                    system.write("<p><img src='media/img/sarpullido.jpg' class='float_left'></p>\
+					system.setQuality("chapaDorada", true);       
+					system.write("<p><img src='media/img/sarpullido.jpg' class='float_left' width= 300></p>\
 					<p>Coges lo que tiene en su interior, es una chapa dorada que no\
 					sabes para qué sirve, así que optas por guardarla en tu bolsillo. Al sacar tu\
 					mano del bolsillo notas un escozor que te quema la mano. Te fijas más detenidamente\
@@ -701,18 +702,26 @@ undum.game.situations = {
             },
 		actions: {
 			"buscar_madera": function (character, system, action) {
-				system.setQuality("madera", true);
-				system.write("<p>Tras caminar unos cuantos pasos encuentras unas ramas. Son un poco raras, debe ser porque han crecido sobre un liquido morado desconocido, pero supones que te serviran.<\p>");
+				if (!character.qualities.madera) {
+					system.setQuality("madera", true);
+					system.write("<p>Tras caminar unos cuantos pasos encuentras unas ramas. Son un poco raras, debe ser porque han crecido sobre un liquido morado desconocido, pero supones que te serviran.<\p>");
+				} else {
+					system.write("<p>Ya tienes suficiente madera para hacer un fuego<\p>");
+                }
 			},
 			"buscar_piedras": function (character, system, action) {
-				system.setQuality("piedra", true);
-				system.write("<p>Te acercas a un riachuelo y encuentras dos brillantes rocas que parece que con el choque adecuado pueden producir una chispa<\p>.")
+				if (!character.qualities.piedra) {
+					system.setQuality("piedra", true);
+					system.write("<p>Te acercas a un riachuelo y encuentras dos brillantes rocas que parece que con el choque adecuado pueden producir una chispa<\p>.")
+				} else {
+					system.write("<p>Ya tienes suficiente piedra para hacer un fuego<\p>");
+                }
 			},
 			"hacer_fuego": function (character, system, action) {
 				if (character.qualities.madera && character.qualities.piedra) {
 					system.setQuality("piedra", false);
 					system.setQuality("madera", false);
-					system.write("<p class= transient><img src='media/img/hoguera.jpg' width = 500 class='float_left'></p>")
+					system.write("<p><img src='media/img/hoguera.jpg' width = 500 class='float_left'></p>")
 					system.write("<p>Junto a la luz tenue de la hoguera le preguntas a tu hermano sobre como llego al coliseo. Este te cuenta que tras salir del refugio y llegó a un asentamiento que se encontraba al sur de este. Vivía una vida tranquila, aunque con las obvias dificultades que este nuevo mundo impone.\
 					En el asentamiento conoció a Sofía, su pareja, hija de uno de los granjeros de la zona. Al ver como la tierra no era muy fértil y cada vez producía menos comida decidieron irse hacia el sur en busca de mejores condiciones pero cuando llevaban algunos kilómetros los saqueadores del Cacique los asaltaron y tomaron prisioneros, a tu hermano lo usaron como gladiador y con toda su fuerza de voluntad y física luchó por poder volver a ver a su amada.\
 					Ellos además te cuenta de como era la vida en el asentamiento antes de su secuestro y tú te das cuenta que antes eran felices pese a las dificultades. Decides <a href='lider'>ir con ellos hacia el asentamiento.</a><\p>");
