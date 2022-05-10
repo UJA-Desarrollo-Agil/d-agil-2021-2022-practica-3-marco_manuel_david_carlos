@@ -738,7 +738,7 @@ undum.game.situations = {
 	"<p>Te vas con tu hermano y su pareja al asentamiento, allí el padre de ella os recibe con gran alegría aunque en este tiempo ha perdido una mano por culpa de los animales salvajes.\
 	Muchos más habitantes se reencuentran con sus familiares antiguamente esclavizados quienes se alegran enormemente y el asentamiento clama en euforia.\
 	Todos ellos saben que la chispa de la rebelión ha sido tu acción contra el cacique y la liberación de tu hermano, al poco rato empieza la fiesta, todos bailan en grandes hogueras, cenáis todos juntos y tras un rato de baile y música los habitantes te rodean, de entre ellos el más anciano de la tribu se te acerca y te agradece en nombre de todos lo que has hecho, todos te ovacionan.\
-	El pueblo te elige como su guerrero y líder. Seguís festejando toda la noche hasta que te duermes en un camastro en la casa familiar de la mujer de tu hermano.\
+	El pueblo te elige como su guerrero y líder. Seguís festejando toda la noche hasta que te <a href='reunion'>duermes en un camastro </a> en la casa familiar de la mujer de tu hermano.\
 	</p>\
 	<p><img src='media/img/farm.jpg' class='float_left'></p>\
 	",
@@ -746,11 +746,17 @@ undum.game.situations = {
 	reunion: new undum.SimpleSituation(
 	"<p>A la mañana siguiente te reunes con los más ancianos del asentamiento, junto a ellos un grupo de habitantes más jóvenes del asentamiento, todos ellos te cuentan que han desaparecido hace tiempo a bastantes habitantes en la ciénaga del Olivar, donde hay un olivo gigantesco mutado que provoca que se pierda todo el que allí entra y nunca vuelva. \
 	Los habitantes cansados y conociendo tu anterior gesta te piden de rodillas suplicando que busques a sus familiares y les ayudes a parar el mal que allí habita. Tu hermano te aconseja que lo intentéis juntos que él te ayudará en esta misión pues su esposa perdió a su madre de esta forma hace ya bastantes años.</p>\
-	<p>Ante esto te encuentras duditativo, piensas por un rato y te decides a Ir con él y ayudar a esta pobre gente o Huir como un cobarde esa misma noche.</p>\
+	<p>Ante esto te encuentras duditativo, piensas por un rato y te decides a <a href='preparar'>ir con él y ayudar a esta pobre gente</a> o <a href='cobardia'>huir como un cobarde esa misma noche.</a></p>\
+	",
+	),
+	preparar: new undum.SimpleSituation(
+	"<p>Tu hermano y tú preparáis las cosas para salir a la mañana siguiente hacia la ciénaga del Olivar, os recomponéis y tratáis vuestras heridas con lo mejor que puede ofrecer el médico del asentamiento (que no es mucho), poco antes de partir el consejo de ancianos del pueblo te otorgan una armadura antirradiación guardada durante décadas en por los habitantes de la tribu desde que murió el último gran lider.</p>\
+	<p>Os ponéis en camino hacia la ciénaga y a lo lejos se ve una gran sombra de un árbol gigante tras una espesa niebla hedionda. Con el traje puesto te vas acercando y conforme te vas internando en la ciénaga escuchas un extraño canto, te vas acercando al sonido y ves una figura extraña, te acercas a esa figura. </p>\
 	",
 	),
 	cobardia: new undum.SimpleSituation(
-	"<p></p>",
+	"<h1>BAD ENDING: Huyes y dejas a tu hermano y a los habitantes del asentamiento en la estacada.</h1>\
+	<p>Decides que esto te supera, has tenido suficiente lucha para lo que te queda de vida y te preparas para escapar esa noche sin que te vean. Antes de irte recoges tus cosas y dejas una nota a tu hermano diciéndole que lo sientes pero que no te siga, la experiencia en el coliseo fue demasiado dura y no quieres volver a vivir algo así.</p>",
 	),
 	nfin: new undum.SimpleSituation(
 	"<h1>NEUTRAL ENDING: Sigues tu camino de explorador del yermo.</h1>\
