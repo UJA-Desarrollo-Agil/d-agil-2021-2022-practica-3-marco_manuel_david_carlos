@@ -1014,6 +1014,7 @@ undum.game.situations = {
 	),
 	arbol: new undum.SimpleSituation(
 	"<p>Lleváis toda la mañana caminando con la espesa niebla a vuestro alrededor cuando al fin llegáis hasta un imponente olivo del tamaño de un edificio grande. El olivo parece moverse lentamente, tú y tu hermano os acercáis con cuidado para no pisar su ráices y no alertarlo, aunque este parece reaccionar a vuestra presencia de todas formas.</p>\
+	<p><img src='media/img/niebla.jpg' class='float_left'></p>\
 	<p>Os acercáis hasta poder subir a las ramas que conectan su tronco con sus raíces, el árbol os da una tremenda sacudida antes de que podáis subir pero no os hace mucho daño, tu hermano te propone que él lo distraerá y mientras tú intentes quemarlo, cortarlo o algo así para <a href='pelearbol'>terminar con él.</a> </p>",
 	{
 		enter: function (character, system, from) {
@@ -1027,7 +1028,9 @@ undum.game.situations = {
 	}
 	),
 	pelearbol: new undum.SimpleSituation(
-	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso mutado que no puede ser quemado tan fácilmente. <a href='./usardaga'>Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</a></p>",
+	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso</p>\
+	<p><img src='media/img/antorcha.jpg' class='float_left'></p>\
+	<p>mutado que no puede ser quemado tan fácilmente. <a href='./usardaga'>Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</a></p>",
 	{
 		enter: function (character, system, from) {
                     system.setCharacterText(
