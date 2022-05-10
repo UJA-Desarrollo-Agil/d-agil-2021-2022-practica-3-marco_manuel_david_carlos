@@ -31,6 +31,7 @@ var taberna = document.getElementById("taberna");
 var atmosphere = document.getElementById("atmosphere");
 var peleas = document.getElementById("peleas");
 var lince = document.getElementById("lince");
+var fini = document.getElementById("fini");
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
@@ -925,6 +926,7 @@ undum.game.situations = {
 	reunion: new undum.SimpleSituation(
 	"<p>A la mañana siguiente te reunes con los más ancianos del asentamiento, junto a ellos un grupo de habitantes más jóvenes del asentamiento, todos ellos te cuentan que han desaparecido hace tiempo a bastantes habitantes en la ciénaga del Olivar, donde hay un olivo gigantesco mutado que provoca que se pierda todo el que allí entra y nunca vuelva. \
 	Los habitantes cansados y conociendo tu anterior gesta te piden de rodillas suplicando que busques a sus familiares y les ayudes a parar el mal que allí habita. Tu hermano te aconseja que lo intentéis juntos que él te ayudará en esta misión pues su esposa perdió a su madre de esta forma hace ya bastantes años.</p>\
+	<p><img src='media/img/reunion.jpg' class='float_left'></p>\
 	<p>Ante esto te encuentras duditativo, piensas por un rato y te decides a <a href='preparar'>ir con él y ayudar a esta pobre gente</a> o <a href='cobardia'>huir como un cobarde esa misma noche.</a></p>\
 	",
 	{
@@ -970,6 +972,7 @@ undum.game.situations = {
 	locoen: new undum.SimpleSituation(
 	"<p>Os acercáis a la figura, este es un hombre encapuchado, sucio, barbudo y aunque no es un anciano, se nota que está demacrado, llevando una ropa hecha jirones, manchada de barro y verde por el musgo al haber pasado tanto tiempo en la ciénaga.\
 	El hombre se os acerca más y más con una suciam extraña botella en la mano llena de un líquido verde esmeralda y un olor a alcohol y aceite, diciendo una y otra vez: 'La enrea te llama. La enrea te llama.' </p>\
+	<p><img src='media/img/locoen.jpg' class='float_left'></p>\
 	<p>Tú lo miras extrañado y dudas si <a href='cercaloco'>acercarte</a> o <a href='arbol'>seguir con tu hermano hacia el interior de la ciénaga.</a></p>\
 	",
 	{
@@ -997,8 +1000,9 @@ undum.game.situations = {
 				 "pararlo": function (character, system, action) {
 					if (character.qualities.linterna == true) {
 						system.setQuality("linterna",false);
-						system.write("<p>Te rebuscas entre tus objetos y encuentras la linterna, antes de que el tipo pueda darte de beber, la enciendes y esto lo distrae profundamente, él se queda extasiado mirando a la linterna y te la quita, dejando la botella a tu lado\
-						Tu hermano se ríe al ver la reacción del tipo y <a href='./botella'>recogéis la botella</a> por si pudiera serviros para más adelante. <a href='arbol'>Seguís vuestro camino hacia el interior de la ciénaga.</a></p>");
+						system.write("<p>Te rebuscas entre tus objetos y encuentras la linterna, antes de que el tipo pueda darte de beber, la enciendes y esto lo distrae profundamente, él se queda extasiado mirando a la linterna y te la quita, dejando la botella a tu lado.</p>\
+						<p><img src='media/img/linterna2.jpg' class='float_left'></p>\
+						<p>Tu hermano se ríe al ver la reacción del tipo y <a href='./botella'>recogéis la botella</a> por si pudiera serviros para más adelante. <a href='arbol'>Seguís vuestro camino hacia el interior de la ciénaga.</a></p>");
 					}else{
 						system.write("<p> El tipo te obliga a beber con una fuerza colosal, aunque tu hermano intenta pararlo no puede y cuando das un trago a ese asqueroso licor tu mente se descompone. <a href='enreotico'>Has sido absorbido por la enrea.</a></p>");	
 					}
@@ -1012,6 +1016,7 @@ undum.game.situations = {
 	),
 	arbol: new undum.SimpleSituation(
 	"<p>Lleváis toda la mañana caminando con la espesa niebla a vuestro alrededor cuando al fin llegáis hasta un imponente olivo del tamaño de un edificio grande. El olivo parece moverse lentamente, tú y tu hermano os acercáis con cuidado para no pisar su ráices y no alertarlo, aunque este parece reaccionar a vuestra presencia de todas formas.</p>\
+	<p><img src='media/img/niebla.jpg' class='float_left'></p>\
 	<p>Os acercáis hasta poder subir a las ramas que conectan su tronco con sus raíces, el árbol os da una tremenda sacudida antes de que podáis subir pero no os hace mucho daño, tu hermano te propone que él lo distraerá y mientras tú intentes quemarlo, cortarlo o algo así para <a href='pelearbol'>terminar con él.</a> </p>",
 	{
 		enter: function (character, system, from) {
@@ -1025,7 +1030,9 @@ undum.game.situations = {
 	}
 	),
 	pelearbol: new undum.SimpleSituation(
-	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso mutado que no puede ser quemado tan fácilmente. <a href='./usardaga'>Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</a></p>",
+	"<p>Tu hermano enciende una antorcha, la zarandea y así llama la atención del árbol, tú haces lo mismo lo más cerca posible de su anciano tronco, aunque no sirve de nada pues parece tener un recubrimiento grueso</p>\
+	<p><img src='media/img/antorcha.jpg' class='float_left'></p>\
+	<p>mutado que no puede ser quemado tan fácilmente. <a href='./usardaga'>Buscas entre tus cosas algo que pueda servir para atravesar la corteza del árbol.</a></p>",
 	{
 		enter: function (character, system, from) {
                     system.setCharacterText(
@@ -1056,7 +1063,12 @@ undum.game.situations = {
 	),
 	explosionarbol: new undum.SimpleSituation(
 	"<h1>NEUTRAL ENDING: La explosión os mató a tu hermano y a ti, pero salvasteis a el asentamiento.</h1>\
-	<p>Tu hermano y tú fuisteis alcanzados de lleno por la explosión del olivo, este se consumió rápidamente al poco de explotar, las gentes del pueblo ven esto preocupadas, aunque al pasar el tiempo tienen una reacción agridulce. Se alegran de que el olivo mutante haya sido destruido y sus efectos con él pero se entristecen por la desaparición de tu hermano y de ti. La familia y esposa de tu hermano os hacen un funeral como es debido y todo el pueblo os rinde homenaje como a héroes. La flora y fauna cercana al asentamiento sana y permiten que sus gentes puedan alimentarse más y mejor.</p>\
+	<p>Tu hermano y tú fuisteis alcanzados de lleno por la explosión del olivo, este se consumió rápidamente al poco de\
+	explotar, las gentes del pueblo ven esto preocupadas, aunque al pasar el tiempo tienen una reacción agridulce.\
+	Se alegran de que el olivo mutante haya sido destruido y sus efectos con él pero se entristecen por la desaparición de tu hermano y de ti.\
+	La familia y esposa de tu hermano os hacen un funeral como es debido y todo el pueblo os rinde homenaje como a héroes.\
+ 	La flora y fauna cercana al asentamiento sana y permiten que sus gentes puedan alimentarse más y mejor.</p>\
+	<p><img src='media/img/funeral.jpg' class='float_left'></p>\
 	",
 	{
 		enter: function (character, system, from) {
@@ -1065,11 +1077,13 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							fini.play();
                 },
 	}
 	),
 	huirarbol: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Tu hermano y tú no lo lográsteis contra el olivo mutante.</h1>\
+	<p><img src='media/img/olivar.gif' class='float_left'></p>\
 	<p>Intentas salir corriendo del tronco del árbol, este falla al intentar darte varios golpes con sus ramas y cuando parecía que habías conseguido escapar una de sus ramas subterráneas aparece por debajo del suelo y te agarra llevándote al interior de la tierra y matándote por la fuerza. Pese a vuestra valentía no lo conseguísteis.</p>\
 	",
 	{
@@ -1099,8 +1113,13 @@ undum.game.situations = {
 	}
 	),
 	endfin: new undum.SimpleSituation(
-	"<p>Marcháis hacia el poblado mientras se escuchan extraños ruidos en la ciénaga, veis como muchos de los olivos que no veíais antes por la niebla tan espesa son en verdad personas transformadas en olivo con cara y forma de haber pasado bastante dolor por esto. Finalmente cuando llegáis al poblado le contáis a los habitantes lo ocurrido y estos os vitorean y felicitan. Te alzan en brazos y os llevan a un banquete con lo mejor que tienen. </p>\
-	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano a un verde mucho más sano lentamente. Tras un día de celebraciones <a href='nfin'>te planteas si este realmente es tu sitio </a> o es mejor <a href='gfin'>quedarte aquí como líder del asentamiento.</a></p>\
+	"<p>Marcháis hacia el poblado mientras se escuchan extraños ruidos en la ciénaga, veis como muchos de los olivos que no veíais antes por la niebla tan espesa \
+	son en verdad personas transformadas en olivo con cara y forma de haber pasado bastante dolor por esto. \
+	 Finalmente cuando llegáis al poblado le contáis a los habitantes lo ocurrido y estos os vitorean y felicitan. \
+	 Te alzan en brazos y os llevan a un banquete con lo mejor que tienen. </p>\
+	 <p><img src='media/img/victoria.jpg' class='float_left'></p>\
+	<p>Mientras a lo lejos la niebla se disipa cada vez más y el árbol gigantesco pasa de un tono grisaceo malsano\
+	a un verde mucho más sano lentamente. Tras un día de celebraciones <a href='nfin'>te planteas si este realmente es tu sitio </a> o es mejor <a href='gfin'>quedarte aquí como líder del asentamiento.</a></p>\
 	",
 	{
 		enter: function (character, system, from) {
@@ -1115,7 +1134,9 @@ undum.game.situations = {
 	),
 	gfin: new undum.SimpleSituation(
 	"<h1>GOOD ENDING: Te quedas en el asentamiento como líder de sus habitantes.</h1>\
-	<p>Decides quedarte en el asentamiento lo que te queda de vida y guiar a los habitantes de este en una nueva época de properidad nunca vista en el yermo de Jaén, el olivar vuelve a ser fértil como una vez fue, no hay más desaparecidos ni esclavos, las caravanas pasan sin problema permitiendo un comercio sano y las aceitunas y el aceite vuelven a ser el producto estrella de la zona.</p>\
+	<p>Decides quedarte en el asentamiento lo que te queda de vida y guiar a los habitantes de este en una nueva época de properidad nunca vista en el yermo de Jaén, el olivar vuelve a ser fértil como una vez fue, no hay más desaparecidos ni esclavos, \
+	 las caravanas pasan sin problema permitiendo un comercio sano y las aceitunas y el aceite vuelven a ser el producto estrella de la zona.</p>\
+	 <p><img src='media/img/jaen.jpg' class='float_left'></p>\
 	",
 	{
 		enter: function (character, system, from) {
@@ -1124,6 +1145,7 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							fini.play();
                 },
 		
 	}
