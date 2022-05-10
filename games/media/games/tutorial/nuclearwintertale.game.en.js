@@ -806,6 +806,8 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							peleas.pause();
+							finepic.play();
                 },
 			
 		}
@@ -906,6 +908,9 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							peleas.pause();
+							fini.play();
+							
                 }, 
 		 }
 	
@@ -1085,6 +1090,7 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							atmosphere.pause();
 							fini.play();
                 },
 	}
@@ -1101,6 +1107,7 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							atmosphere.pause();
                 },
 		
 	}
@@ -1117,6 +1124,7 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							atmosphere.pause();
                 },
 		
 	}
@@ -1154,7 +1162,8 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
-							fini.play();
+							atmosphere.pause();
+							fingood.play();
                 },
 		
 	}
@@ -1171,6 +1180,8 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							atmosphere.pause();
+							finneu.play();
                 },
 		
 	}
@@ -1189,6 +1200,8 @@ undum.game.situations = {
 							Características del personaje: </p>\
 							"
                             );
+							atmosphere.pause();
+							fini.play();
                 },
 		
 	}
