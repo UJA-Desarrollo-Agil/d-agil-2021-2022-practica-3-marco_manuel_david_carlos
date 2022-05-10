@@ -235,11 +235,12 @@ img.float_left {
     margin-top: 0.6em;
     border-top: 1px solid #321;
     text-align: center;
+    color: #8276A1;
 }
 .buttons button {
     font-size: 0.8em;
     background: #876;
-    color: #e6e6c6;
+    color: #8276A1;
     border: none;
     padding: 0.3em 1.0em;
     cursor: pointer;
@@ -253,7 +254,7 @@ img.float_left {
 }
 .buttons button[disabled], .buttons button[disabled]:hover {
     background: #ba9;
-    color: #dcb;
+    color: #8276A1;
     cursor: default;
 }
 

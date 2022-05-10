@@ -748,10 +748,12 @@ undum.game.situations = {
 	
 	quitar: new undum.SimpleSituation(
 	 "<h1>Quitar la máscara</h1> \
+		<p><img src='media/img/cascosuelo.jpg' width= 500 class='float_left'></p>\
         <p> Cuando le quitas la máscara al cyborg, descubres que esa persona con la \
 		que habías estado combatiendo era tu hermano, al cual querías encontrar.   \
 		Al descubrir que esa persona era tu hermano, decides no cortarle la cabeza y salir corriendo  \
 		de allí, lo que provoca que el cacique se enfade y decida pelear contra ti. </p>\
+
 		<br/>\
 		<p>En este combate  tu hermano se une contigo para derrotar los dos al cacique y poder salir  \
 		con vida del coliseo. Tras luchar y derrotar al cacique, tu hermano te explica que lo habían  \
@@ -774,6 +776,7 @@ undum.game.situations = {
 
 	escape1: new undum.SimpleSituation(
 		"<h1>Escape del coliseo</h1> \
+		<p><img src='media/img/multitud.jpg' width= 500 class='float_left'></p>\
         <p>Aprovecháis el alboroto que se ha creado por la pelea para huir entre la multitud, al saber de la muerte del cacique los esclavos se han rebelado y hay luchas internas entre los saqueadores. Tu hermano te dice que cree saber donde está su amada y quiere ir a buscarla, \
 		pero tu lo ves muy peligroso. Debes decidir entre <a  href='rescate' >acompañarle </a> o <a  href='convencer' >intentar convencerle de huir y buscar ayuda </a>.</p >",
 		{
@@ -942,7 +945,8 @@ undum.game.situations = {
 	}
 	),
 	preparar: new undum.SimpleSituation(
-	"<p>Tu hermano y tú preparáis las cosas para salir a la mañana siguiente hacia la ciénaga del Olivar, os recomponéis y tratáis vuestras heridas con lo mejor que puede ofrecer el médico del asentamiento (que no es mucho), poco antes de partir el consejo de ancianos del pueblo te otorgan una armadura antirradiación guardada durante décadas en por los habitantes de la tribu desde que murió el último gran lider.</p>\
+	"<p><img src='media/img/arbolniebla.jpg' width = 200></p>\
+	<p>Tu hermano y tú preparáis las cosas para salir a la mañana siguiente hacia la ciénaga del Olivar, os recomponéis y tratáis vuestras heridas con lo mejor que puede ofrecer el médico del asentamiento (que no es mucho), poco antes de partir el consejo de ancianos del pueblo te otorgan una armadura antirradiación guardada durante décadas en por los habitantes de la tribu desde que murió el último gran lider.</p>\
 	<p>Os ponéis en camino hacia la ciénaga y a lo lejos se ve una gran sombra de un árbol gigante tras una espesa niebla hedionda. Con el traje puesto te vas acercando y conforme te vas internando en la ciénaga escuchas un extraño canto, te vas acercando al sonido y ves una figura extraña, <a href='locoen'>te acercas a esa figura.</a> </p>\
 	",
 	{
@@ -958,6 +962,7 @@ undum.game.situations = {
 	),
 	cobardia: new undum.SimpleSituation(
 	"<h1>BAD ENDING: Huyes y dejas a tu hermano y a los habitantes del asentamiento en la estacada.</h1>\
+	<p><img src='media/img/huida.jpg' width = 200 class='float_left'></p>\
 	<p>Decides que esto te supera, has tenido suficiente lucha para lo que te queda de vida y te preparas para escapar esa noche sin que te vean. Antes de irte recoges tus cosas y dejas una nota a tu hermano diciéndole que lo sientes pero que no te siga, la experiencia en el coliseo fue demasiado dura y no quieres volver a vivir algo así.</p>",
 	{
 		enter: function (character, system, from) {
