@@ -1061,7 +1061,12 @@ undum.game.situations = {
 	),
 	explosionarbol: new undum.SimpleSituation(
 	"<h1>NEUTRAL ENDING: La explosión os mató a tu hermano y a ti, pero salvasteis a el asentamiento.</h1>\
-	<p>Tu hermano y tú fuisteis alcanzados de lleno por la explosión del olivo, este se consumió rápidamente al poco de explotar, las gentes del pueblo ven esto preocupadas, aunque al pasar el tiempo tienen una reacción agridulce. Se alegran de que el olivo mutante haya sido destruido y sus efectos con él pero se entristecen por la desaparición de tu hermano y de ti. La familia y esposa de tu hermano os hacen un funeral como es debido y todo el pueblo os rinde homenaje como a héroes. La flora y fauna cercana al asentamiento sana y permiten que sus gentes puedan alimentarse más y mejor.</p>\
+	<p>Tu hermano y tú fuisteis alcanzados de lleno por la explosión del olivo, este se consumió rápidamente al poco de\
+	explotar, las gentes del pueblo ven esto preocupadas, aunque al pasar el tiempo tienen una reacción agridulce.\
+	Se alegran de que el olivo mutante haya sido destruido y sus efectos con él pero se entristecen por la desaparición de tu hermano y de ti.\
+	La familia y esposa de tu hermano os hacen un funeral como es debido y todo el pueblo os rinde homenaje como a héroes.\
+ 	La flora y fauna cercana al asentamiento sana y permiten que sus gentes puedan alimentarse más y mejor.</p>\
+	<p><img src='media/img/funeral.jpg' class='float_left'></p>\
 	",
 	{
 		enter: function (character, system, from) {
