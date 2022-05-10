@@ -5,6 +5,19 @@ Juego conversacional creado en el framework Undum para la asignatura Desarrollo 
 
 3º Ingeniería del software - Ingeniería informática
 
+
+**Trabajo desarrollado por:**
+
+
+- David Fernández Arenas - dfa00011@red.ujaen.es
+
+- Marco Antonio Carrión Soriano - macs0021@red.ujaen.es
+
+- Carlos Garrido Alcántara - cga00037@red.ujaen.es
+
+- Manuel Ruiz Fernández - mrf00020@red.ujaen.es
+
+
 ## Índice
  1. [Descripción historia conversacional](#historia)
  2. [URL de Trello](#Trello)
@@ -113,17 +126,4 @@ Se pueden añadir situaciones o alargar las ya hechas para dar mayor profundidad
 
 
 <a name="Evolución"></a>
-## Integrantes del proyecto
-
-Trabajo desarrollado por:
-
-
-- David Fernández Arenas - dfa00011@red.ujaen.es
-
-- Marco Antonio Carrión Soriano - macs0021@red.ujaen.es
-
-- Carlos Garrido Alcántara - cga00037@red.ujaen.es
-
-- Manuel Ruiz Fernández - mrf00020@red.ujaen.es
-
 
