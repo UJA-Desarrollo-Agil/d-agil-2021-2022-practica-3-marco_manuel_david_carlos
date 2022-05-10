@@ -225,13 +225,13 @@ undum.game.situations = {
 	
 	entradaasentamiento: new undum.SimpleSituation(
         "<h1>Entrada al asentamiento</h1>\
+		<p><img src='media/img/puertaAsentamiento.png' class='float_left'></p>\
 		<p>Te pones de nuevo en marcha hasta llegar al asentamiento, y una vez allÃ­, te encuentras\
 		con los guardianes de la puerta que te miran de arriba a abajo.</p>\
-		<p><img src='media/img/puertaAsentamiento.png' class='float_left'></p>\
 		<p>Al verte con esa ropa\
-		caracterÃ­stica del refugio donde has vivido toda tu vida, se miran con una sonrisa malÃ©vola y\
-		te dicen que para pasar necesitas pagar la entrada. No esperabas que hubiera que pagar\
-		para entrar, por lo que echas mano a <a class='once' href='./bolsillo'>tus bolsillos</a>.\
+		caracterÃ­stica del refugio donde has vivido toda tu vida, se miran con una sonrisa malÃ©vola. </p>\
+		<p> - Guardias: Para pasar necesitas pagar la entrada</p>\
+		<p> - P: ¿Entrada? Está bien... deja que mire en  <a class='once' href='./bolsillo'>mis bolsillos</a>.\
 		</p>\
 		",
 		{
@@ -251,22 +251,26 @@ undum.game.situations = {
 				"chapa": function (character, system, action) {
 					system.setQuality("chapaDorada", false);
 					system.setCharacterText("<p>Has perdido la chapa dorada</p>");
-					system.write("<p>Les ofreces la chapa dorada y te permiten el paso sin reprochar.</p>");
+					system.write("<p>Les entregas la chapa dorada.</p>");
+					system.write("<p> - P: Esto me parece una entrada razonable.</p>");
+					system.write("<p> - Guardias: No parece demasiado valioso, aún así te dejaremos entrar por esta vez .</p>");
 					system.doLink("asentamiento");
                 },
 				"suerte": function (character, system, action) {
-					if(character.qualities.suerte >= 3){
-						system.write("<p>Es tu dÃ­a e suerte, tu historia hace llorar a los guardias, y te\
-						permiten el paso al asentamiento.</p>");
+					if (character.qualities.suerte >= 3) {
+						system.write("<p>Te inventas una historia de como salvaste a un perrito.</p>");
+						system.write("<p> - P: ...y así es como salvé a ese pequeño perrito .</p>");
+						system.write("<p> - Guardias: Eres todo un héroe, nos hemos emocionado, te dejaremos pasar.</p>");
 						system.doLink("asentamiento");
-					}else{
-						system.write("<p>Te inventas una historia trÃ¡gica pero no cuela, has quedado como un pendejo mentiroso, por\
-						lo que te dan una patada y te echan de allÃ­ como si fueras un perro pulgoso.</p>");
+					} else {
+						system.write("<p>Te inventas un cuento sobre un restaurante.</p>");
+						system.write("<p> - P: ...Y así es como me acabé todos los platos del restaurante .</p>");
+						system.write("<p> - Guardias: ¿Y a nosotros que nos cuentas? ¡Fuera de aquí ahora mismo! .</p>");
 						system.doLink("./entrar");
 					}
                 },
 				"entrar": function (character, system, action) {
-					system.write("<p> DespuÃ©s de tu primer intento fallido de entrar en el asentamiento, buscas otra manera\
+					system.write("<p> DespuÃ©s de que los guardias no te dejaran entrar entrar en el asentamiento, buscas otra manera\
 						de colarte. Las murallas del asentamiento estÃ¡n construidas con chatarra y madera\
 						en mal estado como si de una barricada mal hecha se tratara, por lo que decides rodear\
 						la muralla en busca de alguna apertura lo suficientemente grande para colarte.</p>\

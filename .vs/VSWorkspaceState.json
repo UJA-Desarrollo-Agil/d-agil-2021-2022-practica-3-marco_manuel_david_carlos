@@ -1,18 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\docs",
-    "\\docs\\out",
-    "\\docs\\out\\media",
-    "\\docs\\out\\media\\img",
-    "\\games",
-    "\\games\\media",
-    "\\games\\media\\css",
-    "\\games\\media\\games",
-    "\\games\\media\\games\\tutorial",
-    "\\games\\media\\img",
-    "\\games\\media\\js"
+    ""
   ],
-  "SelectedNode": "\\games\\media\\img",
   "PreviewInSolutionExplorer": false
 }
