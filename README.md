@@ -122,6 +122,13 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 
 ![image](https://user-images.githubusercontent.com/99319104/169515735-b13161cf-5cf8-413a-baa6-0773b41642dd.png)
 
+#### Gráficas burndown y burn-up del valor asociado a los puntos de historia
+
+![image](https://user-images.githubusercontent.com/99321489/169577356-8f69c412-8b1d-440c-a34a-7c8974ff7996.png)
+
+![image](https://user-images.githubusercontent.com/99321489/169578218-6f4806a8-07bf-4bdd-8f7a-051b8dd9c4a6.png)
+
+
 #### Tabla del Sprint 2
 ![image](https://user-images.githubusercontent.com/99321069/169520371-333e6fa0-2044-4246-90e3-b85726de2579.png)
 
@@ -135,7 +142,7 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 
 ![image](https://user-images.githubusercontent.com/99321069/169523338-cf7f658a-e358-4662-98c5-11836a6a028b.png)
 
-### Tabla de velocidades.
+#### Tabla de velocidades.
 
 ![image](https://user-images.githubusercontent.com/99321489/169573942-760c9539-dd7f-472c-aa28-49ecf78a20c1.png)
 
