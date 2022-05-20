@@ -111,3 +111,21 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 
 <a name="Evolución"></a>
 
+## Métricas
+
+#### Tabla del proyecto global
+
+![image](https://user-images.githubusercontent.com/99319104/169515608-66905507-8ab2-4c71-893b-03f08a3f8e40.png)
+
+#### Gráficas burndown y burn-up de los puntos de historia
+
+![image](https://user-images.githubusercontent.com/99319104/169515685-eeee6cff-6a6c-4f35-9108-e2767615260b.png)
+
+![image](https://user-images.githubusercontent.com/99319104/169515735-b13161cf-5cf8-413a-baa6-0773b41642dd.png)
+
+#### Conclusiones
+
+##### Conclusiones respecto al proyecto global.
+
+Como bien podemos observar en las gráficas y en las tablas del proyecto global, los P.H. al final de cada sprint han superado o igualado los P.H. ideales, por lo que podría decirse que se ha cumplido el objetivo. Cabe mencionar que los P.H. que se han ido realizando no se han realizado de una forma progresiva, si no que se ha realizado el trabajo el día de antes de la entrega de las respectivas releases, lo cual es poco ortodoxo, pero también cabe mencionar que los desarrolladores de este proyecto tenían varios proyectos más, por lo que esta progresión está totalmente justificada. 
+
