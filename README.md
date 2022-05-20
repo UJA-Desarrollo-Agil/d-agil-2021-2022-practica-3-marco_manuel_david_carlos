@@ -151,5 +151,11 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 
 ##### Conclusiones respecto al proyecto global.
 
-Como bien podemos observar en las gráficas y en las tablas del proyecto global, los P.H. al final de cada sprint han superado o igualado los P.H. ideales, por lo que podría decirse que se ha cumplido el objetivo. Cabe mencionar que los P.H. que se han ido realizando no se han realizado de una forma progresiva, si no que se ha realizado el trabajo el día de antes de la entrega de las respectivas releases, lo cual es poco ortodoxo, pero también cabe mencionar que los desarrolladores de este proyecto tenían varios proyectos más, por lo que esta progresión está totalmente justificada. 
+Como bien podemos observar en las gráficas y en las tablas del proyecto global, los P.H. al final de cada sprint han superado o igualado los P.H. ideales, por lo que podría decirse que se ha cumplido el objetivo. Cabe mencionar que los P.H. que se han ido realizando no se han realizado de una forma progresiva, si no que se ha realizado el trabajo la semana o días de antes de la entrega de las respectivas releases, lo cual es poco ortodoxo, pero también cabe mencionar que los desarrolladores de este proyecto tenían varios proyectos más, por lo que esta progresión está totalmente justificada. 
+
+##### Conclusiones respecto al Sprint 1.
+
+En el Sprint 1 creamos la mayoría de la historia y con ello la mayoría de P. H. aunque no añadimos muchas historias de usuario en el día del PBR ni las dividimos mucho porque consideramos que la mayoría tal y como estaban podían hacerse sin dividir.
+
+##### Conclusiones respecto al Sprint 2.
 
