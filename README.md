@@ -133,7 +133,7 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 
 - **Burn-Up**
 
-![image](https://user-images.githubusercontent.com/99321069/169522766-da7a2659-be2a-4adf-abfa-dc4b3b02ac5b.png)
+![image](https://user-images.githubusercontent.com/99321069/169523338-cf7f658a-e358-4662-98c5-11836a6a028b.png)
 
 
 #### Conclusiones
