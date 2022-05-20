@@ -172,7 +172,7 @@ Como bien podemos observar en las gráficas y en las tablas del proyecto global,
 
 ##### Conclusiones respecto al Sprint 1.
 
-En el Sprint 1 creamos la mayoría de la historia y con ello la mayoría de P. H. aunque no añadimos muchas historias de usuario en el día del PBR ni las dividimos mucho porque consideramos que la mayoría tal y como estaban podían hacerse sin dividir.
+En el Sprint 1 creamos la mayoría de la historia y con ello la mayoría de P. H. aunque no añadimos muchas historias de usuario en el día del PBR ni las dividimos mucho porque consideramos que la mayoría tal y como estaban podían hacerse sin dividir. Como se puede ver en la gráfica del burndown, había trabajo que no se pudo terminar para este sprint, por lo que la gráfica no acaba en cero, además de que se atrasa respecto al trabajo ideal. En la gráfica de burn up se observa que casi todo el trabajo se realiza en las partes finales del sprint, cosa que también se observa en la gráfica burndown, se debería distribuir mejor el tiempo
 
 ##### Conclusiones respecto al Sprint 2.
 
