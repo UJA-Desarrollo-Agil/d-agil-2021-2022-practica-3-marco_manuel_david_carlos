@@ -135,6 +135,10 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 
 ![image](https://user-images.githubusercontent.com/99321069/169523338-cf7f658a-e358-4662-98c5-11836a6a028b.png)
 
+### Tabla de velocidades.
+
+![image](https://user-images.githubusercontent.com/99321489/169573942-760c9539-dd7f-472c-aa28-49ecf78a20c1.png)
+
 
 #### Conclusiones
 
