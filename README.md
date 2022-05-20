@@ -176,3 +176,4 @@ En el Sprint 1 creamos la mayoría de la historia y con ello la mayoría de P. H
 
 ##### Conclusiones respecto al Sprint 2.
 
+En el Sprint 2 acabamos todas las historias de usuario y con ello completamos todas las PH. Sin embargo, si nos fijamos en EL burn-up podemos observar como la mayoría de las historias se han realizado por completo en los últimos días del Sprint. A pesar de ello, se ha completado el proyectoenb su totalidad.
