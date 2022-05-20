@@ -24,7 +24,7 @@ Juego conversacional creado en el framework Undum para la asignatura Desarrollo 
  3. [Sprint review](#Review)
  4. [Sprint Retrospective](#Retro)
  5. [Evolución del tablero Trello](#Tablero)
- 6. [Integrantes del proyecto](#Evolución)
+ 6. [Métricas](#metrica)
  
 
 
@@ -109,8 +109,7 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 <img src="capturas/finaltotal.png" alt="imagen 3" title="Imagen 3">
 
 
-<a name="Evolución"></a>
-
+<a name="metrica"></a>
 ## Métricas
 
 #### Tabla del proyecto global
@@ -122,6 +121,18 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 ![image](https://user-images.githubusercontent.com/99319104/169515685-eeee6cff-6a6c-4f35-9108-e2767615260b.png)
 
 ![image](https://user-images.githubusercontent.com/99319104/169515735-b13161cf-5cf8-413a-baa6-0773b41642dd.png)
+
+#### Tabla del Sprint 2
+![image](https://user-images.githubusercontent.com/99321069/169520371-333e6fa0-2044-4246-90e3-b85726de2579.png)
+
+#### Gráficas burndown y burn-up del Sprint 2
+
+- **Burndown**
+![image](https://user-images.githubusercontent.com/99321069/169520728-29677a4c-3f53-4272-ba81-39fa37712b47.png)
+
+- **Burn-Up**
+![image](https://user-images.githubusercontent.com/99321069/169520958-501ec31b-4486-4d78-a01a-86f15bb6481f.png)
+
 
 #### Conclusiones
 
