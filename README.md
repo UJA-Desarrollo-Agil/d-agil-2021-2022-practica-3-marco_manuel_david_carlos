@@ -128,6 +128,23 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 
 ![image](https://user-images.githubusercontent.com/99321489/169578218-6f4806a8-07bf-4bdd-8f7a-051b8dd9c4a6.png)
 
+#### Tabla del Sprint 1
+
+![image](https://user-images.githubusercontent.com/99320659/169597612-9aa4ebb9-7514-4beb-80ae-89a1a043ccf2.png)
+
+
+#### Gráficas burndown y burn-up del Sprint 1
+
+- **Burndown**
+
+![image](https://user-images.githubusercontent.com/99320659/169597572-aa03d971-619c-461a-96b2-e4e525d32d74.png)
+
+
+- **Burn-Up**
+
+![image](https://user-images.githubusercontent.com/99320659/169597529-4dd22bdb-f190-4288-ad24-138c0ee43e1a.png)
+
+
 
 #### Tabla del Sprint 2
 ![image](https://user-images.githubusercontent.com/99321069/169520371-333e6fa0-2044-4246-90e3-b85726de2579.png)
