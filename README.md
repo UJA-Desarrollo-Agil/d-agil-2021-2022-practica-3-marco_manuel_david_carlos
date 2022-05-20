@@ -128,10 +128,12 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 #### Gráficas burndown y burn-up del Sprint 2
 
 - **Burndown**
-![image](https://user-images.githubusercontent.com/99321069/169520728-29677a4c-3f53-4272-ba81-39fa37712b47.png)
+
+![image](https://user-images.githubusercontent.com/99321069/169522821-3011efc9-f564-4bd3-b88c-19078fb127b9.png)
 
 - **Burn-Up**
-![image](https://user-images.githubusercontent.com/99321069/169520958-501ec31b-4486-4d78-a01a-86f15bb6481f.png)
+
+![image](https://user-images.githubusercontent.com/99321069/169522766-da7a2659-be2a-4adf-abfa-dc4b3b02ac5b.png)
 
 
 #### Conclusiones
