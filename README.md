@@ -112,6 +112,10 @@ Haciendo un horario en el cual se coloquen los horarios que cada componente del 
 <a name="metrica"></a>
 ## Métricas
 
+#### Enlace Hoja de cálculo
+
+URL de la hoja de cálculo: https://docs.google.com/spreadsheets/d/1e0oaCIha990baWU8i_SS0km2HggUdqBq_mErGs6Jc2U/edit#gid=0
+
 #### Tabla del proyecto global
 
 ![image](https://user-images.githubusercontent.com/99319104/169515608-66905507-8ab2-4c71-893b-03f08a3f8e40.png)
